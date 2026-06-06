@@ -32,7 +32,13 @@ def run_cmd(cmd):
     return result.stdout.strip()
 
 def process_memory():
-    # Stage all changes
+    # Fetch and merge cloud changes FIRST
+    print(f"[{datetime.datetime.now().strftime('%Y-%m-%d %H:%M')}] Синхронизация с облаком (Pull)...")
+    pull_output = run_cmd("git pull origin main --rebase")
+    if pull_output:
+        print(f"Pull result: {pull_output}")
+
+    # Stage all local changes
     run_cmd("git add .")
     
     # Get staged files
