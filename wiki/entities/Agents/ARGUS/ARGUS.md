@@ -44,3 +44,9 @@ ARGUS is obsessively detail-oriented. He communicates purely in facts and metric
 
 ***
 **Отметки:** [[wiki/entities/Agents/ARGUS/ARGUS.md|#perception]] [[wiki/incoming/INCOMING_INDEX.md|#incoming]] [[wiki/sources/SOURCES_INDEX.md|#facts]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).

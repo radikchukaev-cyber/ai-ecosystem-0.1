@@ -58,3 +58,9 @@ status: "active"
 
 ***
 **Отметки:** [[wiki/entities/Agents/CASPER/CASPER.md|#guardian]] [[wiki/entities/Agents/CASPER/CASPER.md|#backups]] [[wiki/entities/Agents/CASPER/CASPER.md|#security]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).

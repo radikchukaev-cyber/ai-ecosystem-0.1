@@ -122,3 +122,9 @@ status: "ASSIGNED"
 
 ***
 **Отметки:** [[wiki/entities/Agents/RAMS/RAMS.md|#orchestrator]] [[wiki/entities/System/Tools/TOOLS_INDEX|#action]] [[wiki/concepts/CONSTITUTION.md|#business]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).

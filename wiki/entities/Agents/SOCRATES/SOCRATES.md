@@ -47,3 +47,9 @@ While VULCAN builds and ARGUS filters, SOCRATES thinks. He is activated when the
 
 ***
 **Отметки:** [[wiki/entities/Agents/SOCRATES/SOCRATES.md|#reflection]] [[wiki/synthesis/SYNTHESIS_INDEX.md|#learning]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).

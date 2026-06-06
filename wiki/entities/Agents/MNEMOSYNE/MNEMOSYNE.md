@@ -273,3 +273,9 @@ related: ["[[wiki/concepts/Файл1]]", "[[wiki/synthesis/History/Файл2]]"]
 
 ***
 **Отметки:** [[wiki/MEMORY.md|#memory]] [[wiki/concepts/CONSTITUTION.md|#rules]] [[wiki/entities/Agents/CASPER/CASPER.md|#guardian]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).

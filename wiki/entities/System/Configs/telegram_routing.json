@@ -1,0 +1,20 @@
+{
+  "-5187379867": {
+    "description": "General Cabinet for All 6 Core Agents",
+    "default": "RAMS",
+    "mentions": {
+      "сократ": "SOCRATES",
+      "socrates": "SOCRATES",
+      "вулкан": "VULCAN",
+      "vulcan": "VULCAN",
+      "аргус": "ARGUS",
+      "argus": "ARGUS",
+      "каспер": "CASPER",
+      "casper": "CASPER",
+      "мнемозин": "MNEMOSYNE",
+      "mnemosyne": "MNEMOSYNE",
+      "рамс": "RAMS",
+      "rams": "RAMS"
+    }
+  }
+}

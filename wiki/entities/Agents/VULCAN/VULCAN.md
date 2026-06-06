@@ -53,3 +53,9 @@ VULCAN's primary domain is the creation and maintenance of functional code and s
 
 ***
 **Отметки:** [[wiki/entities/Agents/VULCAN/VULCAN.md|#code]] [[wiki/entities/System/Tools/TOOLS_INDEX|#action]] [[wiki/entities/System/Tests/TESTS_INDEX.md|#tests]]
+
+
+## 🌐 Telegram Интеграция
+- **Telegram Group ID**: -5187379867
+- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
+- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).
