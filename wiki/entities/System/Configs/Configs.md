@@ -43,3 +43,5 @@ status: "active"
 
 ***
 **Отметки:** [[wiki/entities/System/Configs/CONFIGS_INDEX.md|#tools]] [[wiki/entities/System/Configs/CONFIGS_INDEX.md|#security]]
+
+- [[telegram_routing.json|telegram_routing]] - Конфигурация роутинга для [[OpenClaw_Swarm]]

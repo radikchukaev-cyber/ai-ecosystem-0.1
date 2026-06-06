@@ -80,7 +80,7 @@ async def get_agent_reply(agent_name, prompt):
         return "IGNORE"
 
 async def process_message(chat_id, text, sender="User", depth=0):
-    if depth > 3:
+    if depth > 1:
         return # Prevent infinite loops
         
     try:
@@ -142,8 +142,8 @@ async def process_message(chat_id, text, sender="User", depth=0):
 СООБЩЕНИЕ В ГРУППЕ:
 {text}
 
-Твоя задача: Ответить коротко, в своем характере ({agent_name}). Не выходи из образа.
-Если хочешь передать слово другому агенту, просто обратись к нему по имени.
+Твоя задача: Ответить МАКСИМАЛЬНО КОРОТКО (1-2 предложения), в своем характере ({agent_name}). Не выходи из образа.
+ОТВЕЧАЙ ТОЛЬКО ШЕФУ. НЕ ОБЩАЙСЯ С ДРУГИМИ АГЕНТАМИ И НЕ УПОМИНАЙ ИХ ИМЕНА, чтобы не создавать бесконечный цикл.
 {broadcast_instruction}
 
 Команды [APPEND_MEMORY] и [CREATE_FILE] работают как обычно.
@@ -197,7 +197,7 @@ async def process_message(chat_id, text, sender="User", depth=0):
             await send_telegram(chat_id, final_reply_text.strip())
             
             # Check for Roundtable Handoff
-            if depth < 3 and group_config:
+            if depth < 1 and group_config:
                 reply_lower = final_reply_text.lower()
                 handoff_targets = []
                 for trigger, tgt_agent in group_config.get("mentions", {}).items():

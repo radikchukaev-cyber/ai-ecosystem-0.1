@@ -126,5 +126,9 @@ status: "ASSIGNED"
 
 ## 🌐 Telegram Интеграция
 - **Telegram Group ID**: -5187379867
-- **Статус**: Подключен к Единому Шлюзу (OpenClaw Gateway).
-- **Режим Роутинга**: Mention-Based Routing (отвечает на сообщения, где упоминается его имя).
+- **Статус**: Подключен к Единому Шлюзу ([[OpenClaw_Gateway]]).
+- **Механика**: Включен в мультиагентную систему роя ([[OpenClaw_Swarm]]).
+- **Протоколы**: Поддерживает [[Mention_Based_Routing]] (отвечает на упоминание имени), [[Broadcast_Mode]] (участвует в общих дискуссиях) и [[Roundtable_Protocol]] (передает слово другим агентам).
+- **Связанные конфигурации**: [[telegram_routing]]
+
+#telegram #swarm #multi_agent #openclaw
