@@ -1,0 +1,4 @@
+# tags: #guardian, #security, #logs, #audit
+
+[2026-06-05 09:12:33] ERROR: Timeout reaching Serper API for Sentinel. Retrying... Success.
+[2026-06-05 14:22:10] WARN: Argus tried to access restricted directory 'Root_Configs'. Blocked by RBAC.

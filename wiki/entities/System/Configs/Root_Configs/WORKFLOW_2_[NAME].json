@@ -1,0 +1,37 @@
+{
+  "workflow_id": "WF-002",
+  "name": "System Audit & Backup",
+  "description": "Weekly system integrity check and data backup.",
+  "trigger": "webhook",
+  "endpoint": "/webhooks/trigger-audit",
+  "steps": [
+    {
+      "step_id": "audit_1",
+      "action": "check_integrity",
+      "target": "/system/core",
+      "strict_mode": true
+    },
+    {
+      "step_id": "audit_2",
+      "action": "analyze_logs",
+      "time_range": "7d",
+      "severity_threshold": "ERROR"
+    },
+    {
+      "step_id": "backup_1",
+      "action": "create_snapshot",
+      "include": ["/data", "/configs"],
+      "exclude": ["/data/tmp"]
+    },
+    {
+      "step_id": "notify_1",
+      "action": "send_report",
+      "channels": ["email", "slack"]
+    }
+  ],
+  "retry_policy": {
+    "max_retries": 3,
+    "delay_seconds": 300
+  },
+  "active": true
+}

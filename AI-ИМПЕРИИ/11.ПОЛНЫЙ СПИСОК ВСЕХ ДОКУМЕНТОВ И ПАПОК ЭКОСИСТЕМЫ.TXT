@@ -1,0 +1,981 @@
+ПОЛНАЯ СТРУКТУРА (НИЧЕГО НЕ ПРОПУЩЕНО)
+
+🏛️ ГЛАВНЫЙ УРОВЕНЬ
+wiki/
+├─ index.md
+├─ MEMORY.md
+└─ .gitignore
+
+🎯 РАЗДЕЛ 1: УПРАВЛЕНИЕ И КОНФИГУРАЦИЯ
+wiki/entities/System/Configs/
+wiki/entities/System/Configs/
+├─ SHEF_PROFILE.md
+├─ SHEF_PERSONALITY.md
+├─ SHEF_CONTACT_INFO.md
+├─ SHEF_PREFERENCES.md
+├─ SHEF_BUDGET.md
+├─ SHEF_VISION.md
+└─ Root_Configs/
+   ├─ .env (НЕ в гит!)
+   ├─ API_KEYS.md
+   ├─ GITHUB_TOKENS.md
+   ├─ OBSIDIAN_SETTINGS.md
+   ├─ NOTEBOOKLM_WORKFLOWS.md
+   └─ RBAC_PERMISSIONS.md
+
+👥 РАЗДЕЛ 2: ОСНОВНЫЕ 6 АГЕНТОВ
+wiki/entities/Agents/AGENTS_INDEX.md
+🧠 RAMS (Chronos Orchestrator)
+wiki/entities/Agents/RAMS/
+├─ RAMS.md (ГЛАВНЫЙ ФАЙЛ — полный профиль)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ daily_log.md
+   ├─ current_tasks.md
+   ├─ weekly_summary.md
+   ├─ coordination_log.md
+   ├─ decision_log.md
+   ├─ conflict_resolution.md
+   ├─ pattern_detected.md
+   ├─ improvements.md
+   ├─ forecast.md
+   ├─ learning_notes.md
+   └─ boot_sequence.md
+└─ RAMS_skills/
+   ├─ orchestration.md
+   ├─ decision_making.md
+   ├─ resource_management.md
+   ├─ system_analysis.md
+   ├─ delegation.md
+   ├─ conflict_mediation.md
+   ├─ performance_optimization.md
+   ├─ strategic_planning.md
+   ├─ agent_activation.md
+   ├─ monitoring.md
+   ├─ adaptation.md
+   ├─ error_recovery.md
+   └─ long_term_planning.md
+🔨 VULCAN (Action & Execution)
+wiki/entities/Agents/VULCAN/
+├─ VULCAN.md (ГЛАВНЫЙ ФАЙЛ)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ daily_tasks.md
+   ├─ completed_tasks.md
+   ├─ errors_and_fixes.md
+   ├─ statistics.md
+   ├─ code_review_log.md
+   ├─ deployment_log.md
+   ├─ performance_metrics.md
+   ├─ optimization_notes.md
+   ├─ learning_notes.md
+   └─ issues_encountered.md
+└─ Vulcan_skills/
+   ├─ coding.md
+   ├─ testing.md
+   ├─ debugging.md
+   ├─ deployment.md
+   ├─ optimization.md
+   ├─ code_review.md
+   ├─ architecture_design.md
+   ├─ integration.md
+   ├─ documentation.md
+   ├─ performance_tuning.md
+   ├─ security_hardening.md
+   ├─ error_handling.md
+   └─ scalability_planning.md
+👁️ ARGUS (Perception & Filtering)
+wiki/entities/Agents/ARGUS/
+├─ ARGUS.md (ГЛАВНЫЙ ФАЙЛ)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ parsed_today.md
+   ├─ contradictions.md
+   ├─ compression_stats.md
+   ├─ data_quality_report.md
+   ├─ parsing_errors.md
+   ├─ validation_log.md
+   ├─ summarization_results.md
+   ├─ pattern_anomalies.md
+   ├─ source_credibility.md
+   └─ learning_notes.md
+└─ Argus_skills/
+   ├─ compression.md
+   ├─ parsing.md
+   ├─ validation.md
+   ├─ summarization.md
+   ├─ contradiction_detection.md
+   ├─ data_cleaning.md
+   ├─ quality_assurance.md
+   ├─ format_conversion.md
+   ├─ anomaly_detection.md
+   ├─ source_verification.md
+   ├─ deduplication.md
+   └─ content_analysis.md
+📜 MNEMOSYNE (Memory Keeper)
+wiki/entities/Agents/MNEMOSYNE/
+├─ MNEMOSYNE.md (ГЛАВНЫЙ ФАЙЛ)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ structure_audit.md
+   ├─ duplicates_log.md
+   ├─ archive_history.md
+   ├─ organization_changes.md
+   ├─ carpath_violations.md
+   ├─ link_management.md
+   ├─ metadata_updates.md
+   ├─ cleanup_log.md
+   ├─ obsolescence_tracking.md
+   └─ learning_notes.md
+└─ Mnemosyne_skills/
+   ├─ organization.md
+   ├─ deduplication.md
+   ├─ linking.md
+   ├─ archivization.md
+   ├─ index_management.md
+   ├─ metadata_tagging.md
+   ├─ structure_validation.md
+   ├─ legacy_migration.md
+   ├─ backup_organization.md
+   ├─ cross_referencing.md
+   ├─ namespace_management.md
+   └─ file_naming_conventions.md
+🎓 SOCRATES (Reflection & Learning)
+wiki/entities/Agents/SOCRATES/
+├─ SOCRATES.md (ГЛАВНЫЙ ФАЙЛ)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ daily_analysis.md
+   ├─ pattern_detections.md
+   ├─ learning_notes.md
+   ├─ root_cause_findings.md
+   ├─ hypothesis_tests.md
+   ├─ insights.md
+   ├─ failure_analysis.md
+   ├─ success_factors.md
+   ├─ system_health_report.md
+   └─ recommendations.md
+└─ Socrates_skills/
+   ├─ root_cause_analysis.md
+   ├─ pattern_detection.md
+   ├─ learning_synthesis.md
+   ├─ instruction_update.md
+   ├─ hypothesis_testing.md
+   ├─ critical_thinking.md
+   ├─ system_diagnostics.md
+   ├─ knowledge_integration.md
+   ├─ process_improvement.md
+   ├─ risk_assessment.md
+   ├─ strategic_analysis.md
+   └─ mentoring.md
+🔐 CASPER (Guardian & Security)
+wiki/entities/Agents/CASPER/
+├─ CASPER.md (ГЛАВНЫЙ ФАЙЛ)
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ tools.md
+├─ heartbeat.md
+└─ memory/
+   ├─ MEMORY_STRUCTURE.md
+   ├─ security_log.md
+   ├─ backup_history.md
+   ├─ integrity_checks.md
+   ├─ access_log.md
+   ├─ incident_report.md
+   ├─ vulnerability_scan.md
+   ├─ cleanup_operations.md
+   ├─ disaster_recovery_log.md
+   ├─ compliance_report.md
+   └─ learning_notes.md
+└─ Casper_skills/
+   ├─ backup_and_cleanup.md
+   ├─ access_control.md
+   ├─ integrity_validation.md
+   ├─ archive_management.md
+   ├─ security_protocols.md
+   ├─ encryption.md
+   ├─ disaster_recovery.md
+   ├─ audit_logging.md
+   ├─ compliance_checking.md
+   ├─ threat_detection.md
+   ├─ incident_response.md
+   └─ policy_enforcement.md
+
+📹 РАЗДЕЛ 3: СПЕЦИАЛЬНЫЕ КОМАНДЫ
+YouTube Team
+wiki/entities/Agents/YouTube_Researcher/
+├─ YouTube_Researcher.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ daily_research.md
+│  ├─ trends_discovered.md
+│  └─ video_ideas.md
+└─ YouTube_Researcher_skills/
+   ├─ trend_analysis.md
+   ├─ niche_research.md
+   ├─ audience_analysis.md
+   ├─ competitor_analysis.md
+   └─ viral_prediction.md
+
+wiki/entities/Agents/Writer/
+├─ Writer.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ completed_scripts.md
+│  ├─ writing_style_log.md
+│  └─ content_calendar.md
+└─ Writer_skills/
+   ├─ scriptwriting.md
+   ├─ storytelling.md
+   ├─ copywriting.md
+   ├─ seo_optimization.md
+   └─ content_planning.md
+
+wiki/entities/Agents/Thumbnail_Agent/
+├─ Thumbnail_Agent.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ created_thumbnails.md
+│  ├─ ctr_analysis.md
+│  └─ design_notes.md
+└─ Thumbnail_Agent_skills/
+   ├─ visual_design.md
+   ├─ psychology_of_thumbnails.md
+   ├─ color_theory.md
+   ├─ typography.md
+   └─ a_b_testing.md
+
+wiki/entities/Agents/Packaging_Agent/
+├─ Packaging_Agent.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ published_videos.md
+│  ├─ optimization_log.md
+│  └─ metadata_archive.md
+└─ Packaging_Agent_skills/
+   ├─ video_optimization.md
+   ├─ metadata_creation.md
+   ├─ thumbnail_placement.md
+   ├─ description_writing.md
+   └─ platform_optimization.md
+
+wiki/entities/Agents/Analytics_Agent/
+├─ Analytics_Agent.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ daily_metrics.md
+│  ├─ performance_analysis.md
+│  └─ improvement_recommendations.md
+└─ Analytics_Agent_skills/
+   ├─ data_analysis.md
+   ├─ metrics_interpretation.md
+   ├─ reporting.md
+   ├─ growth_hacking.md
+   └─ audience_insights.md
+💼 Business Trio
+wiki/entities/Agents/Market_Researcher/
+├─ Market_Researcher.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ market_analysis.md
+│  ├─ competitor_findings.md
+│  └─ opportunity_assessment.md
+└─ Market_Researcher_skills/
+   ├─ market_analysis.md
+   ├─ competitive_analysis.md
+   ├─ opportunity_identification.md
+   ├─ trend_forecasting.md
+   └─ risk_assessment.md
+
+wiki/entities/Agents/Offer_Strategist/
+├─ Offer_Strategist.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ offer_strategies.md
+│  ├─ negotiation_notes.md
+│  └─ deal_tracking.md
+└─ Offer_Strategist_skills/
+   ├─ offer_design.md
+   ├─ value_proposition.md
+   ├─ pricing_strategy.md
+   ├─ negotiation.md
+   └─ deal_structuring.md
+
+wiki/entities/Agents/Execution_Agent/
+├─ Execution_Agent.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ executed_deals.md
+│  ├─ sales_pipeline.md
+│  └─ customer_log.md
+└─ Execution_Agent_skills/
+   ├─ sales.md
+   ├─ relationship_building.md
+   ├─ closing_techniques.md
+   ├─ customer_success.md
+   └─ revenue_optimization.md
+🏥 Дополнительные агенты
+wiki/entities/Agents/Health_Assistant/
+├─ Health_Assistant.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ health_log.md
+│  ├─ wellness_tracking.md
+│  └─ recommendations.md
+└─ Health_Assistant_skills/
+   ├─ wellness_planning.md
+   ├─ nutrition_guidance.md
+   ├─ fitness_coaching.md
+   ├─ sleep_optimization.md
+   └─ stress_management.md
+
+wiki/entities/Agents/Sentinel/
+├─ Sentinel.md
+├─ identity.md
+├─ soul.md
+├─ laws.md
+├─ memory/
+│  ├─ monitored_sources.md
+│  ├─ news_digest.md
+│  └─ alerts_log.md
+└─ Sentinel_skills/
+   ├─ news_monitoring.md
+   ├─ source_tracking.md
+   ├─ trend_spotting.md
+   ├─ alert_generation.md
+   └─ context_analysis.md
+
+📚 РАЗДЕЛ 4: ЗНАНИЯ И КОНЦЕПТЫ
+wiki/concepts/CONCEPTS_INDEX.md
+wiki/concepts/
+├─ CONSTITUTION.md (ОСНОВНОЙ ЗАКОН)
+├─ CARPATH_ARCHITECTURE.md
+├─ MEMORY_SYSTEM.md
+├─ FIVE_LEVELS_OF_MEMORY.md
+├─ RBAC_AND_PERMISSIONS.md
+├─ API_Error_Handling.md
+├─ Code_Patterns.md
+├─ Logging_Best_Practices.md
+├─ YouTube_Workflow.md
+├─ Business_Trio_Process.md
+├─ Root_Cause_Analysis.md
+├─ MCP_Integration.md
+├─ Tokenomics.md
+├─ Scaling_Strategy.md
+├─ Data_Compression_Techniques.md
+├─ Decision_Making_Framework.md
+├─ Error_Recovery_Procedures.md
+├─ Communication_Protocols.md
+├─ System_Health_Metrics.md
+├─ Agent_Interaction_Patterns.md
+├─ Knowledge_Base_Management.md
+├─ Performance_Benchmarks.md
+├─ Security_Best_Practices.md
+├─ Disaster_Recovery_Plan.md
+├─ Version_Control_Guidelines.md
+├─ Code_Review_Standards.md
+├─ Testing_Methodologies.md
+├─ Documentation_Standards.md
+├─ API_Design_Patterns.md
+├─ Database_Optimization.md
+├─ Caching_Strategies.md
+└─ System_Architecture.md
+
+📝 РАЗДЕЛ 5: ИСТОЧНИКИ И ФАКТЫ
+wiki/sources/
+wiki/sources/
+├─ Claude_Capabilities.md
+├─ Claude_API_Reference.md
+├─ Claude_Limitations.md
+├─ YouTube_API_Docs.md
+├─ YouTube_API_Limits.md
+├─ GitHub_Integration.md
+├─ GitHub_API_Reference.md
+├─ NotebookLM_API.md
+├─ Obsidian_Features.md
+├─ Obsidian_Limitations.md
+├─ NotebookLM_Workflows.md
+├─ NotebookLM_Reference.md
+├─ Fly_IO_Documentation.md
+├─ Railway_APP_Documentation.md
+├─ AI_Tools_Comparison.md
+├─ Market_Analysis.md
+├─ Industry_Trends.md
+├─ Competitor_Analysis.md
+├─ Technology_Stack.md
+├─ Best_Practices_Summary.md
+├─ [DATE]_[TOPIC]_[SOURCE].md (для новых)
+├─ [DATE]_[TOPIC]_[SOURCE].md
+└─ [DATE]_[TOPIC]_[SOURCE].md
+
+🕰️ РАЗДЕЛ 6: ИСТОРИЯ УСПЕХОВ
+wiki/synthesis/History/HISTORY_INDEX.md
+wiki/synthesis/History/
+├─ HISTORY_INDEX.md
+├─ [DATE]_SUCCESS_[PROJECT_NAME].md
+├─ [DATE]_SUCCESS_Claude_Code_Guide.md
+├─ [DATE]_SUCCESS_JSON_Parser.md
+├─ [DATE]_SUCCESS_YouTube_Integration.md
+├─ [DATE]_SUCCESS_Data_Compression.md
+├─ [DATE]_SUCCESS_Error_Recovery.md
+├─ [DATE]_SUCCESS_System_Optimization.md
+├─ [DATE]_SUCCESS_Agent_Coordination.md
+├─ [DATE]_SUCCESS_Memory_System.md
+├─ [DATE]_SUCCESS_Documentation.md
+├─ [DATE]_SUCCESS_[PROJECT_NAME].md
+├─ [DATE]_SUCCESS_[PROJECT_NAME].md
+├─ [DATE]_SUCCESS_[PROJECT_NAME].md
+├─ Learning_Patterns.md
+├─ Most_Effective_Strategies.md
+├─ Best_Decision_Examples.md
+└─ High_Impact_Projects.md
+
+❌ РАЗДЕЛ 7: АРХИВ ОШИБОК И ПОРАЖЕНИЙ
+wiki/synthesis/Failures/FAILURES_INDEX.md
+wiki/synthesis/Failures/
+├─ FAILURES_INDEX.md
+├─ [DATE]_FAILURE_[ERROR_NAME].md
+├─ [DATE]_FAILURE_JSON_ParseError.md
+├─ [DATE]_FAILURE_Rate_Limiting.md
+├─ [DATE]_FAILURE_Memory_Corruption.md
+├─ [DATE]_FAILURE_Agent_Timeout.md
+├─ [DATE]_FAILURE_Data_Loss.md
+├─ [DATE]_FAILURE_API_Integration.md
+├─ [DATE]_FAILURE_Coordination_Breakdown.md
+├─ [DATE]_FAILURE_Planning_Error.md
+├─ [DATE]_FAILURE_Resource_Overrun.md
+├─ [DATE]_FAILURE_[ERROR_NAME].md
+├─ [DATE]_FAILURE_[ERROR_NAME].md
+├─ [DATE]_FAILURE_[ERROR_NAME].md
+├─ Root_Cause_Analysis_Summary.md
+├─ Common_Patterns_In_Failures.md
+├─ Prevention_Checklist.md
+├─ Recovery_Procedures.md
+└─ Lessons_Learned.md
+
+📊 РАЗДЕЛ 8: ВИЗУАЛЬНЫЕ СХЕМЫ
+wiki/synthesis/Canvases/
+wiki/synthesis/Canvases/
+├─ System_Architecture.canvas
+├─ Data_Flow.canvas
+├─ Agent_Interaction.canvas
+├─ Decision_Tree.canvas
+├─ Memory_System_Diagram.canvas
+├─ Workflow_Pipeline.canvas
+├─ Team_Structure.canvas
+├─ Resource_Allocation.canvas
+├─ Risk_Matrix.canvas
+├─ Growth_Trajectory.canvas
+├─ Error_Handling_Flowchart.canvas
+├─ Recovery_Process.canvas
+└─ Future_Vision.canvas
+
+🔄 РАЗДЕЛ 9: ОЧЕРЕДЬ ПЕРЕРАБОТКИ
+wiki/synthesis/Legacy_2_Wiki/
+wiki/synthesis/Legacy_2_Wiki/
+├─ QUEUE_INDEX.md
+├─ [DATE]_[TOPIC]_pending.md
+├─ [DATE]_[TOPIC]_pending.md
+├─ [DATE]_[TOPIC]_pending.md
+├─ [PRIORITY_HIGH]_[TOPIC].md
+├─ [PRIORITY_MEDIUM]_[TOPIC].md
+├─ [PRIORITY_LOW]_[TOPIC].md
+└─ STATUS_TRACKING.md
+
+🗂️ РАЗДЕЛ 10: АРХИВ
+wiki/synthesis/Archive/
+wiki/synthesis/Archive/
+├─ README.md (МЁРТВАЯ ЗОНА - ТОЛЬКО ОТКАТ!)
+├─ backup_2024-01-01_version1/
+│  ├─ old_constitution.md
+│  ├─ old_structure.md
+│  └─ obsolete_files.md
+├─ backup_2024-02-01_version2/
+│  └─ ...
+├─ deprecated_concepts/
+│  ├─ old_system_design.md
+│  └─ abandoned_approach.md
+├─ obsolete_agents/
+│  └─ [если были удалены]
+└─ rollback_points/
+   ├─ 2024-01-15_stable.md
+   └─ 2024-01-10_stable.md
+
+🏢 РАЗДЕЛ 11: КОМПАНИИ И ПРОЕКТЫ
+wiki/entities/Companies/COMPANIES_INDEX.md
+wiki/entities/Companies/
+├─ COMPANIES_INDEX.md
+├─ AI_Mastodont/
+│  ├─ AI_MASTODONT.md
+│  ├─ VISION.md
+│  ├─ ROADMAP.md
+│  ├─ TEAM.md
+│  ├─ METRICS.md
+│  ├─ BUDGET.md
+│  ├─ TIMELINE.md
+│  ├─ DELIVERABLES.md
+│  └─ RISKS.md
+├─ [PROJECT_NAME]/
+│  ├─ PROJECT_BRIEF.md
+│  ├─ GOALS.md
+│  ├─ STAKEHOLDERS.md
+│  ├─ RESOURCES.md
+│  ├─ BUDGET.md
+│  └─ TIMELINE.md
+├─ [PROJECT_NAME]/
+│  └─ ...
+└─ ACTIVE_PROJECTS.md
+
+⚙️ РАЗДЕЛ 12: СКРИПТЫ
+wiki/entities/System/Scripts/SCRIPTS_INDEX.md
+wiki/entities/System/Scripts/
+├─ SCRIPTS_INDEX.md
+├─ memory_autosave.py
+├─ memory_search.py
+├─ vector_search.py
+├─ dupe_finder.py
+├─ structure_validator.py
+├─ youtube_parser.py
+├─ json_parser_safe.py
+├─ data_compressor.py
+├─ markdown_converter.py
+├─ backup_manager.py
+├─ integrity_checker.py
+├─ performance_profiler.py
+├─ log_analyzer.py
+├─ metrics_calculator.py
+├─ cleanup_old_files.py
+├─ sync_github.py
+├─ monitoring_system.py
+├─ health_check.py
+├─ deployment_checker.py
+├─ rollback_automation.py
+└─ README.md (инструкции по запуску)
+
+🛠️ РАЗДЕЛ 13: ИНСТРУМЕНТЫ И СКИЛЛЫ (СИСТЕМА)
+wiki/entities/System/Tools/Skills/SKILLS_INDEX.md
+wiki/entities/System/Tools/Skills/
+├─ SKILLS_INDEX.md
+├─ obsidian-cli/
+│  ├─ README.md
+│  ├─ usage.md
+│  ├─ examples.md
+│  ├─ api_reference.md
+│  └─ troubleshooting.md
+├─ github-sync/
+│  ├─ README.md
+│  ├─ setup.md
+│  ├─ configuration.md
+│  └─ commands.md
+├─ json-parser-safe/
+│  ├─ README.md
+│  ├─ api.md
+│  ├─ examples.md
+│  └─ error_handling.md
+├─ vector-search/
+│  ├─ README.md
+│  ├─ setup.md
+│  ├─ usage.md
+│  └─ performance.md
+├─ youtube-api-wrapper/
+│  ├─ README.md
+│  ├─ authentication.md
+│  ├─ endpoints.md
+│  ├─ rate_limiting.md
+│  └─ examples.md
+├─ notebooklm-workflows/
+│  ├─ README.md
+│  ├─ WORKFLOW_1_[NAME].json
+│  ├─ WORKFLOW_2_[NAME].json
+│  └─ deployment.md
+├─ references/
+│  ├─ API_CHEATSHEET.md
+│  ├─ GITHUB_CHEATSHEET.md
+│  ├─ OBSIDIAN_CHEATSHEET.md
+│  ├─ PYTHON_CHEATSHEET.md
+│  └─ BASH_CHEATSHEET.md
+└─ integrations/
+   ├─ NOTEBOOKLM_INTEGRATION.md
+   ├─ GITHUB_INTEGRATION.md
+   ├─ YOUTUBE_INTEGRATION.md
+   ├─ TELEGRAM_INTEGRATION.md
+   └─ NOTEBOOKLM_INTEGRATION_2.md
+
+📝 РАЗДЕЛ 14: ЛОГИРОВАНИЕ И ОТСЛЕЖИВАНИЕ
+wiki/entities/System/Logs/LOGS_INDEX.md
+wiki/entities/System/Logs/
+├─ LOGS_INDEX.md
+├─ system.log
+├─ token_usage.log
+├─ errors.log
+├─ performance.log
+├─ deployment.log
+├─ api_calls.log
+├─ decision_log.md
+├─ task_assignment_log.md
+├─ error_resolution_log.md
+├─ backup_log.md
+├─ security_log.md
+├─ access_log.md
+├─ change_log.md
+├─ daily_report_YYYY-MM-DD.md
+├─ weekly_report_YYYY-WW.md
+├─ monthly_report_YYYY-MM.md
+└─ system_health_check.md
+
+🧪 РАЗДЕЛ 15: ТЕСТЫ
+wiki/entities/System/Tests/
+wiki/entities/System/Tests/
+├─ test_json_parser.py
+├─ test_memory_system.py
+├─ test_carpath.py
+├─ test_agents.py
+├─ test_compression.py
+├─ test_api_integration.py
+├─ test_coordination.py
+├─ test_decision_making.py
+├─ test_resource_management.py
+├─ test_backup_recovery.py
+├─ test_security.md
+├─ conftest.py
+├─ fixtures/
+│  ├─ valid_json.json
+│  ├─ invalid_json.json
+│  ├─ edge_cases.json
+│  ├─ test_data.csv
+│  └─ sample_videos.json
+├─ mocks/
+│  ├─ mock_api.py
+│  ├─ mock_database.py
+│  └─ mock_youtube.py
+└─ README.md
+
+🔐 РАЗДЕЛ 16: АУДИТ И СООТВЕТСТВИЕ
+wiki/entities/System/Audit/
+wiki/entities/System/Audit/
+├─ daily_audit.md
+├─ security_audit.md
+├─ performance_audit.md
+├─ compliance_report.md
+├─ access_audit.md
+├─ data_integrity_check.md
+├─ system_health_report.md
+├─ vulnerability_scan.md
+├─ risk_assessment.md
+├─ audit_log_archive.md
+└─ recommendations.md
+
+📥 РАЗДЕЛ 17: ВХОДЯЩИЕ ДАННЫЕ
+raw/
+raw/
+├─ assets/
+│  ├─ youtube_thumbnails/
+│  │  └─ [image files]
+│  ├─ screenshots/
+│  │  └─ [image files]
+│  ├─ documents/
+│  │  └─ [document files]
+│  └─ media/
+│     └─ [audio/video files]
+│
+├─ sources/
+│  ├─ claude_documentation.pdf
+│  ├─ youtube_api_reference.md
+│  ├─ github_guides/
+│  │  └─ [guide files]
+│  ├─ obsidian_docs.pdf
+│  ├─ notebooklm_manual.pdf
+│  └─ research_papers/
+│     └─ [research files]
+│
+├─ transcripts/
+│  ├─ 2024-01-15_meeting_transcript.md
+│  ├─ voice_notes/
+│  │  └─ [transcribed audio]
+│  └─ podcast_clips/
+│     └─ [transcript files]
+│
+├─ web-clipped/
+│  ├─ medium_articles/
+│  │  └─ [clipped articles]
+│  ├─ github_gists/
+│  │  └─ [gist files]
+│  └─ documentation_screenshots/
+│     └─ [screenshot archives]
+│
+└─ external_data/
+   ├─ market_research.xlsx
+   ├─ competitor_analysis.xlsx
+   ├─ sales_data.csv
+   └─ analytics_export.xlsx
+
+📋 ДОПОЛНИТЕЛЬНЫЕ ФАЙЛЫ
+Корневой уровень
+/
+├─ .gitignore
+├─ README.md (общая информация)
+├─ ARCHITECTURE.md (обзор архитектуры)
+├─ SETUP.md (как запустить)
+├─ CONTRIBUTING.md (как добавлять в систему)
+├─ LICENSE.md (лицензия)
+├─ CHANGELOG.md (история изменений)
+└─ QUICKSTART.md (быстрый старт)
+Obsidian Vault Config
+.obsidian/
+├─ app.json
+├─ plugins.json
+├─ hotkeys.json
+├─ themes.json
+├─ community-plugins.json
+├─ graph.json
+├─ workspace.json
+└─ plugins/
+   ├─ smart-connections/
+   ├─ obsidian-cli/
+   ├─ git-integration/
+   └─ [other plugins]
+
+🎯 ИТОГОВАЯ СТАТИСТИКА
+Всего файлов по категориям:
+📊 СТАТИСТИКА:
+
+ГЛАВНЫЕ ИНДЕКСЫ: 3
+├─ index.md
+├─ AGENTS_INDEX.md
+└─ MEMORY.md
+
+КОНФИГУРАЦИЯ: 10
+├─ SHEF_PROFILE и вариации
+├─ Root_Configs
+
+ОСНОВНЫЕ АГЕНТЫ: 6 × (8 файлов) = 48
+├─ RAMS: identity, soul, laws, tools, heartbeat, memory (11 файлов), skills (13 файлов)
+├─ VULCAN: (аналогично)
+├─ ARGUS: (аналогично)
+├─ MNEMOSYNE: (аналогично)
+├─ SOCRATES: (аналогично)
+└─ CASPER: (аналогично)
+
+СПЕЦИАЛЬНЫЕ КОМАНДЫ: 8 агентов × 5 файлов = 40
+├─ YouTube Team: 5 агентов
+├─ Business Trio: 3 агента
+├─ Health Assistant: 1 агент
+└─ Sentinel: 1 агент
+
+КОНЦЕПТЫ: 30+ файлов
+
+ИСТОЧНИКИ: 20+ файлов
+
+ИСТОРИЯ: 15+ успехов + индекс = 16 файлов
+
+ОШИБКИ: 15+ ошибок + индекс + анализ = 18 файлов
+
+ВИЗУАЛИЗАЦИЯ: 12 canvas файлов
+
+ИНСТРУМЕНТЫ: 
+├─ Scripts: 20+ файлов
+├─ Skills: 30+ файлов
+└─ References: 10+ файлов
+
+ЛОГИРОВАНИЕ: 15+ файлов
+
+ТЕСТЫ: 10+ файлов + fixtures
+
+АУДИТ: 10 файлов
+
+ВХОДЯЩИЕ ДАННЫЕ: папки с файлами
+
+GITHUB: .gitignore, workflows и т.д.
+
+───────────────────────────────────────────────────────────
+
+ИТОГО: ~400-500 файлов в полной системе
+
+📁 ПОЛНАЯ ИЕРАРХИЯ (БЫСТРЫЙ СПРАВОЧНИК)
+ANTIGRAVITY EMPIRE
+│
+├─ wiki/
+│  ├─ index.md ⭐
+│  ├─ MEMORY.md ⭐
+│  │
+│  ├─ entities/
+│  │  ├─ System/
+│  │  │  ├─ Configs/ (SHEF_PROFILE, .env, API ключи)
+│  │  │  ├─ Logs/ (все логи)
+│  │  │  ├─ Audit/ (аудит и проверки)
+│  │  │  ├─ Tests/ (все тесты)
+│  │  │  ├─ Scripts/ (Python/Bash скрипты)
+│  │  │  └─ Tools/
+│  │  │     └─ Skills/ (готовые инструменты)
+│  │  │
+│  │  ├─ Agents/
+│  │  │  ├─ AGENTS_INDEX.md
+│  │  │  ├─ RAMS/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ VULCAN/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ ARGUS/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ MNEMOSYNE/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ SOCRATES/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ CASPER/ (✓ identity, soul, laws, tools, heartbeat, memory, skills)
+│  │  │  ├─ YouTube_Researcher/
+│  │  │  ├─ Writer/
+│  │  │  ├─ Thumbnail_Agent/
+│  │  │  ├─ Packaging_Agent/
+│  │  │  ├─ Analytics_Agent/
+│  │  │  ├─ Market_Researcher/
+│  │  │  ├─ Offer_Strategist/
+│  │  │  ├─ Execution_Agent/
+│  │  │  ├─ Health_Assistant/
+│  │  │  └─ Sentinel/
+│  │  │
+│  │  └─ Companies/
+│  │     ├─ COMPANIES_INDEX.md
+│  │     ├─ AI_Mastodont/
+│  │     └─ [other projects]/
+│  │
+│  ├─ concepts/
+│  │  ├─ CONCEPTS_INDEX.md
+│  │  ├─ CONSTITUTION.md ⭐
+│  │  ├─ CARPATH_ARCHITECTURE.md
+│  │  └─ [30+ других концептов]
+│  │
+│  ├─ sources/
+│  │  ├─ Claude_Capabilities.md
+│  │  ├─ YouTube_API_Docs.md
+│  │  └─ [20+ источников]
+│  │
+│  └─ synthesis/
+│     ├─ History/
+│     │  ├─ HISTORY_INDEX.md
+│     │  └─ [15+ успехов]
+│     ├─ Failures/
+│     │  ├─ FAILURES_INDEX.md
+│     │  └─ [15+ ошибок]
+│     ├─ Canvases/ (12 визуальных схем)
+│     ├─ Legacy_2_Wiki/ (очередь переработки)
+│     └─ Archive/ (мёртвая зона)
+│
+├─ raw/
+│  ├─ assets/ (медиа файлы)
+│  ├─ sources/ (PDF, документация)
+│  ├─ transcripts/ (голосовые записи)
+│  ├─ web-clipped/ (скриншоты с сайтов)
+│  └─ external_data/ (данные из источников)
+│
+├─ .obsidian/ (конфиг хранилища)
+├─ .git/ (версионирование)
+├─ .gitignore
+├─ README.md
+├─ SETUP.md
+└─ [config files]
+
+✅ ИТОГОВЫЙ ЧЕКЛИСТ
+ОСНОВЫ:
+☐ index.md (главная карта)
+☐ MEMORY.md (живая память)
+☐ .gitignore
+
+УПРАВЛЕНИЕ:
+☐ SHEF_PROFILE.md и вариации
+☐ SHEF_CONTACT_INFO.md
+☐ Root_Configs/ (API ключи, .env)
+
+ОСНОВНЫЕ АГЕНТЫ (6 × 7 файлов):
+☐ RAMS (identity, soul, laws, tools, heartbeat, memory, skills)
+☐ VULCAN (аналогично)
+☐ ARGUS (аналогично)
+☐ MNEMOSYNE (аналогично)
+☐ SOCRATES (аналогично)
+☐ CASPER (аналогично)
+
+СПЕЦИАЛЬНЫЕ КОМАНДЫ (8 агентов):
+☐ YouTube Team (5 агентов)
+☐ Business Trio (3 агента)
+☐ Health Assistant (1 агент)
+☐ Sentinel (1 агент)
+
+КОНЦЕПТЫ:
+☐ CONSTITUTION.md
+☐ CARPATH_ARCHITECTURE.md
+☐ MEMORY_SYSTEM.md
+☐ [30+ других концептов]
+
+ИСТОЧНИКИ:
+☐ Claude_Capabilities.md
+☐ YouTube_API_Docs.md
+☐ [20+ других источников]
+
+ИСТОРИЯ:
+☐ HISTORY_INDEX.md
+☐ [15+ SUCCESS файлов]
+
+ОШИБКИ:
+☐ FAILURES_INDEX.md
+☐ [15+ FAILURE файлов]
+
+ВИЗУАЛИЗАЦИЯ:
+☐ 12 Canvas диаграмм
+
+ИНСТРУМЕНТЫ:
+☐ Scripts/ (20+ скриптов)
+☐ Skills/ (30+ скиллов)
+☐ References/ (справочники)
+
+ЛОГИРОВАНИЕ:
+☐ Logs/ (15+ файлов логов)
+
+ТЕСТЫ:
+☐ Tests/ (10+ тестовых файлов)
+
+АУДИТ:
+☐ Audit/ (10 аудит файлов)
+
+ВХОДЯЩИЕ ДАННЫЕ:
+☐ raw/ (папки с данными)
+
+───────────────────────────────────────────────────────────
+
+ВСЕГО ДОЛЖНО БЫТЬ: ~400-500 файлов

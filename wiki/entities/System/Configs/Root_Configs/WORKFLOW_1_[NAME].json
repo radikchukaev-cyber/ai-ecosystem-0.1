@@ -1,0 +1,36 @@
+{
+  "workflow_id": "WF-001",
+  "name": "Content Generation Pipeline",
+  "description": "Automated workflow for generating and formatting content.",
+  "trigger": "schedule",
+  "schedule": "0 0 * * *",
+  "steps": [
+    {
+      "step_id": "step_1",
+      "action": "fetch_data",
+      "source": "api.example.com/daily-topics",
+      "timeout_ms": 5000
+    },
+    {
+      "step_id": "step_2",
+      "action": "generate_content",
+      "model": "gpt-4",
+      "parameters": {
+        "temperature": 0.7,
+        "max_tokens": 1500
+      }
+    },
+    {
+      "step_id": "step_3",
+      "action": "format_markdown",
+      "template": "daily_post.md"
+    },
+    {
+      "step_id": "step_4",
+      "action": "publish",
+      "destination": "blog_system"
+    }
+  ],
+  "on_failure": "notify_admin",
+  "active": true
+}

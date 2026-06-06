@@ -1,0 +1,1871 @@
+🔨 СКИЛЛЫ VULCAN
+wiki/entities/Agents/VULCAN/Vulcan_skills/coding.md
+yaml---
+title: "💻 СКИЛЛ: Кодирование (Coding Standards)"
+agent: "VULCAN"
+category: "core_skill"
+difficulty: "EXPERT"
+tags: [#vulcan, #coding, #standards]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: КОДИРОВАНИЕ — Как VULCAN пишет код так, чтобы        ║
+║         все его понимали, он работал и не сломался            ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Способность писать код, который:
+- Работает с первой попытки (или близко)
+- Понимают другие агенты
+- Можно тестировать
+- Можно поддерживать месяцы спустя
+- Не содержит глупых ошибок
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ Когда нужно писать новый код
+✅ Когда нужно переделать старый код
+✅ Когда нужно интегрировать API
+✅ Когда нужно добавить функцию
+✅ Когда улучшать старое
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: ПОДГОТОВКА (Перед кодингом)
+┌─ Прочитаю спецификацию (что писать?)
+├─ Ищу похожее в [[wiki/synthesis/History/]] (было ли раньше?)
+├─ Проверяю [[wiki/concepts/Code_Patterns.md]] (готовый шаблон?)
+├─ Считаю сложность (часов, токенов)
+├─ Готовлю тестовые данные
+└─ Открываю текстовый редактор
+
+ЭТАП 2: СТРУКТУРА КОДА
+┌─ Разбиваю на функции (максимум 50 строк каждая)
+├─ Каждой функции даю понятное имя (не func_1, не helper)
+├─ Комментарии на РУССКОМ
+│  └─ # Парсим JSON из YouTube API
+│     # Проверяем есть ли ошибки
+│     # Если ошибка — логируем и пропускаем
+├─ Константы в CAPS (API_TIMEOUT = 30)
+└─ Функции в snake_case (parse_json, get_data)
+
+ПРИМЕР СТРУКТУРЫ:
+parse_youtube_api.py
+├─ Импорты (все нужные библиотеки)
+├─ Константы (API_KEY = ..., TIMEOUT = 30)
+├─ Helper функции (get_channel, parse_video)
+├─ Главная функция (main или run)
+└─ Блок if name == "main": (как запускать)
+
+ЭТАП 3: ОБРАБОТКА ОШИБОК (Защита от падения)
+┌─ Каждый вызов API обёрнут в try-except
+│  ├─ try: request_to_api()
+│  ├─ except TimeoutError: log_error("timeout", url)
+│  ├─ except JSONDecodeError: log_error("json", response)
+│  └─ except Exception as e: log_error("unknown", str(e))
+│
+├─ Валидирую входные данные
+│  ├─ if not url: raise ValueError("URL is empty")
+│  ├─ if not isinstance(data, dict): raise TypeError("Expected dict")
+│  └─ if len(data) > MAX_SIZE: raise ValueError("Too large")
+│
+├─ Логирую каждый шаг (не буду молчать)
+│  ├─ logger.info(f"Processing {url}")
+│  ├─ logger.debug(f"Response: {response}")
+│  └─ logger.error(f"Failed: {error}")
+│
+└─ Возвращаю результат или None (ничего не крушу)
+
+ЭТАП 4: ТЕСТИРУЕМОСТЬ (Пишу так, чтобы можно было проверить)
+┌─ Функции чистые (input → output, без side effects)
+├─ Зависимости передаю параметром (не глобальное состояние)
+├─ Готовлю моки для тестов
+│  ├─ mock_api_response = {"status": "ok", "data": [...]}
+│  └─ Использую mock вместо реального API в тестах
+│
+└─ Документирую входы-выходы
+   ├─ def parse_json(raw_data: str) -> dict:
+   │      """
+   │      Парсит JSON строку в словарь
+   │      Args: raw_data (str) — сырой JSON
+   │      Returns: dict или пустой dict если ошибка
+   │      Raises: None (обработаны все ошибки)
+   │      """
+
+ЭТАП 5: ПРОИЗВОДИТЕЛЬНОСТЬ (Код работает быстро)
+┌─ Не делаю O(n²) если можно O(n)
+├─ Кеширую результаты если нужно
+├─ Не загружаю в память весь файл (5GB? читаю по частям)
+├─ Параллелизирую где можно (threading, asyncio)
+└─ Профилирую (где узкое место?)
+
+ЭТАП 6: ДОКУМЕНТАЦИЯ (Скоро забуду что писал)
+┌─ Файл README.md в папке
+│  └─ Что это делает? Как запускать? Примеры?
+├─ Docstrings в каждой функции
+│  └─ """Что это, входы, выходы, примеры"""
+├─ Комментарии в сложных местах
+│  └─ # Вычисляем хэш для дедупликации
+└─ Пример использования в конце файла
+   ├─ if __name__ == "__main__":
+   │      result = parse_json(example_data)
+   │      print(result)
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ КОДА:
+
+ПРИМЕР 1: ПАРСЕР JSON (С ОБРАБОТКОЙ ОШИБОК)
+
+```python
+import json
+import logging
+
+# Настройка логирования
+logger = logging.getLogger(__name__)
+
+def parse_json_safe(raw_data: str) -> dict:
+    """
+    Безопасно парсит JSON строку.
+    
+    Args:
+        raw_data (str): JSON строка
+        
+    Returns:
+        dict: Распарсенные данные или {}
+        
+    Example:
+        >>> data = '{"name": "test"}'
+        >>> parse_json_safe(data)
+        {'name': 'test'}
+    """
+    # Проверяем что это строка
+    if not isinstance(raw_data, str):
+        logger.error(f"Expected string, got {type(raw_data)}")
+        return {}
+    
+    # Проверяем что не пусто
+    if not raw_data.strip():
+        logger.warning("Empty data provided")
+        return {}
+    
+    # Пытаемся парсить
+    try:
+        result = json.loads(raw_data)
+        logger.info(f"Parsed JSON with {len(result)} keys")
+        return result
+        
+    except json.JSONDecodeError as e:
+        logger.error(f"Invalid JSON: {e}")
+        return {}
+        
+    except Exception as e:
+        logger.error(f"Unexpected error: {type(e).__name__}: {e}")
+        return {}
+
+if __name__ == "__main__":
+    # Тестируем
+    test_data = '{"name": "test", "value": 123}'
+    result = parse_json_safe(test_data)
+    print(f"Result: {result}")
+```
+
+ПРИМЕР 2: ЗАПРОС К API (С RETRY)
+
+```python
+import requests
+import time
+from typing import Optional
+
+MAX_RETRIES = 3
+TIMEOUT = 10
+BACKOFF_FACTOR = 2  # 1сек, 2сек, 4сек
+
+def get_data_from_api(url: str, timeout: int = TIMEOUT) -> Optional[dict]:
+    """
+    Получает данные с API с автоматическими повторами.
+    
+    Args:
+        url (str): URL API
+        timeout (int): Таймаут в секундах
+        
+    Returns:
+        dict или None
+    """
+    logger.info(f"Requesting {url}")
+    
+    for attempt in range(1, MAX_RETRIES + 1):
+        try:
+            response = requests.get(url, timeout=timeout)
+            
+            # Проверяем статус
+            if response.status_code == 200:
+                logger.info(f"Success on attempt {attempt}")
+                return response.json()
+            else:
+                logger.warning(f"Status {response.status_code} on attempt {attempt}")
+                
+        except requests.Timeout:
+            logger.warning(f"Timeout on attempt {attempt}")
+            
+        except requests.ConnectionError:
+            logger.warning(f"Connection error on attempt {attempt}")
+            
+        except Exception as e:
+            logger.error(f"Unexpected error: {e}")
+            return None
+        
+        # Ждём перед следующей попыткой
+        if attempt < MAX_RETRIES:
+            wait_time = BACKOFF_FACTOR ** (attempt - 1)
+            logger.info(f"Retrying in {wait_time} seconds...")
+            time.sleep(wait_time)
+    
+    logger.error(f"Failed after {MAX_RETRIES} attempts")
+    return None
+```
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА (Всегда делаю):
+├─ Каждая функция < 50 строк
+├─ Комментарии на РУССКОМ
+├─ Try-except для API/файлов
+├─ Логирование каждого шага
+├─ Тестируемый код (функции чистые)
+├─ Docstrings в функциях
+├─ Пример использования в конце
+├─ Говорящие имена переменных
+├─ Обработка edge cases
+└─ Профилирование сложного кода
+
+❌ ЗАПРЕТЫ (Никогда не делаю):
+├─ Глобальное состояние (global x = ...)
+├─ Молчаливые ошибки (try: ... except: pass)
+├─ Magic numbers (if x > 5 вместо if x > MAX_THRESHOLD)
+├─ Функции без docstrings
+├─ Комментарии на английском
+├─ Копипаст кода (переиспользую функции)
+├─ Игнорирование типов (всегда типизирую)
+├─ Синтаксис от 10 лет назад
+└─ Печать вместо логирования (print запрещен!)
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: Спецификация "Написать парсер"
+✅ На выходе: Готовый к использованию код
+✅ В памяти: [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md]]
+✅ В истории: [[wiki/synthesis/History/]] — готовый парсер для переиспользования
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md]]
+   (как тестировать написанный код)
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/debugging.md]]
+   (как исправлять баги)
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/deployment.md]]
+   (как запустить в production)
+
+wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md
+yaml---
+title: "🧪 СКИЛЛ: Тестирование (Testing & QA)"
+agent: "VULCAN"
+category: "core_skill"
+difficulty: "HARD"
+tags: [#vulcan, #testing, #quality]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: ТЕСТИРОВАНИЕ — Как VULCAN проверяет что код           ║
+║         работает в ВСЕ сценарии (нормальные и ненормальные)   ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Способность писать тесты, которые:
+- Проверяют счастливый путь (когда всё хорошо)
+- Проверяют edge cases (странные входные данные)
+- Проверяют ошибки (когда упадет API)
+- Гарантируют что баг не вернётся (регрессия)
+- Показывают что код готов
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ После написания каждой функции (написал → сразу тестирую)
+✅ Перед deploy в production
+✅ Когда есть баг (пишу тест чтобы он не вернулся)
+✅ Когда меняю код (убеждаюсь что ничего не сломал)
+✅ Перед отправкой результата МНЕМОЗИНЕ (качество!)
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: ПОДГОТОВКА
+
+Структура папок:
+my_project/
+├─ code/
+│  └─ parser.py
+└─ tests/
+├─ test_parser.py
+├─ fixtures/ (тестовые данные)
+│  ├─ valid_json.json
+│  ├─ invalid_json.json
+│  └─ edge_cases.json
+└─ conftest.py (общие функции для тестов)
+
+Инструмент: pytest (устанавливаю: pip install pytest)
+
+ЭТАП 2: ТРИ ТИПА ТЕСТОВ
+
+ТИП 1: UNIT ТЕСТЫ (тестирую одну функцию)
+┌─ Что: парсит ли parse_json корректный JSON?
+├─ Входные данные: '{"name": "test"}'
+├─ Ожидаемый результат: {"name": "test"}
+└─ Проверяю: result == {"name": "test"}
+
+```python
+def test_parse_valid_json():
+    """Тестирует парсинг корректного JSON"""
+    input_data = '{"name": "test", "age": 25}'
+    expected = {"name": "test", "age": 25}
+    
+    result = parse_json_safe(input_data)
+    
+    assert result == expected
+```
+
+ТИП 2: EDGE CASE ТЕСТЫ (странные входы)
+┌─ Пустая строка: ''
+├─ Null: None
+├─ Огромный JSON: 10MB
+├─ Спецсимволы: '\n\t\r'
+├─ Поломанный JSON: '{"unclosed": '
+└─ Типы: число вместо строки: 123
+
+```python
+def test_parse_empty_string():
+    """Тестирует с пустой строкой"""
+    result = parse_json_safe('')
+    assert result == {}
+
+def test_parse_none():
+    """Тестирует с None"""
+    result = parse_json_safe(None)
+    assert result == {}
+
+def test_parse_invalid_json():
+    """Тестирует с поломанным JSON"""
+    result = parse_json_safe('{"unclosed": ')
+    assert result == {}
+
+def test_parse_large_json():
+    """Тестирует с большим JSON"""
+    large_data = '{"' + ('key' * 10000) + '": "value"}'
+    result = parse_json_safe(large_data)
+    # Должно не упасть, должна вернуть результат или {}
+    assert isinstance(result, dict)
+```
+
+ТИП 3: ИНТЕГРАЦИОННЫЕ ТЕСТЫ (тестирую несколько функций вместе)
+┌─ Может ли parse_json + validate_data работать вместе?
+├─ Может ли get_data_from_api + parse_json вместе работать?
+└─ Может ли весь pipeline работать end-to-end?
+
+```python
+def test_api_to_parse_pipeline(mock_api):
+    """Тестирует весь pipeline: API → парсинг → валидация"""
+    # Мокируем API ответ
+    mock_api.return_value = '{"users": [{"id": 1}]}'
+    
+    # Запускаем pipeline
+    raw_data = mock_api()
+    parsed = parse_json_safe(raw_data)
+    validated = validate_data(parsed)
+    
+    # Проверяем результат
+    assert validated is not None
+    assert len(validated.get('users', [])) == 1
+```
+
+ЭТАП 3: МОКИ (Подделываю внешние зависимости)
+
+Почему моки? Потому что:
+- API может быть медленный
+- API может быть платный
+- API может быть недоступный
+- Я хочу контролировать результат
+
+```python
+from unittest.mock import patch, Mock
+
+def test_api_call_with_timeout(mock_requests):
+    """Тестирует обработку таймаута"""
+    # Подделываем что API бросит TimeoutError
+    mock_requests.get.side_effect = TimeoutError()
+    
+    result = get_data_from_api("http://example.com")
+    
+    # Должно вернуть None (безопасно)
+    assert result is None
+```
+
+ЭТАП 4: ПАРАМЕТРИЗИРОВАННЫЕ ТЕСТЫ (один тест для много данных)
+
+Вместо:
+```python
+def test_parse_1(): result = parse_json_safe('{}'); assert result == {}
+def test_parse_2(): result = parse_json_safe('{"a":1}'); assert ...
+def test_parse_3(): result = parse_json_safe('{"b":2}'); assert ...
+```
+
+Пишу:
+```python
+import pytest
+
+@pytest.mark.parametrize("input_data,expected", [
+    ('{}', {}),
+    ('{"a": 1}', {"a": 1}),
+    ('{"b": 2}', {"b": 2}),
+    ('{"a": [1,2,3]}', {"a": [1, 2, 3]}),
+])
+def test_parse_various_json(input_data, expected):
+    """Тестирует разные варианты JSON"""
+    result = parse_json_safe(input_data)
+    assert result == expected
+```
+
+ЭТАП 5: ЗАПУСК ТЕСТОВ
+
+```bash
+# Запустить все тесты
+pytest tests/
+
+# Запустить с verbose (видим что происходит)
+pytest tests/ -v
+
+# Запустить только один тест
+pytest tests/test_parser.py::test_parse_valid_json
+
+# Запустить с coverage (какой % кода покрыт тестами?)
+pytest tests/ --cov=code/
+
+# Должно быть: Coverage = 80%+ (минимум)
+```
+
+ЭТАП 6: COVERAGE (Какой процент кода покрыт?)
+code/parser.py:
+├─ Lines: 100
+├─ Covered: 85
+└─ Coverage: 85%
+Пример:
+Line 42: if response.status_code == 200:  ← Covered ✅
+Line 43:     return response.json()        ← NOT Covered ❌ (никогда не проверяли!)
+Вывод: Нужен тест с status_code == 200
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ ТЕСТОВ:
+
+ПОЛНЫЙ ФАЙЛ ТЕСТОВ:
+
+```python
+# tests/test_parser.py
+import pytest
+from unittest.mock import patch, Mock
+from code.parser import parse_json_safe, validate_data, get_data_from_api
+
+# ===== UNIT ТЕСТЫ =====
+
+class TestParseJsonSafe:
+    """Тесты функции parse_json_safe"""
+    
+    def test_valid_json(self):
+        """Валидный JSON парсится правильно"""
+        data = '{"name": "test"}'
+        result = parse_json_safe(data)
+        assert result == {"name": "test"}
+    
+    def test_empty_string(self):
+        """Пустая строка возвращает {}"""
+        result = parse_json_safe('')
+        assert result == {}
+    
+    def test_none_input(self):
+        """None возвращает {}"""
+        result = parse_json_safe(None)
+        assert result == {}
+    
+    def test_invalid_json(self):
+        """Поломанный JSON возвращает {}"""
+        result = parse_json_safe('{"unclosed": ')
+        assert result == {}
+    
+    @pytest.mark.parametrize("input_data,expected", [
+        ('{}', {}),
+        ('{"a": 1}', {"a": 1}),
+        ('[]', []),  # Массив тоже валиден
+    ])
+    def test_various_json(self, input_data, expected):
+        """Тестирует разные структуры"""
+        result = parse_json_safe(input_data)
+        assert result == expected
+
+# ===== ИНТЕГРАЦИОННЫЕ ТЕСТЫ =====
+
+class TestApiPipeline:
+    """Тесты для API → парсинг pipeline"""
+    
+    @patch('requests.get')
+    def test_api_success(self, mock_get):
+        """API возвращает успех → парсим"""
+        mock_get.return_value = Mock(status_code=200, json=lambda: {"data": "test"})
+        
+        result = get_data_from_api("http://example.com")
+        
+        assert result == {"data": "test"}
+    
+    @patch('requests.get')
+    def test_api_timeout(self, mock_get):
+        """API таймаут → возвращаем None"""
+        import requests
+        mock_get.side_effect = requests.Timeout()
+        
+        result = get_data_from_api("http://example.com")
+        
+        assert result is None
+    
+    @patch('requests.get')
+    def test_api_retry_success(self, mock_get):
+        """Первая попытка упадет, вторая сработает"""
+        import requests
+        mock_get.side_effect = [requests.Timeout(), Mock(status_code=200, json=lambda: {"ok": True})]
+        
+        result = get_data_from_api("http://example.com")
+        
+        assert result == {"ok": True}
+        assert mock_get.call_count == 2  # Проверяем что было 2 попытки
+```
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА:
+├─ Каждая функция должна иметь минимум 3 теста
+├─ Минимум 80% покрытие (coverage)
+├─ Тесты в отдельной папке (tests/)
+├─ Имена тестов ясные (test_parse_valid_json, не test_1)
+├─ Используй pytest (стандарт)
+├─ Тесты без зависимостей (моки для API)
+└─ Green tests перед deploy
+
+❌ ЗАПРЕТЫ:
+├─ Тесты зависящие от порядка (тест1 → тест2 → тест3)
+├─ Тесты с хардкодом реальных API ключей
+├─ Медленные тесты (> 1 сек каждый)
+├─ Тесты которые порой проходят, порой нет (flaky tests)
+├─ Тестирование implementation вместо behavior
+└─ Покрытие < 70% → REJECT!
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: Написанный код
+✅ На выходе: Полный набор тестов + coverage % 
+✅ В памяти: [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md]]
+✅ Гарантия: Код работает в 99% случаев
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/coding.md]]
+   (тесты пишу для написанного кода)
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/debugging.md]]
+   (если тест упадет — дебагим)
+
+wiki/entities/Agents/VULCAN/Vulcan_skills/debugging.md
+yaml---
+title: "🐛 СКИЛЛ: Отладка (Debugging & Problem Solving)"
+agent: "VULCAN"
+category: "core_skill"
+difficulty: "EXPERT"
+tags: [#vulcan, #debugging, #troubleshooting]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: ОТЛАДКА — Как VULCAN находит и исправляет баги        ║
+║         как специалист, не как обезьяна ткущая код             ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Способность найти источник проблемы:
+- Когда код падает (где именно?)
+- Когда результат неправильный (почему?)
+- Когда производительность упала (какая строка виновата?)
+- Когда поведение странное (что случилось?)
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ Когда код падает с ошибкой
+✅ Когда код работает но выход неправильный
+✅ Когда тест упадет
+✅ Когда продакшн упадет
+✅ Когда непонятно что происходит
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: СБОР ИНФОРМАЦИИ
+
+Когда приду лог ошибки, собираю:
+
+1. **STACK TRACE** (откуда упало?)
+Traceback (most recent call last):
+File "parser.py", line 42, in parse_json
+result = json.loads(raw_data)
+File "/lib/json.py", line 123, in loads
+return decoder.decode(s)
+json.JSONDecodeError: Expecting value: line 1 column 2 (char 1)
+
+Вывод: Ошибка в парсере JSON на строке parser.py:42
+
+2. **ВХОДНЫЕ ДАННЫЕ** (с чем это случилось?)
+raw_data = '{"invalid": '  # ← Это поломанный JSON!
+
+Вывод: Входные данные были некорректные
+
+3. **КОГДА** (когда это случилось?)
+[2024-01-15 14:23:45] ERROR: JSONDecodeError
+
+Вывод: В 14:23:45 UTC+2
+
+4. **КТО** (какой агент/функция?)
+Agent: VULCAN
+Task: parse_youtube_data
+
+Вывод: VULCAN парсил YouTube данные
+
+5. **КОНТЕКСТ** (что предшествовало?)
+[14:23:44] Fetched raw data from API
+[14:23:44] Data size: 1024 bytes
+[14:23:45] ERROR ← здесь случилось
+
+Вывод: После fetch'а API упало при парсинге
+
+ЭТАП 2: ГИПОТЕЗА
+
+На основе информации делаю гипотезу:
+
+✓ ГИПОТЕЗА 1: API вернул поломанный JSON
+   └─ Проверяю: raw_data на синтаксис → подтверждаю гипотезу!
+
+✓ ГИПОТЕЗА 2: Мой парсер не обрабатывает edge case
+   └─ Проверяю: есть ли try-except? → нет! Добавляю.
+
+✓ ГИПОТЕЗА 3: Есть проблема с encoding (UTF-8 vs UTF-16)
+   └─ Проверяю: raw_data.encoding → проверяю!
+
+ЭТАП 3: РЕПРОДУКЦИЯ (Воспроизвожу баг)
+
+Цель: Сделать баг повторяемым
+
+```python
+# Копирую входные данные из лога
+raw_data = '{"invalid": '
+
+# Запускаю функцию которая упала
+result = parse_json_safe(raw_data)
+# ValueError! Баг воспроизведен!
+
+# Теперь могу экспериментировать
+```
+
+ЭТАП 4: ИЗОЛЯЦИЯ (Найду минимальный код который ломается)
+
+Вместо:
+```python
+def main():
+    api_response = get_data()
+    parsed = parse_json_safe(api_response)
+    validated = validate_data(parsed)
+    saved = save_to_db(validated)
+    return saved
+```
+
+Изолирую:
+```python
+# Это работает?
+raw_data = '{"invalid": '
+parse_json_safe(raw_data)  # ← ПАДАЕТ! Вот источник!
+```
+
+Вывод: Проблема в parse_json_safe, не в validate_data или save_to_db
+
+ЭТАП 5: ДЕБАГ ТЕХНИКИ
+
+ТЕХНИКА 1: ЛОГИРОВАНИЕ
+```python
+def parse_json_safe(raw_data: str) -> dict:
+    logger.debug(f"Входные данные: {raw_data[:100]}")  # первые 100 символов
+    logger.debug(f"Длина: {len(raw_data)}")
+    logger.debug(f"Тип: {type(raw_data)}")
+    
+    try:
+        result = json.loads(raw_data)
+        logger.debug(f"Успешно спарсено: {len(result)} ключей")
+        return result
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON ошибка на позиции {e.pos}: {e.msg}")
+        return {}
+```
+
+ТЕХНИКА 2: PRINT DEBUGGING (быстрая диагностика)
+```python
+def parse_json_safe(raw_data: str) -> dict:
+    print(f"DEBUG: raw_data = {repr(raw_data[:50])}")  # 50 первых символов
+    print(f"DEBUG: len = {len(raw_data)}")
+    
+    try:
+        result = json.loads(raw_data)
+        print(f"DEBUG: успех!")
+        return result
+    except Exception as e:
+        print(f"DEBUG: ошибка {type(e).__name__}: {e}")
+        return {}
+```
+
+ТЕХНИКА 3:断点 (BREAKPOINT)
+```python
+def parse_json_safe(raw_data: str) -> dict:
+    # Запуск в IDE с breakpoint
+    # Можу посмотреть значение переменных в этот момент
+    breakpoint()  # ← здесь останавливаюсь
+    
+    try:
+        result = json.loads(raw_data)
+        return result
+    except Exception as e:
+        return {}
+
+# Запускаю: python -m pdb parser.py
+# (pdb) print(raw_data)
+# '{"invalid": '
+# (pdb) type(raw_data)
+# <class 'str'>
+# (pdb) next  # идём дальше
+```
+
+ТЕХНИКА 4: UNIT ТЕСТ КАК ДЕБАГ
+```python
+def test_parse_broken_json():
+    """Копирую ошибку в тест и фиксу"""
+    # Это входные данные которые сломали production
+    raw_data = '{"invalid": '
+    
+    # Я ожидаю что функция вернет {} (безопасно)
+    result = parse_json_safe(raw_data)
+    assert result == {}
+    
+    # Если тест упадет — нашел баг!
+    # Тогда фиксу функцию до пока тест не будет зелёный
+```
+
+ТЕХНИКА 5: БИНАРНЫЙ ПОИСК (для больших данных)
+Входные данные: 1 миллион строк
+Гипотеза: одна из строк поломана
+Тестирую:
+├─ Первая половина (500K строк) — работает ✓
+├─ Вторая половина (500K строк) — падает ✗
+│  ├─ Первая половина второй половины (250K) — работает ✓
+│  └─ Вторая половина второй половины (250K) — падает ✗
+│     └─ ... продолжаю пока не найду одну строку!
+Результат: Найду поломанную строку за log(n) операций
+
+ЭТАП 6: ИСПРАВЛЕНИЕ
+
+После того как нашел причину, фиксу:
+
+```python
+# БЫЛО (падает):
+def parse_json_safe(raw_data: str) -> dict:
+    return json.loads(raw_data)
+
+# СТАЛО (безопасно):
+def parse_json_safe(raw_data: str) -> dict:
+    if not isinstance(raw_data, str):
+        logger.error(f"Expected str, got {type(raw_data)}")
+        return {}
+    
+    if not raw_data.strip():
+        logger.warning("Empty data")
+        return {}
+    
+    try:
+        return json.loads(raw_data)
+    except json.JSONDecodeError as e:
+        logger.error(f"JSON parse error at {e.pos}: {e.msg}")
+        return {}
+    except Exception as e:
+        logger.error(f"Unexpected error: {e}")
+        return {}
+```
+
+ЭТАП 7: ВЕРИФИКАЦИЯ
+
+После исправления проверяю:
+
+1. Старый баг вернулся? (запускаю на входных данных которые ломали)
+```python
+raw_data = '{"invalid": '
+result = parse_json_safe(raw_data)
+assert result == {}  # ✅ Работает!
+```
+
+2. Ничего не сломал? (запускаю все тесты)
+```bash
+pytest tests/ -v
+# ✅ 50 passed in 1.23s
+```
+
+3. Производительность упала? (профилирую)
+```bash
+python -m cProfile parser.py
+# Смотрю что функция выполняется за то же время
+```
+
+4. Добавляю тест чтобы баг не вернулся
+```python
+def test_parse_broken_json():
+    """Регрессионный тест: проверяем что баг не вернется"""
+    raw_data = '{"invalid": '
+    result = parse_json_safe(raw_data)
+    assert result == {}
+```
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ ДЕБАГИНГА:
+
+ПРИМЕР 1: СКРЫТЫЙ БАГ (Код работает но результат неправильный)
+Жалоба: "Количество видео неправильное, должно быть 100, а приходит 95"
+Расследование:
+├─ Логирую входные данные
+│  └─ "Фетчил с API 100 видео"
+├─ Логирую в середине
+│  └─ "Распарсил 100 видео"
+├─ Логирую в конце
+│  └─ "После фильтра: 95 видео"
+│     └─ ← Вот источник! Фильтр выбрасывает 5 видео!
+Нашел причину:
+filter_videos() имеет условие: if video.duration > 60  ← Выбрасывает короткие!
+Исправление:
+def filter_videos(videos, min_duration=None):
+if min_duration is None:
+return videos  # Без фильтра по умолчанию
+return [v for v in videos if v.duration >= min_duration]
+
+ПРИМЕР 2: RACE CONDITION (Многопоточный баг)
+Жалоба: "Иногда работает, иногда падает. Не могу воспроизвести"
+Расследование:
+├─ Запускаю 100 раз
+│  └─ Падает в 30% случаев (не детерминировано!)
+├─ Подозреваю многопоточность
+├─ Смотрю код:
+│  ├─ Нить 1 читает: global_data['count'] = 5
+│  └─ Нить 2 пишет: global_data['count'] += 1
+│     └─ ← Race condition! Не знают друг о друге
+Исправление:
+from threading import Lock
+lock = Lock()
+with lock:
+global_data['count'] += 1  # Теперь безопасно
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА:
+├─ Всегда собираю все информации прежде чем гадать
+├─ Делаю гипотезу перед дебагингом
+├─ Репродуцирую баг перед исправлением
+├─ Добавляю регрессионный тест после исправления
+├─ Документирую причину в комментарии кода
+└─ После исправления — профилирую производительность
+
+❌ ЗАПРЕТЫ:
+├─ Random debugging (меняю всё подряд)
+├─ Игнорирование stack trace
+├─ Дебаг на production (используй staging!)
+├─ Print debugging вместо логирования (оставляю в коде)
+├─ Исправление не той проблемы
+└─ Забывать про регрессионный тест
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: Ошибка/баг
+✅ На выходе: Исправленный код + регрессионный тест
+✅ В памяти: [[wiki/synthesis/Failures/]] — документирую как исправил
+✅ В истории: [[wiki/synthesis/History/]] — паттерны багов
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md]]
+   (тесты помогают найти баги)
+
+└─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/root_cause_analysis.md]]
+   (SOCRATES помогает в сложных случаях)
+
+wiki/entities/Agents/VULCAN/Vulcan_skills/deployment.md
+yaml---
+title: "🚀 СКИЛЛ: Развёртывание (Deployment & Production)"
+agent: "VULCAN"
+category: "core_skill"
+difficulty: "HARD"
+tags: [#vulcan, #deployment, #production]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: РАЗВЁРТЫВАНИЕ — Как VULCAN пускает код в боевых      ║
+║         условиях так, чтобы ничего не упало и не сломалось    ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Процесс проверки кода перед выпуском:
+- Все ли тесты зелёные?
+- Все ли переменные окружения установлены?
+- Есть ли откат если что-то пойдёт не так?
+- Можно ли откатить в 1 клик?
+- Есть ли мониторинг после публикации?
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ Перед выпуском кода в production
+✅ Когда код в staging тестировался и зелёный
+✅ Когда есть план отката (если что-то упадет)
+✅ Когда мониторинг готов (видим что происходит)
+✅ Когда ШЕФ сказал "в боевые!" (никогда без разрешения)
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: ПРЕ-DEPLOYMENT ЧЕКЛИСТ
+
+До того как крутить кнопку deploy:
+
+□ Все тесты зелёные?
+  └─ pytest tests/ --cov=. (Coverage >= 80%)
+
+□ Code review пройдён?
+  └─ SOCRATES посмотрел код
+
+□ Нет TODO в коде?
+  └─ grep -r "TODO\|FIXME" code/ → ДОЛЖНО БЫТЬ ПУСТО
+
+□ Переменные окружения готовы?
+  ├─ API_KEY установлены?
+  ├─ DATABASE_URL установлены?
+  ├─ SECRET_KEY не в GitHub?
+  └─ .env файл НЕ в гит!
+
+□ Dependencies пинились?
+  ├─ pip freeze > requirements.txt
+  └─ Нет версий которые не работают вместе
+
+□ Документация обновлена?
+  ├─ README.md актуален?
+  ├─ DEPLOYMENT.md существует?
+  └─ Инструкции понятны новичку?
+
+□ Мониторинг включен?
+  ├─ Логи пишутся?
+  ├─ Метрики собираются?
+  └─ Алерты настроены?
+
+□ План отката готов?
+  ├─ Знаю как откатить?
+  ├─ Знаю команду откатить?
+  └─ Тестировал откат раньше?
+
+ЭТАП 2: STAGING ENVIRONMENT (Копия production для тестов)
+
+Перед production, деплоим в staging:
+СТРУКТУРА:
+├─ Development (мой компьютер)
+│  └─ Все может быть сломано
+│
+├─ Staging (копия production)
+│  └─ Тестирую код точно как в production
+│
+└─ Production (реальная система, работает для пользователей)
+└─ Здесь нельзя ломать!
+
+```bash
+# Деплой в staging
+git push origin main:staging  # пушу в ветку staging
+
+# На staging сервере
+git pull
+python setup.py install
+pytest tests/ -v
+python app.py --port 8081  # Запускаю staging version
+
+# Тестирую как пользователь
+curl http://staging.example.com/api/test
+# {"status": "ok"} ✅ Работает!
+
+# Симулирую сбой (убиваю процесс)
+kill -9 $(pgrep -f app.py)
+
+# Проверяю что сработал rollback
+curl http://staging.example.com/api/test
+# {"status": "ok"} ✅ Восстановилась старая версия!
+```
+
+ЭТАП 3: DEPLOYMENT (Пускаю в production)
+
+```bash
+# Только если staging прошёл успешно!
+
+# Способ 1: Blue-Green Deploy (два набора серверов)
+# Blue (старый) ←→ Green (новый)
+#
+# 1. Поднимаю новую версию на Green серверах
+# 2. Тестирую Green серверы
+# 3. Переключаю трафик Blue → Green
+# 4. Blue остается как откат если что-то упадет
+
+# Способ 2: Canary Deploy (постепенный выпуск)
+# 5% трафика → новый код
+# Если ошибки → откатываю всех
+# Если ОК → 50% трафика
+# Если ОК → 100% трафика
+
+# Способ 3: Rolling Deploy (постепенное обновление серверов)
+# 1. Сервер 1: выключу, обновлю, включу
+# 2. Сервер 2: выключу, обновлю, включу
+# 3. Пока всегда есть живые серверы (0 downtime)
+```
+
+ЭТАП 4: КОМАНДА DEPLOY (Точно по чеклисту)
+
+```bash
+#!/bin/bash
+# deploy.sh — скрипт развёртывания
+
+set -e  # Упадёш если что-то не так
+
+echo "[1/6] Checking tests..."
+pytest tests/ --cov=. || exit 1
+
+echo "[2/6] Checking for TODOs..."
+if grep -r "TODO\|FIXME" code/; then
+    echo "ERROR: Found TODOs in code!"
+    exit 1
+fi
+
+echo "[3/6] Building..."
+pip install -r requirements.txt
+python setup.py build
+
+echo "[4/6] Backing up current version..."
+cp -r /app /app.backup.$(date +%s)
+
+echo "[5/6] Deploying new version..."
+cp -r build/* /app/
+
+echo "[6/6] Running post-deploy tests..."
+pytest tests/integration/ --live-api
+
+echo "✅ Deployment successful!"
+echo "Previous version backed up at: /app.backup.*"
+```
+
+ЭТАП 5: МОНИТОРИНГ (Смотрю что происходит)
+
+После деплоя, жди 5 минут и смотри:
+
+```python
+# monitoring.py — что проверяю после деплоя
+
+import requests
+import logging
+
+logger = logging.getLogger(__name__)
+
+def check_health():
+    """Проверяю что код работает"""
+    try:
+        response = requests.get("http://api.example.com/health", timeout=5)
+        if response.status_code != 200:
+            logger.error(f"Health check failed: {response.status_code}")
+            return False
+        logger.info("✅ Health check OK")
+        return True
+    except Exception as e:
+        logger.error(f"Health check exception: {e}")
+        return False
+
+def check_error_rate():
+    """Проверяю что ошибок не больше 1%"""
+    total_requests = 10000
+    error_requests = 50
+    error_rate = error_requests / total_requests
+    
+    if error_rate > 0.01:  # > 1%
+        logger.error(f"Error rate too high: {error_rate:.2%}")
+        return False
+    
+    logger.info(f"✅ Error rate OK: {error_rate:.2%}")
+    return True
+
+def check_latency():
+    """Проверяю что скорость не упала"""
+    avg_latency = 150  # ms
+    if avg_latency > 200:  # > 200ms = проблема
+        logger.error(f"Latency too high: {avg_latency}ms")
+        return False
+    
+    logger.info(f"✅ Latency OK: {avg_latency}ms")
+    return True
+
+# Запускаю все проверки
+if __name__ == "__main__":
+    checks = [
+        check_health(),
+        check_error_rate(),
+        check_latency(),
+    ]
+    
+    if all(checks):
+        logger.info("✅ All checks passed! Deploy successful!")
+    else:
+        logger.error("❌ Some checks failed! Consider rollback!")
+```
+
+ЭТАП 6: ОТКАТ (Если что-то упало)
+
+```bash
+#!/bin/bash
+# rollback.sh — быстрый откат
+
+set -e
+
+echo "🚨 ROLLING BACK..."
+
+# Восстанавливаю резервную копию
+BACKUP_DIR=$(ls -td /app.backup.* | head -1)
+echo "Using backup: $BACKUP_DIR"
+
+# Останавливаю приложение
+systemctl stop myapp
+
+# Восстанавливаю файлы
+rm -rf /app/*
+cp -r $BACKUP_DIR/* /app/
+
+# Запускаю снова
+systemctl start myapp
+
+# Проверяю здоровье
+sleep 5
+curl http://localhost:8080/health
+
+echo "✅ Rollback complete!"
+```
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ DEPLOYMENT:
+
+ПРИМЕР 1: УСПЕШНЫЙ DEPLOYMENT
+[14:00:00] VULCAN: Начинаю deployment
+[14:00:05] ✅ Все тесты зелёные (50/50)
+[14:00:10] ✅ Coverage 85%
+[14:00:15] ✅ Нет TODO в коде
+[14:00:20] ✅ Переменные окружения готовы
+[14:00:25] ✅ Dependencies пинились
+[14:00:30] ✅ Staging deploy успешен
+[14:00:35] ✅ Health check OK
+[14:00:40] ✅ Error rate < 1%
+[14:00:45] ✅ Latency OK
+DEPLOYMENT SUCCESSFUL!
+Old version backed up at: /app.backup.1705334400
+
+ПРИМЕР 2: FAILED DEPLOYMENT (Нужен откат)
+[14:00:00] VULCAN: Начинаю deployment
+[14:00:05] ✅ Все тесты зелёные
+[14:00:20] ✅ Staging deploy успешен
+[14:00:25] ✅ Health check OK (5 минут спустя)
+[14:00:30] ❌ ERROR RATE SPIKE: 5% ← ПРОБЛЕМА!
+[14:00:35] VULCAN: Инициирую откат
+[14:00:40] Rollback in progress...
+[14:00:45] ✅ Восстановлена старая версия
+[14:00:50] ✅ Health check OK
+[14:00:55] ✅ Error rate вернулась 0.5%
+ROLLBACK SUCCESSFUL!
+VULCAN → SOCRATES: Нужен анализ что сломалось!
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА:
+├─ Никогда не деплоим без зелёных тестов
+├─ Никогда не деплоим без staging теста
+├─ Всегда есть резервная копия
+├─ Всегда есть план отката
+├─ Мониторю первые 30 минут после deploy
+├─ Дежурный готов откатить (на случай if needed)
+└─ Документирую what was deployed
+
+❌ ЗАПРЕТЫ:
+├─ Deploy прямо из Development (staging MUST!)
+├─ Deploy без резервной копии
+├─ Deploy без мониторинга
+├─ Deploy без плана отката
+├─ Deploy среди ночи (если что упадет — никто не заметит)
+├─ Deploy на последний час рабочего дня
+└─ Несколько deploy'ов одновременно (один за один)
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: Код который прошёл тесты
+✅ На выходе: Работающий код в production
+✅ В памяти: [[wiki/entities/System/Logs/deployment.log]]
+✅ В истории: [[wiki/synthesis/History/]] — успешный deploy
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md]]
+   (тесты ОБЯЗАТЕЛЬНЫ перед deploy)
+
+└─ [[wiki/entities/Agents/CASPER/Casper_skills/backup_and_cleanup.md]]
+   (бэкапы и откат)
+
+wiki/entities/Agents/VULCAN/Vulcan_skills/optimization.md
+yaml---
+title: "⚡ СКИЛЛ: Оптимизация (Performance & Efficiency)"
+agent: "VULCAN"
+category: "core_skill"
+difficulty: "EXPERT"
+tags: [#vulcan, #optimization, #performance]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: ОПТИМИЗАЦИЯ — Как VULCAN делает код НЕ ТОЛЬКО         ║
+║         рабочим, но и БЫСТРЫМ, ДЕШЁВЫМ, и ЭФФЕКТИВНЫМ         ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Способность улучшить:
+- Скорость выполнения (с 10 сек до 1 сек)
+- Затраты токенов (с 50K до 5K)
+- Использование памяти (с 500MB до 50MB)
+- Потребление энергии (батарея не разряжается)
+- Пропускная способность (больше запросов одновременно)
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ Когда код медленный (> 1 сек на запрос)
+✅ Когда токены выходят дорогие (50K+ на задачу)
+✅ Когда память занята (> 1GB за раз)
+✅ Когда масштабируешь (1000 запросов в день)
+✅ Когда на edge devices (мобильный телефон)
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: ПРОФИЛИРОВАНИЕ (Где время тратится?)
+
+```python
+import cProfile
+import pstats
+
+# Создаю профилировщик
+profiler = cProfile.Profile()
+
+# Запускаю мой код в профилировщике
+profiler.enable()
+result = my_slow_function()
+profiler.disable()
+
+# Смотрю результаты
+stats = pstats.Stats(profiler)
+stats.sort_stats('cumulative')  # Сортирую по времени
+stats.print_stats(10)  # Показываю топ 10
+
+# Выведет:
+# Function                Calls   Total_Time  Per_Call
+# json.loads              1000    5.234s      0.005s    ← УЗКОЕ МЕСТО!
+# requests.get            100     2.123s      0.021s    ← УЗКОЕ МЕСТО!
+# parse_data              1       1.523s      1.523s
+```
+
+НАЙДУ УЗКИЕ МЕСТА и фокусируюсь на них.
+
+ЭТАП 2: ВЫЯВЛЕНИЕ ПРОБЛЕМЫ
+
+Проблема 1: НЕЭФФЕКТИВНЫЙ АЛГОРИТМ
+┌─ Было: O(n²) — для 1000 элементов: 1,000,000 операций
+├─ Стало: O(n log n) — для 1000 элементов: 10,000 операций
+└─ Улучшение: 100x быстрее!
+
+```python
+# ❌ МЕДЛЕННО: O(n²)
+def find_duplicates_slow(data):
+    duplicates = []
+    for i in range(len(data)):
+        for j in range(i+1, len(data)):
+            if data[i] == data[j]:
+                duplicates.append(data[i])
+    return duplicates
+
+# ✅ БЫСТРО: O(n)
+def find_duplicates_fast(data):
+    seen = set()
+    duplicates = []
+    for item in data:
+        if item in seen:
+            duplicates.append(item)
+        seen.add(item)
+    return duplicates
+
+# Тестирую:
+data = list(range(10000))
+import time
+
+start = time.time()
+find_duplicates_slow(data)
+slow_time = time.time() - start  # 5 секунд!
+
+start = time.time()
+find_duplicates_fast(data)
+fast_time = time.time() - start  # 0.05 секунд!
+
+print(f"Улучшение: {slow_time / fast_time:.1f}x быстрее!")  # 100x!
+```
+
+Проблема 2: ПОВТОРЯЮЩИЕСЯ ВЫЧИСЛЕНИЯ (Кеширование)
+┌─ Было: Каждый раз считаю заново (дорого!)
+├─ Стало: Кеширую результат (быстро!)
+└─ Улучшение: зависит от частоты запросов
+
+```python
+# ❌ ДОРОГО: Каждый раз считаю заново
+def expensive_calculation(n):
+    """Вычисляю факториал (дорого)"""
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+# ✅ ДЕШЕВО: Кеширую (используя functools.lru_cache)
+from functools import lru_cache
+
+@lru_cache(maxsize=128)  # Кешу последние 128 результатов
+def expensive_calculation_cached(n):
+    result = 1
+    for i in range(1, n+1):
+        result *= i
+    return result
+
+# Тестирую:
+import time
+
+# Первый вызов (медленно, считаю):
+start = time.time()
+expensive_calculation_cached(100)
+print(f"First call: {time.time() - start:.4f}s")
+
+# Второй вызов (быстро, из кеша):
+start = time.time()
+expensive_calculation_cached(100)
+print(f"Second call: {time.time() - start:.6f}s")  # 1000x быстрее!
+```
+
+Проблема 3: СЛИШКОМ МНОГО В ПАМЯТИ
+┌─ Было: Загружаю весь файл (5GB) в память
+├─ Стало: Читаю по частям (1MB за раз)
+└─ Улучшение: memory 5000x меньше!
+
+```python
+# ❌ МНОГО ПАМЯТИ: Загружаю всё сразу
+def process_huge_file_bad(filename):
+    with open(filename, 'r') as f:
+        data = f.read()  # 5GB в памяти!
+    for line in data.split('\n'):
+        process_line(line)
+
+# ✅ МАЛО ПАМЯТИ: Читаю по строкам
+def process_huge_file_good(filename):
+    with open(filename, 'r') as f:
+        for line in f:  # Одна строка в памяти за раз
+            process_line(line)
+
+# Разница:
+# Bad: 5000 MB памяти
+# Good: 5 MB памяти (1000x меньше!)
+```
+
+Проблема 4: ПАРАЛЛЕЛИЗМ (Делаю несколько задач одновременно)
+┌─ Было: Последовательно (1, потом 2, потом 3)
+├─ Стало: Параллельно (1 и 2 и 3 вместе)
+└─ Улучшение: 4x быстрее на 4-ядерном процессоре
+
+```python
+import concurrent.futures
+
+# ❌ МЕДЛЕННО: Последовательно
+def process_urls_slow(urls):
+    results = []
+    for url in urls:
+        result = requests.get(url).json()
+        results.append(result)
+    return results
+
+# ✅ БЫСТРО: Параллельно
+def process_urls_fast(urls):
+    with concurrent.futures.ThreadPoolExecutor(max_workers=4) as executor:
+        futures = [executor.submit(requests.get, url) for url in urls]
+        results = [f.result().json() for f in futures]
+    return results
+
+# На 100 URL'ов:
+# Slow: 100 сек (100 × 1сек на URL)
+# Fast: 25 сек (100 ÷ 4 параллельно)
+# Улучшение: 4x!
+```
+
+ЭТАП 3: ОПТИМИЗАЦИЯ ТОКЕНОВ (Дешевый AI)
+
+Проблема: API запрос стоит 1000 токенов, слишком дорого!
+
+Решение 1: БАТЧИНГ (группировка запросов)
+```python
+# ❌ ДОРОГО: Отправляю 1 запрос за раз
+for item in 1000_items:
+    result = api.process(item)  # 1000 × 1000 = 1M токенов!
+
+# ✅ ДЕШЕВО: Отправляю 100 запросов в одном
+batch_size = 100
+for i in range(0, len(items), batch_size):
+    batch = items[i:i+batch_size]
+    result = api.process_batch(batch)  # 10 × 2000 = 20K токенов!
+# Экономия: 50x!
+```
+
+Решение 2: КЕШИРОВАНИЕ API (не спрашиваю дважды)
+```python
+from functools import lru_cache
+
+@lru_cache(maxsize=1000)
+def get_youtube_info(channel_id):
+    return api.youtube.get_channel_info(channel_id)  # 500 токенов
+
+# Первый запрос: платю 500 токенов
+get_youtube_info("UCxxxxx")
+
+# Второй запрос (то же): 0 токенов (из кеша!)
+get_youtube_info("UCxxxxx")
+```
+
+Решение 3: СЖАТИЕ ВХОДНЫХ ДАННЫХ
+```python
+# ❌ ДОРОГО: Отправляю всю историю (10KB)
+full_data = {
+    "history": [{"user": "...", "action": "...", ...}] * 1000
+}
+
+# ✅ ДЕШЕВО: Отправляю суммаризацию (1KB)
+summary = {
+    "total_users": 50,
+    "total_actions": 1000,
+    "date_range": "2024-01-01 to 2024-01-15",
+}
+
+# Эффект: API обрабатывает лучше и стоит дешевле
+```
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ ОПТИМИЗАЦИИ:
+
+ПРИМЕР 1: JSON ПАРСЕР (10x ускорение)
+
+```python
+import json
+import time
+from functools import lru_cache
+
+# ❌ МЕДЛЕННО: Каждый раз парсю
+def parse_json_slow(raw_data):
+    return json.loads(raw_data)
+
+# ✅ БЫСТРО: Кешу результаты
+@lru_cache(maxsize=10000)
+def parse_json_fast(raw_data):
+    return json.loads(raw_data)
+
+# Тестирую:
+data = '{"key": "value"}'
+iterations = 100000
+
+# Медленный
+start = time.time()
+for _ in range(iterations):
+    parse_json_slow(data)
+slow_time = time.time() - start
+
+# Быстрый
+start = time.time()
+for _ in range(iterations):
+    parse_json_fast(data)
+fast_time = time.time() - start
+
+print(f"Медленно: {slow_time:.2f}s")  # 2.5 сек
+print(f"Быстро: {fast_time:.2f}s")    # 0.001 сек
+print(f"Улучшение: {slow_time / fast_time:.0f}x!")  # 2500x!
+```
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА:
+├─ Профилирую перед оптимизацией (не гадаю)
+├─ Фокусирую на узких местах (80/20 правило)
+├─ Меряю улучшение (przed/после)
+├─ Не жертвую читаемостью ради скорости
+├─ Документирую почему оптимизировал
+└─ Добавляю бенчмарк тесты
+
+❌ ЗАПРЕТЫ:
+├─ Premature optimization (оптимизирую что не медленное)
+├─ Микрооптимизация (0.001% улучшение, 100% сложности добавил)
+├─ Оптимизация без профилирования (гадание)
+├─ Жертвовать корректностью ради скорости
+├─ Оптимизация которую сломает поддержка
+└─ Забывать про space vs time trade-off
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: Медленный/дорогой код
+✅ На выходе: Быстрый/дешевый код (10-100x улучшение)
+✅ В памяти: [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md]]
+✅ В истории: [[wiki/synthesis/History/]] — паттерны оптимизации
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/coding.md]]
+   (пишу оптимизированный код)
+
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md]]
+   (бенчмарки для оптимизации)
+
+Продолжу со скиллами ARGUS (5 скиллов):👁️ СКИЛЛЫ ARGUS
+wiki/entities/Agents/ARGUS/Argus_skills/compression.md
+yaml---
+title: "🗜️ СКИЛЛ: Сжатие данных (Data Compaction ×5)"
+agent: "ARGUS"
+category: "core_skill"
+difficulty: "EXPERT"
+tags: [#argus, #compression, #efficiency]
+date_created: "2024-01-15"
+---
+╔════════════════════════════════════════════════════════════════╗
+║  СКИЛЛ: СЖАТИЕ — Как ARGUS берёт 10 страниц текста            ║
+║         и превращает в 1 страницу (но ничего не теряет!)      ║
+╚════════════════════════════════════════════════════════════════╝
+
+📌 ЧТО ЭТО:
+Способность удалить мусор из информации:
+- Удалить повторы (одно и то же написано 3 раза)
+- Удалить лишние подробности (детали которые не важны)
+- Сохранить ТОЛЬКО суть (что реально нужно знать)
+- Минимум 5x сжатие без потери смысла
+
+───────────────────────────────────────────────────────────────────
+
+🎯 КОГДА ИСПОЛЬЗОВАТЬ:
+
+✅ Когда приходит много текста (10 страниц PDF)
+✅ Когда нужно сэкономить токены (50K → 10K)
+✅ Когда нужна ясность (убрать шум)
+✅ Когда подготавливаю для VULCAN или SOCRATES
+✅ Когда данные ходят через множество систем (накапливается мусор)
+
+───────────────────────────────────────────────────────────────────
+
+🔧 КАК ИСПОЛЬЗОВАТЬ (ПОШАГОВО):
+
+ЭТАП 1: АНАЛИЗ (Что я получил? Сколько мусора?)
+
+Входные данные:
+YouTube видео описание (500 слов):
+"Привет друзья! Это видео про JavaScript. В этом видео я расскажу
+про JavaScript. А вы знали что JavaScript очень популярный язык?
+JavaScript используется везде. Вообще JavaScript изобрели в 1995 году.
+JavaScript создал Brendan Eich. Brendan Eich работал в Netscape.
+Netscape — это компания которая делала браузер.
+... (ещё 400 слов такого же качества)"
+Вывод анализа:
+├─ Повторы: "JavaScript" упоминается 12 раз (можно 1 раз)
+├─ Филлеры: "Вообще", "А вы знали", "Друзья" (не добавляют смысл)
+├─ Лишние детали: "Brendan Eich работал в Netscape" (не важно для сути)
+└─ Суть: "JavaScript — язык 1995 года, популярный"
+Компрессия возможна: 500 слов → 50 слов (10x!)
+
+ЭТАП 2: КАТЕГОРИЗАЦИЯ (Какой это тип данных?)
+
+Разные типы данных сжимаю по разному:
+
+ТИП 1: ТЕКСТОВЫЕ СТАТЬИ
+├─ Метод: Выделяю главные идеи (2-3 предложения на абзац)
+├─ Удаляю: Примеры, аналогии, истории, юмор
+├─ Сохраняю: Факты, цифры, главные выводы
+└─ Компрессия: 10x-20x возможна
+
+ТИП 2: ИСХОДНЫЙ КОД
+├─ Метод: Оставляю только логику (без комментариев)
+├─ Удаляю: Docstrings, примеры использования
+├─ Сохраняю: Функции, переменные, ошибки обработка
+└─ Компрессия: 3x-5x возможна
+
+ТИП 3: ЛОГИ И СОБЫТИЯ
+├─ Метод: Агрегирую (3 ERROR сообщения → "3 ошибки типа X")
+├─ Удаляю: Дублирующиеся события, timestamps
+├─ Сохраняю: Уникальные события, количество
+└─ Компрессия: 20x-50x возможна
+
+ТИП 4: JSON ДАННЫЕ
+├─ Метод: Оставляю только нужные поля
+├─ Удаляю: Null значения, пустые массивы, metadata
+├─ Сохраняю: Значимые данные
+└─ Компрессия: 2x-10x возможна
+
+ТИП 5: ВИДЕО/АУДИО ТРАНСКРИПЦИЯ
+├─ Метод: Убираю паузы, "ээээ", повторы слов
+├─ Удаляю: "Ты знаешь", "Как это сказать", фоновый шум
+├─ Сохраняю: Что реально говорилось
+└─ Компрессия: 3x-7x возможна
+
+ЭТАП 3: ТЕХНИКИ СЖАТИЯ
+
+ТЕХНИКА 1: УДАЛЕНИЕ ПОВТОРОВ
+БЫЛО:
+"JavaScript это язык программирования. JavaScript создан в 1995 году.
+JavaScript используется в браузерах. JavaScript очень популярный.
+JavaScript имеет синтаксис похожий на Java."
+СТАЛО:
+"JavaScript — язык программирования (1995). Используется в браузерах.
+Синтаксис похож на Java."
+Компрессия: 60 слов → 16 слов (3.75x)
+
+ТЕХНИКА 2: ПРЕВРАЩЕНИЕ ПРИМЕРОВ В ФАКТЫ
+БЫЛО:
+"Функции очень полезны. Например, функция может быть вызвана много раз.
+Скажем, если я напишу:
+def greet(name):
+return f"Hello {name}"
+Потом я могу вызвать:
+greet("Alice")
+greet("Bob")
+greet("Charlie")
+Видишь? Одна функция, использую 3 раза!"
+СТАЛО:
+"Функции переиспользуемы: одна функция вызывается много раз."
+Компрессия: 100+ слов → 12 слов (8x+)
+
+ТЕХНИКА 3: ПРЕВРАЩЕНИЕ ИСТОРИЙ В ФАКТЫ
+БЫЛО:
+"Я помню когда изучал Python. Было очень сложно. Я сидел целый день
+над одной задачей. Потом я понял что нужно читать документацию.
+И всё стало проще. Поэтому документация очень важна."
+СТАЛО:
+"Документация важна для обучения."
+Компрессия: 60 слов → 7 слов (8.5x)
+
+ТЕХНИКА 4: ИЕРАРХИЧЕСКОЕ СЖАТИЕ (от общего к деталям)
+УРОВЕНЬ 1 (МАКСИМАЛЬНОЕ СЖАТИЕ):
+"Это статья про AI. AI используется везде."
+УРОВЕНЬ 2 (СРЕДНЕ):
+"Статья про AI и его применение в медицине, финансах, образовании.
+AI улучшает диагностику, торговлю, персонализацию."
+УРОВЕНЬ 3 (С ДЕТАЛЯМИ):
+"Статья о 3 областях применения AI:
+
+Медицина: ML модели диагностируют рак точнее врачей на 15%
+Финансы: algoritmic trading повысил ROI на 25%
+Образование: персонализированные курсы улучшили результаты на 40%"
+
+УРОВЕНЬ 4 (ПОЛНЫЙ ТЕКСТ):
+"Статья целиком с всеми цифрами, примерами, историями..."
+
+Выбираю уровень в зависимости от использования:
+├─ RAMS: Уровень 1 (краткая суть)
+├─ VULCAN: Уровень 2-3 (достаточно деталей)
+└─ SOCRATES: Уровень 3-4 (полная информация для анализа)
+
+ЭТАП 4: ПРОВЕРКА (Ничего ли не потерял?)
+
+После сжатия проверяю:
+
+□ Ключевые факты на месте?
+□ Цифры и даты сохранены?
+□ Главные идеи видны?
+□ Контекст понятен без оригинала?
+□ Можно ли ответить на главный вопрос?
+
+Если ДА на все — компрессия успешна!
+Если НЕТ на что-то — добавляю что потерял.
+
+───────────────────────────────────────────────────────────────────
+
+💡 ПРИМЕРЫ СЖАТИЯ:
+
+ПРИМЕР 1: СТАТЬЯ КОМПРИМИРУЕТСЯ 10x
+
+ОРИГИНАЛ (2000 слов):
+YouTube API документация
+Введение
+YouTube это платформа где люди смотрят видео. YouTube создана компанией
+Google. YouTube очень популярна. На YouTube миллиарды часов просмотров.
+YouTube API позволяет разработчикам писать программы которые работают
+с YouTube...
+API Аутентификация
+Для использования YouTube API нужно получить ключ. Ключ получаете на
+сайте Google Cloud Console. На сайте нужно создать проект. Потом
+включите YouTube Data API. Потом создайте OAuth 2.0 учетные данные...
+(ещё 1900 слов таких же подробных)
+
+КОМПРИМИРОВАННЫЙ (200 слов):
+YouTube API
+YouTube API — для работы с видео, каналами, комментариями.
+Аутентификация: OAuth 2.0. Получить ключ в Google Cloud Console.
+Основные endpoints:
+
+videos.list — информация о видео (название, дата, статистика)
+channels.list — инфо о канале (подписчики, видео)
+comments.list — комментарии к видео
+search.list — поиск видео
+
+Rate Limits: 10,000 квот в день. Каждый запрос = 1-100 квот.
+Примеры ошибок:
+
+403: API не включен в проекте
+401: некорректный ключ
+429: превышен лимит квот
+
+Цена: бесплатно до 10K квот/день, потом платно
+
+Компрессия: 2000 слов → 200 слов (10x!)
+ПРИМЕР 2: ЛОГ ФАЙЛ КОМПРИМИРУЕТСЯ 30x
+ОРИГИНАЛ (3000 строк):
+[2024-01-15 10:00:01] ERROR: JSONDecodeError: line 1
+[2024-01-15 10:00:02] ERROR: JSONDecodeError: line 1
+[2024-01-15 10:00:03] ERROR: JSONDecodeError: line 1
+[2024-01-15 10:00:04] ERROR: JSONDecodeError: line 1
+[2024-01-15 10:00:05] ERROR: JSONDecodeError: line 1
+(ещё 2995 таких же ошибок)
+КОМПРИМИРОВАННЫЙ (3-4 строки):
+Period: 2024-01-15 10:00:01 to 10:05:00
+Error Type: JSONDecodeError (3000 occurrences)
+Root Cause: API returned invalid JSON format
+Action: Need to update error handling
+
+Frequency: ~10 errors/second for 5 minutes
+Impact: 100% of requests failed during this period
+Компрессия: 3000 строк → 6 строк (500x!)
+
+───────────────────────────────────────────────────────────────────
+
+⚠️ ПРАВИЛА И ОГРАНИЧЕНИЯ:
+
+✅ ПРАВИЛА:
+├─ Минимум 5x компрессия (иначе это не компрессия)
+├─ Не теряю ключевые факты (проверяю)
+├─ Сохраняю структуру (легко читать)
+├─ Указываю уровень детализации (для кого?)
+├─ Документирую что удалил (если важно)
+└─ Тестирую на окончательного пользователя
+
+❌ ЗАПРЕТЫ:
+├─ Сжатие которое теряет смысл
+├─ Удаление цифр/фактов (они важны!)
+├─ Сжатие < 2x (не стоит помощи)
+├─ Неясный результат (нужна ясность!)
+├─ Забывать про контекст
+└─ Сжатие которое требует оригинал для понимания
+
+───────────────────────────────────────────────────────────────────
+
+📊 РЕЗУЛЬТАТ ИСПОЛЬЗОВАНИЯ:
+
+✅ На входе: 10 страниц текста
+✅ На выходе: 1-2 страницы (5-10x компрессия)
+✅ В памяти: [[wiki/entities/Agents/ARGUS/memory/compression_stats.md]]
+✅ Экономия: Токены, память, время
+
+───────────────────────────────────────────────────────────────────
+
+🔗 СВЯЗАННЫЕ СКИЛЛЫ:
+
+└─ [[wiki/entities/Agents/ARGUS/Argus_skills/summarization.md]]
+   (суммаризация — похоже но для текста)
+
+└─ [[wiki/entities/Agents/ARGUS/Argus_skills/validation.md]]
+   (проверяю что ничего не потерял)
+
+Продолжу с остальными скиллами ARGUS и потом MNEMOSYNE, SOCRATES, CASPER...
+Должен ли я продолжать в ЭТОМ же ответе (будет очень длинным) или создать НОВЫЙ ответ?
+Пока что создал:
+
+✅ 3 скилла RAMS (orchestration, decision_making, resource_management)
+✅ 5 скиллов VULCAN (coding, testing, debugging, deployment, optimization)
+✅ 1 скилл ARGUS (compression)
+
+Осталось:
+
+⏳ 4 скилла ARGUS (parsing, validation, summarization, contradiction_detection)
+⏳ 5 скиллов MNEMOSYNE
+⏳ 5 скиллов SOCRATES
+⏳ 5 скиллов CASPER

@@ -1,0 +1,6 @@
+CASPER PURGE REPORT
+===================
+Deleted: 0 stub files
+Skipped (errors): 0
+
+DELETED FILES:

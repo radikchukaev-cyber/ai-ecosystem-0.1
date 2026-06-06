@@ -1,0 +1,32 @@
+{
+  "editor:toggle-source": [
+    {
+      "modifiers": ["Mod"],
+      "key": "e"
+    }
+  ],
+  "workspace:close-window": [
+    {
+      "modifiers": ["Mod", "Shift"],
+      "key": "w"
+    }
+  ],
+  "app:open-settings": [
+    {
+      "modifiers": ["Mod"],
+      "key": ","
+    }
+  ],
+  "templater-obsidian:insert-template": [
+    {
+      "modifiers": ["Alt"],
+      "key": "t"
+    }
+  ],
+  "obsidian-excalidraw-plugin:create-new": [
+    {
+      "modifiers": ["Mod", "Alt"],
+      "key": "e"
+    }
+  ]
+}

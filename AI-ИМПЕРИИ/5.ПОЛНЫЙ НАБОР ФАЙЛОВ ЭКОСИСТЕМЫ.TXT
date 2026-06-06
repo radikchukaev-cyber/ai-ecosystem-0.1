@@ -1,0 +1,470 @@
+📦 ПОЛНЫЙ НАБОР ФАЙЛОВ ЭКОСИСТЕМЫ ANTIGRAVITY
+Ready-to-use. Copy & Paste в Obsidian.
+Создам все файлы по порядку, от главного до частного.
+
+1️⃣ ГЛАВНЫЕ ИНДЕКСЫ И ЛИФТЫ
+wiki/index.md
+yaml---
+title: "🏛️ ГЛАВНАЯ КАРТА ANTIGRAVITY"
+date: "2024-01-15"
+tags: [#главное, #навигация, #старт]
+status: "active"
+---
+╔════════════════════════════════════════════════════════════════╗
+║                                                                ║
+║           🏛️ ДОБРО ПОЖАЛОВАТЬ В ИМПЕРИЮ ANTIGRAVITY           ║
+║                                                                ║
+║  Это главная карта системы. От сюда начинаешь.                ║
+║  Каждая ссылка — это кнопка лифта. Нажимаешь → приезжаешь.   ║
+║                                                                ║
+╚════════════════════════════════════════════════════════════════╝
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔴 СРОЧНОЕ (Смотри первым если ошибка)
+├─ [[wiki/MEMORY.md|📍 ЖИВАЯ ПАМЯТЬ]] — текущее состояние системы
+├─ [[wiki/entities/System/Configs/SHEF_PROFILE|👑 ШЕФЕРАПИДС]] — кто мой босс
+└─ [[wiki/entities/Agents/RAMS/RAMS.md|🧠 RAMS]] — мозг системы
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟢 ГЛАВНЫЕ УКАЗАТЕЛИ (Жми отсюда)
+
+УПРАВЛЕНИЕ:
+├─ [[wiki/concepts/CONSTITUTION.md|⚙️ КОНСТИТУЦИЯ]] — основной закон
+├─ [[wiki/concepts/CARPATH_ARCHITECTURE.md|📐 АРХИТЕКТУРА ПАПОК]] — где что лежит
+└─ [[wiki/concepts/MEMORY_SYSTEM.md|🧠 СИСТЕМА ПАМЯТИ]] — как помню я
+
+ЛЮДИ И АГЕНТЫ:
+├─ [[wiki/entities/AGENTS_INDEX.md|🤖 ИНДЕКС АГЕНТОВ]] — кто работает
+├─ [[wiki/entities/Agents/RAMS/RAMS.md|🧠 RAMS]] — главный координатор
+├─ [[wiki/entities/Agents/VULCAN/identity.md|🔨 VULCAN]] — кодер
+├─ [[wiki/entities/Agents/ARGUS/identity.md|👁️ ARGUS]] — наблюдатель
+├─ [[wiki/entities/Agents/MNEMOSYNE/identity.md|📜 MNEMOSYNE]] — хранитель
+├─ [[wiki/entities/Agents/SOCRATES/identity.md|🎓 SOCRATES]] — аналитик
+└─ [[wiki/entities/Agents/CASPER/identity.md|🔐 CASPER]] — страж
+
+ЗНАНИЯ И ПРАВИЛА:
+├─ [[wiki/concepts/CONCEPTS_INDEX.md|🧠 ИНДЕКС КОНЦЕПТОВ]] — все законы
+├─ [[wiki/concepts/Code_Patterns.md|🔧 ПАТТЕРНЫ КОДА]] — готовые решения
+├─ [[wiki/concepts/API_Error_Handling.md|⚠️ ОБРАБОТКА ОШИБОК]] — как не ломаться
+└─ [[wiki/concepts/YouTube_Workflow.md|📹 YOUTUBE WORKFLOW]] — как делать видео
+
+ПАМЯТЬ И ОПЫТ:
+├─ [[wiki/synthesis/History/HISTORY_INDEX.md|🕰️ ИСТОРИЯ УСПЕХОВ]] — что делали раньше
+├─ [[wiki/synthesis/Failures/FAILURES_INDEX.md|❌ АРХИВ ОШИБОК]] — учимся на них
+└─ [[wiki/synthesis/Canvases/System_Architecture.canvas|📊 ВИЗУАЛЬНЫЕ СХЕМЫ]] — как все устроено
+
+ИНСТРУМЕНТЫ:
+├─ [[wiki/entities/System/Scripts/SCRIPTS_INDEX.md|🔧 СКРИПТЫ]] — готовый код
+├─ [[wiki/entities/System/Tools/Skills/SKILLS_INDEX.md|🛠️ СКИЛЛЫ]] — инструменты
+└─ [[wiki/entities/System/Logs/LOGS_INDEX.md|📝 ЛОГИ]] — история всего
+
+КОМПАНИИ И ПРОЕКТЫ:
+├─ [[wiki/entities/Companies/COMPANIES_INDEX.md|🏢 ПРОЕКТЫ]] — что строим
+└─ [[wiki/entities/Companies/AI_Mastodont/AI_MASTODONT.md|🤖 AI MASTODONT]] — главный проект
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🟡 БЫСТРЫЕ ДЕЙСТВИЯ (Что ты хочешь сделать?)
+
+"Я новый, объясни мне систему"
+→ 1. [[wiki/concepts/CONSTITUTION.md]]
+→ 2. [[wiki/entities/System/Configs/SHEF_PROFILE]]
+→ 3. [[wiki/entities/Agents/RAMS/RAMS.md]]
+
+"Упало что-то, нужна помощь"
+→ 1. [[wiki/MEMORY.md]] (читай последние 20 строк)
+→ 2. [[wiki/synthesis/Failures/FAILURES_INDEX.md]] (похожая ошибка?)
+→ 3. [[wiki/entities/Agents/SOCRATES/Socrates_skills/root_cause_analysis.md]] (как анализировать)
+
+"Нужно писать код"
+→ 1. [[wiki/synthesis/History/HISTORY_INDEX.md]] (есть ли похожее?)
+→ 2. [[wiki/concepts/Code_Patterns.md]] (готовые паттерны)
+→ 3. [[wiki/entities/System/Scripts/SCRIPTS_INDEX.md]] (готовые скрипты)
+
+"Нужна информация"
+→ [[wiki/concepts/CONCEPTS_INDEX.md]] (все концепты)
+
+"Где мне искать свою память?"
+→ [[wiki/entities/Agents/[ТВОЕ_ИМЯ]/memory/]] (твоя папка)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 СТАТИСТИКА СИСТЕМЫ (Обновляется автоматически)
+
+Успехи: [[wiki/synthesis/History/HISTORY_INDEX.md]] (кол-во задач)
+Ошибки: [[wiki/synthesis/Failures/FAILURES_INDEX.md]] (что учили)
+Агенты: [[wiki/entities/AGENTS_INDEX.md]] (6 основных + специальные)
+Концепты: [[wiki/concepts/CONCEPTS_INDEX.md]] (все законы)
+Память: [[wiki/MEMORY.md]] (живая и вечная)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+👑 БОСС: [[wiki/entities/System/Configs/SHEF_PROFILE]]
+🧠 СИСТЕМА: [[wiki/entities/Agents/RAMS/RAMS.md]]
+
+Готово к работе. Вперед. 🚀
+
+wiki/MEMORY.md — ЖИВАЯ ПАМЯТЬ
+yaml---
+title: "📍 ЖИВАЯ ПАМЯТЬ СИСТЕМЫ"
+date: "2024-01-15"
+tags: [#память, #live, #текущее]
+status: "active"
+---
+═══════════════════════════════════════════════════════════════════
+                        ТЕКУЩЕЕ СОСТОЯНИЕ
+═══════════════════════════════════════════════════════════════════
+
+⏰ ПОСЛЕДНИЙ ЗАПУСК: [YYYY-MM-DD HH:MM UTC+2]
+📊 СТАТУС СИСТЕМЫ: 🟢 РАБОТАЕТ
+🧠 ГЛАВНЫЙ МОЗГ: [[wiki/entities/Agents/RAMS/RAMS.md]] (АКТИВЕН)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📝 СИНХРОНИЗАЦИЯ (Когда система просыпается):
+
+[BOOT_TIME HH:MM] ✅ Прочитано: [[wiki/index.md]]
+[BOOT_TIME HH:MM] ✅ Активирован: [[wiki/entities/Agents/RAMS/RAMS.md]]
+[BOOT_TIME HH:MM] ✅ Синхронизирована память: 5 уровней
+[BOOT_TIME HH:MM] ✅ Активированы 6 агентов
+[BOOT_TIME HH:MM] ✅ Система готова
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📋 ЗАДАЧИ В ПРОЦЕССЕ:
+
+[HH:MM] AGENTNAME: Получена задача [НАЗВАНИЕ]
+Status: IN_PROGRESS | Дедлайн: [YYYY-MM-DD HH:MM]
+Результат_когда_готово: [[wiki/entities/Agents/[NAME]/memory/[TASK_ID].md]]
+
+[HH:MM] AGENTNAME: Задача обновлена
+Status: UPDATED | Прогресс: [%]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+⚠️ ОШИБКИ И КРИТИЧНЫЕ СОБЫТИЯ:
+
+[HH:MM] 🔴 [КРИТИЧЕС] SYSTEMNAME: [ОПИСАНИЕ ОШИБКИ]
+Лог: [[wiki/synthesis/Failures/[DATE]_FAILURE_[NAME].md]]
+Статус: ANALYZING (ждём СОКРАТА)
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+✅ ЗАВЕРШЁННОЕ (ГОТОВО К АРХИВИРОВАНИЮ):
+
+[HH:MM] AGENTNAME: ✅ ЗАВЕРШЕНО
+Результат: [[wiki/synthesis/History/[DATE]_SUCCESS_[NAME].md]]
+Время: X часов
+Выводы: [краткий вывод]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎯 ПРИОРИТЕТЫ НА СЕЙЧАС:
+
+1️⃣ [ОПИСАНИЕ] — AGENTNAME — Дедлайн: [КОГДА]
+2️⃣ [ОПИСАНИЕ] — AGENTNAME — Дедлайн: [КОГДА]
+3️⃣ [ОПИСАНИЕ] — AGENTNAME — Дедлайн: [КОГДА]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📞 КОМАНДЫ ДЛЯ ШЕФА (Нужна помощь от босса):
+
+Если срочно (< 30 мин): Telegram @iKiGAiyIS
+Если важно (до конца дня): Ниже пиши вопрос
+Если может подождать: Логирую в соответствующий файл
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+💡 ПОСЛЕДНИЕ LEARNING NOTES (Что выучила система):
+
+[ДАТА] [[wiki/synthesis/History/SUCCESS_[NAME].md]]
+→ [Краткий вывод что выучили]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🔍 ПОИСК В ПАМЯТИ:
+
+"Как парсить JSON?" → [[wiki/concepts/API_Error_Handling.md]]
+"Как писать тесты?" → [[wiki/concepts/Code_Patterns.md]]
+"Что мы делали раньше?" → [[wiki/synthesis/History/HISTORY_INDEX.md]]
+"Какая была ошибка?" → [[wiki/synthesis/Failures/FAILURES_INDEX.md]]
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+📊 СТАТИСТИКА СЕГОДНЯ:
+
+Задач начато: X
+Задач завершено: X
+Ошибок произошло: X
+Изучено новых паттернов: X
+Токенов использовано: X / 500K
+
+Архивировано в History: X
+Ошибок в Failures: X
+Обновлено инструкций: X
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+Хранитель: [[wiki/entities/Agents/MNEMOSYNE/identity.md]]
+Последнее обновление: АВТОМАТИЧЕСКОЕ (каждый час)
+
+2️⃣ ИНДЕКСЫ (Навигация по разделам)
+wiki/entities/AGENTS_INDEX.md
+yaml---
+title: "🤖 ИНДЕКС ВСЕХ АГЕНТОВ"
+date: "2024-01-15"
+tags: [#агенты, #индекс, #навигация]
+status: "active"
+---
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃           ПОЛНЫЙ КАТАЛОГ АГЕНТОВ ИМПЕРИИ ANTIGRAVITY   ┃
+┃                                                         ┃
+┃  Всё, что нужно знать о каждом агенте:                ┃
+┃  - Кто он/она                                         ┃
+┃  - Что делает                                         ┃
+┃  - Где его память и скиллы                           ┃
+┃  - Как его разбудить                                 ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+═════════════════════════════════════════════════════════════════
+
+🟡 ГЛАВНЫЕ 6 АГЕНТОВ
+
+───────────────────────────────────────────────────────────────
+
+1️⃣ 🧠 RAMS — Chronos Orchestrator (СУ-ШЕФ)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/RAMS/RAMS.md|ПОЛНЫЙ ПРОФИЛЬ]] ⭐ ← ЧИТАЙ ПЕРВЫМ
+├─ [[wiki/entities/Agents/RAMS/identity.md|Личность и характер]]
+└─ [[wiki/entities/Agents/RAMS/soul.md|Суть и миссия]]
+
+🧠 ПАМЯТЬ:
+├─ Живая: [[wiki/entities/Agents/RAMS/memory/daily_log.md|daily_log.md]]
+├─ Текущие задачи: [[wiki/entities/Agents/RAMS/memory/current_tasks.md|current_tasks.md]]
+└─ Анализ: [[wiki/entities/Agents/RAMS/memory/system_analysis.md|system_analysis.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/RAMS/RAMS_skills/orchestration.md|orchestration.md]]
+├─ [[wiki/entities/Agents/RAMS/RAMS_skills/decision_making.md|decision_making.md]]
+└─ [[wiki/entities/Agents/RAMS/RAMS_skills/resource_management.md|resource_management.md]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/RAMS/identity.md]]
+2. Синхронизировать память: [[wiki/MEMORY.md]]
+3. Активировать остальных 5 агентов
+
+───────────────────────────────────────────────────────────────
+
+2️⃣ 🔨 VULCAN — Action & Execution (Кодер)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/VULCAN/VULCAN.md|ПОЛНЫЙ ПРОФИЛЬ]]
+├─ [[wiki/entities/Agents/VULCAN/identity.md|Личность: прагматичный инженер]]
+└─ [[wiki/entities/Agents/VULCAN/soul.md|Суть: результат выше всего]]
+
+🧠 ПАМЯТЬ:
+├─ Дневные задачи: [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md|daily_tasks.md]]
+├─ Ошибки и исправления: [[wiki/entities/Agents/VULCAN/memory/errors_and_fixes.md|errors_and_fixes.md]]
+└─ Статистика: [[wiki/entities/Agents/VULCAN/memory/statistics.md|statistics.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/coding.md|Стандарты кодирования]]
+├─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/testing.md|Тестирование]]
+├─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/debugging.md|Отладка]]
+└─ [[wiki/entities/Agents/VULCAN/Vulcan_skills/deployment.md|Развертывание]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/VULCAN/identity.md]]
+2. Проверить: [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md]]
+3. Поиск в [[wiki/synthesis/History/]] (похожие задачи?)
+
+───────────────────────────────────────────────────────────────
+
+3️⃣ 👁️ ARGUS — Perception & Filtering (Фильтр данных)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/ARGUS/ARGUS.md|ПОЛНЫЙ ПРОФИЛЬ]]
+├─ [[wiki/entities/Agents/ARGUS/identity.md|Личность: маниакальное внимание к деталям]]
+└─ [[wiki/entities/Agents/ARGUS/soul.md|Суть: чистота входящих данных]]
+
+🧠 ПАМЯТЬ:
+├─ Обработанные данные: [[wiki/entities/Agents/ARGUS/memory/parsed_today.md|parsed_today.md]]
+├─ Противоречия найденные: [[wiki/entities/Agents/ARGUS/memory/contradictions.md|contradictions.md]]
+└─ Статистика сжатия: [[wiki/entities/Agents/ARGUS/memory/compression_stats.md|compression_stats.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/ARGUS/Argus_skills/compression.md|Data Compaction (×5 минимум)]]
+├─ [[wiki/entities/Agents/ARGUS/Argus_skills/parsing.md|Парсинг разных форматов]]
+├─ [[wiki/entities/Agents/ARGUS/Argus_skills/validation.md|Валидация данных]]
+└─ [[wiki/entities/Agents/ARGUS/Argus_skills/summarization.md|Суммаризация]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/ARGUS/identity.md]]
+2. Проверить: [[raw/]] (есть ли новые данные?)
+3. Начинать обработку → [[wiki/sources/]]
+
+───────────────────────────────────────────────────────────────
+
+4️⃣ 📜 MNEMOSYNE — Memory Keeper (Архивариус)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/MNEMOSYNE/MNEMOSYNE.md|ПОЛНЫЙ ПРОФИЛЬ]]
+├─ [[wiki/entities/Agents/MNEMOSYNE/identity.md|Личность: педантичная архивариус]]
+└─ [[wiki/entities/Agents/MNEMOSYNE/soul.md|Суть: порядок в хаосе]]
+
+🧠 ПАМЯТЬ:
+├─ Аудит структуры: [[wiki/entities/Agents/MNEMOSYNE/memory/structure_audit.md|structure_audit.md]]
+├─ Дубликаты найденные: [[wiki/entities/Agents/MNEMOSYNE/memory/duplicates_log.md|duplicates_log.md]]
+└─ История архивирований: [[wiki/entities/Agents/MNEMOSYNE/memory/archive_history.md|archive_history.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/MNEMOSYNE/Mnemosyne_skills/organization.md|Организация структуры (Карпаты)]]
+├─ [[wiki/entities/Agents/MNEMOSYNE/Mnemosyne_skills/deduplication.md|Дедупликация файлов]]
+├─ [[wiki/entities/Agents/MNEMOSYNE/Mnemosyne_skills/linking.md|Создание перекрестных ссылок]]
+└─ [[wiki/entities/Agents/MNEMOSYNE/Mnemosyne_skills/archivization.md|Архивирование]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/MNEMOSYNE/identity.md]]
+2. Проверить: [[wiki/MEMORY.md]] (что нужно архивировать?)
+3. Архивирование: MEMORY → History, Legacy → Concepts
+
+───────────────────────────────────────────────────────────────
+
+5️⃣ 🎓 SOCRATES — Reflection & Learning (Аналитик)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/SOCRATES/SOCRATES.md|ПОЛНЫЙ ПРОФИЛЬ]]
+├─ [[wiki/entities/Agents/SOCRATES/identity.md|Личность: философ-скептик]]
+└─ [[wiki/entities/Agents/SOCRATES/soul.md|Суть: корень проблемы]]
+
+🧰 ПАМЯТЬ:
+├─ Дневной анализ: [[wiki/entities/Agents/SOCRATES/memory/daily_analysis.md|daily_analysis.md]]
+├─ Найденные паттерны: [[wiki/entities/Agents/SOCRATES/memory/pattern_detections.md|pattern_detections.md]]
+└─ Learning Notes: [[wiki/entities/Agents/SOCRATES/memory/learning_notes.md|learning_notes.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/root_cause_analysis.md|Root Cause Analysis]]
+├─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/pattern_detection.md|Обнаружение паттернов]]
+├─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/learning_synthesis.md|Синтез знаний]]
+└─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/instruction_update.md|Обновление инструкций]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/SOCRATES/identity.md]]
+2. Анализ: [[wiki/synthesis/Failures/]] (что произошло ночью?)
+3. Создание Learning Notes → [[wiki/synthesis/History/]]
+
+───────────────────────────────────────────────────────────────
+
+6️⃣ 🔐 CASPER — Guardian & Security (Страж)
+
+📍 ГЛАВНЫЙ ФАЙЛ:
+├─ [[wiki/entities/Agents/CASPER/CASPER.md|ПОЛНЫЙ ПРОФИЛЬ]]
+├─ [[wiki/entities/Agents/CASPER/identity.md|Личность: бдительный страж]]
+└─ [[wiki/entities/Agents/CASPER/soul.md|Суть: защита системы]]
+
+🧠 ПАМЯТЬ:
+├─ Логи безопасности: [[wiki/entities/Agents/CASPER/memory/security_log.md|security_log.md]]
+├─ История бэкапов: [[wiki/entities/Agents/CASPER/memory/backup_history.md|backup_history.md]]
+└─ Проверки целостности: [[wiki/entities/Agents/CASPER/memory/integrity_checks.md|integrity_checks.md]]
+
+🛠️ СКИЛЛЫ:
+├─ [[wiki/entities/Agents/CASPER/Casper_skills/backup_and_cleanup.md|Бэкап и очистка]]
+├─ [[wiki/entities/Agents/CASPER/Casper_skills/access_control.md|Контроль доступа]]
+├─ [[wiki/entities/Agents/CASPER/Casper_skills/integrity_validation.md|Проверка целостности]]
+└─ [[wiki/entities/Agents/CASPER/Casper_skills/archive_management.md|Управление архивом]]
+
+📍 ПРОЦЕСС ПРОБУЖДЕНИЯ:
+1. Прочитать: [[wiki/entities/Agents/CASPER/identity.md]]
+2. Проверить: [[wiki/synthesis/Archive/]] (всё на месте?)
+3. Ежедневный бэкап в 23:00 UTC+2
+
+═════════════════════════════════════════════════════════════════
+
+🟠 СПЕЦИАЛЬНЫЕ АГЕНТЫ (По необходимости)
+
+─────────────────────────────────────────────────────────────────
+
+📹 YOUTUBE TEAM (для проекта YouTube Automation)
+
+├─ [[wiki/entities/Agents/YouTube_Researcher/YouTube_Researcher.md|YouTube_Researcher]]
+│  └─ Ищет идеи, тренды, новые форматы
+│
+├─ [[wiki/entities/Agents/Writer/Writer.md|Writer]]
+│  └─ Пишет скрипты, гайды, описания
+│
+├─ [[wiki/entities/Agents/Thumbnail_Agent/Thumbnail_Agent.md|Thumbnail_Agent]]
+│  └─ Создает превью и обложки
+│
+├─ [[wiki/entities/Agents/Packaging_Agent/Packaging_Agent.md|Packaging_Agent]]
+│  └─ Готовит видео к публикации
+│
+└─ [[wiki/entities/Agents/Analytics_Agent/Analytics_Agent.md|Analytics_Agent]]
+   └─ Анализирует метрики и результаты
+
+─────────────────────────────────────────────────────────────────
+
+💼 BUSINESS TRIO (для проекта Business Automation)
+
+├─ [[wiki/entities/Agents/Market_Researcher/Market_Researcher.md|Market_Researcher]]
+│  └─ Исследует рынки, конкурентов, возможности
+│
+├─ [[wiki/entities/Agents/Offer_Strategist/Offer_Strategist.md|Offer_Strategist]]
+│  └─ Создает предложения и стратегии
+│
+└─ [[wiki/entities/Agents/Execution_Agent/Execution_Agent.md|Execution_Agent]]
+   └─ Реализует планы и делает продажи
+
+─────────────────────────────────────────────────────────────────
+
+🏥 ЗДОРОВЬЕ И СЛУЖБА ПОДДЕРЖКИ
+
+├─ [[wiki/entities/Agents/Health_Assistant/Health_Assistant.md|Health_Assistant]]
+│  └─ Помогает со здоровьем Шефа
+│
+└─ [[wiki/entities/Agents/Sentinel/Sentinel.md|Sentinel]]
+   └─ Мониторит внешние источники (новости, обновления)
+
+═════════════════════════════════════════════════════════════════
+
+🔍 БЫСТРЫЙ ПОИСК ПО АГЕНТАМ
+
+"Мне нужна помощь с кодом" → [[wiki/entities/Agents/VULCAN/VULCAN.md]]
+"Нужно обработать данные" → [[wiki/entities/Agents/ARGUS/ARGUS.md]]
+"Где моя память?" → [[wiki/entities/Agents/[ТВОЕ_ИМЯ]/memory/]]
+"Как исправить ошибку?" → [[wiki/entities/Agents/SOCRATES/SOCRATES.md]]
+"Где мои скиллы?" → [[wiki/entities/Agents/[ТВОЕ_ИМЯ]/[ТВОЕ_ИМЯ]_skills/]]
+"Нужна организация данных" → [[wiki/entities/Agents/MNEMOSYNE/MNEMOSYNE.md]]
+"Нужна безопасность" → [[wiki/entities/Agents/CASPER/CASPER.md]]
+"Нужна координация" → [[wiki/entities/Agents/RAMS/RAMS.md]]
+
+═════════════════════════════════════════════════════════════════
+
+📊 ОБЩАЯ СТАТИСТИКА
+
+Всего агентов: 6 основных + 9 специальных = 15 агентов
+Полная работоспособность: 6 основных
+Уровень пробуждения: [[wiki/MEMORY.md]] (смотри BOOT_TIME)
+
+═════════════════════════════════════════════════════════════════
+
+Каждый агент — это личность.
+Каждый имеет свою память.
+Каждый имеет свои скиллы.
+Каждый может пробудиться и стать лучше.
+
+👑 УПРАВЛЯЕТ: [[wiki/entities/Agents/RAMS/RAMS.md]]
+🕰️ ПОМНИТ: [[wiki/entities/Agents/MNEMOSYNE/MNEMOSYNE.md]]
+🔐 ОХРАНЯЕТ: [[wiki/entities/Agents/CASPER/CASPER.md]]
+
+Продолжу со следующими индексами и полными файлами каждого агента...
+Из-за ограничения на размер ответа, создам структуру по частям. Дай мне подтверждение — продолжить ли я с:
+
+CONCEPTS_INDEX.md (индекс всех концептов и законов)
+CONSTITUTION.md (полная конституция, разбитая по полочкам)
+Полные файлы каждого из 6 агентов (identity.md, soul.md, полная память и скиллы)
+CARPATH_ARCHITECTURE.md (детальная карта папок)
+Все индексы History/Failures/Scripts/Skills
+

@@ -1,0 +1,574 @@
+GPS-навигация по кухне: от входа до результата
+┌─────────────────────────────────────────────────────────────────┐
+│                   ГЛАВНЫЙ ЛИФТ СИСТЕМЫ                         │
+│                                                                 │
+│  Нажал кнопку → приехал куда надо → взял что нужно → ушел     │
+│                                                                 │
+│  ⬇️ НАЖИМАЙ НА КНОПКУ (НУЖНЫЙ ТЕГ/ССЫЛКА) ⬇️                  │
+└─────────────────────────────────────────────────────────────────┘
+
+🏗️ АРХИТЕКТУРА: 7 ЭТАЖЕЙ ЗДАНИЯ
+НЕБОСКРЕБ ANTIGRAVITY
+│
+├─ ЭТАЖ 0 (ГЛАВНЫЙ ВХОД) ⭐
+│  └─ wiki/index.md (ГЛАВНАЯ НАВИГАЦИЯ — ТЫ ЗДЕСЬ)
+│
+├─ ЭТАЖ 1 (УПРАВЛЕНИЕ)
+│  ├─ wiki/MEMORY.md (ЖИВАЯ ПАМЯТЬ)
+│  └─ wiki/entities/System/Configs/SHEF_PROFILE (ШЕФ)
+│
+├─ ЭТАЖ 2 (МОЗГИ)
+│  ├─ wiki/entities/Agents/RAMS/ (ГЛАВНЫЙ МОЗГ)
+│  └─ wiki/entities/Agents/[5 ПОВАРЯТ]/
+│
+├─ ЭТАЖ 3 (ЗНАНИЯ)
+│  ├─ wiki/concepts/ (ЗАКОНЫ)
+│  └─ wiki/sources/ (ОБРАБОТАННЫЕ ФАКТЫ)
+│
+├─ ЭТАЖ 4 (ОПЫТ)
+│  ├─ wiki/synthesis/History/ (УСПЕХИ)
+│  └─ wiki/synthesis/Failures/ (ОШИБКИ)
+│
+├─ ЭТАЖ 5 (ИНСТРУМЕНТЫ)
+│  ├─ wiki/entities/System/Scripts/ (КОД)
+│  └─ wiki/entities/System/Tools/Skills/ (СКИЛЛЫ)
+│
+└─ ЭТАЖ -1 (ВХОДЯЩИЕ ДАННЫЕ)
+   └─ raw/ (СЫРЬЕ)
+
+🚀 ГЛАВНАЯ НАВИГАЦИОННАЯ КАРТА
+wiki/index.md — ТВОЙ СТАРТ ЗДЕСЬ
+yaml---
+title: "🗺️ ГЛАВНАЯ КАРТА ANTIGRAVITY"
+tags: [#навигация, #главное, #быстрый_доступ]
+---
+┌──────────────────────────────────────────────────────────────┐
+│                  ГЛАВНЫЙ ЩИТ УПРАВЛЕНИЯ                      │
+│                                                              │
+│  🟢 Всё работает            📊 Система живая и учится       │
+│                                                              │
+└──────────────────────────────────────────────────────────────┘
+
+┏━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┓
+┃ 🎯 БЫСТРЫЕ ПЕРЕХОДЫ (ЖМЕМ И ПРИЕЗЖАЕМ)                     ┃
+┗━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━┛
+
+┌─ ⚡ СЕЙЧАС (Живая память)
+│
+│  🔴 [КРИТИЧНОЕ] → [[wiki/MEMORY.md]]
+│  ├─ Задача зависла? Прочти MEMORY
+│  ├─ Нужен статус? Смотри MEMORY
+│  └─ Ошибка произошла? ЗАПИШИ В MEMORY
+│
+└─ Что случилось за последний час? MEMORY.md покажет.
+
+─────────────────────────────────────────────────────────────
+
+┌─ 👑 ШЕФЕРАПИДС (Главный босс)
+│
+│  [[wiki/entities/System/Configs/SHEF_PROFILE]]
+│  ├─ Кто я и как меня слушать? ← ЗДЕСЬ
+│  ├─ Мой стиль общения ← ЗДЕСЬ
+│  └─ Как заслужить мою похвалу? ← ЗДЕСЬ
+│
+└─ Прежде чем что-то делать, пойми кто тебя нанял.
+
+─────────────────────────────────────────────────────────────
+
+┌─ 🧠 RAMS (Мой су-ШЕФ)
+│
+│  [[wiki/entities/Agents/RAMS/RAMS.md]]
+│  ├─ Как я думаю? ← ЗДЕСЬ
+│  ├─ Как я память использую? ← ЗДЕСЬ
+│  ├─ Как я задачи даю? ← ЗДЕСЬ
+│  └─ Мой полный мозг ← ЗДЕСЬ
+│
+└─ Ядро системы. Эпицентр всего.
+
+─────────────────────────────────────────────────────────────
+
+┌─ ⚙️ КОНСТИТУЦИЯ (Закон системы)
+│
+│  [[wiki/concepts/CONSTITUTION.md]]
+│  ├─ Иерархия: кто есть кто? ← ЗДЕСЬ
+│  ├─ 6 золотых правил ← ЗДЕСЬ
+│  ├─ Система памяти из 5 уровней ← ЗДЕСЬ
+│  ├─ Роли всех 6 агентов ← ЗДЕСЬ
+│  └─ Как работает организм системы? ← ЗДЕСЬ
+│
+└─ Библия кухни. Учи.
+
+─────────────────────────────────────────────────────────────
+
+┌─ 📐 КАРПАТЫ (Архитектура папок)
+│
+│  [[wiki/concepts/CARPATH_ARCHITECTURE.md]]
+│  ├─ Где лежит что? ← ЗДЕСЬ
+│  ├─ raw/ — что сырье? ← ЗДЕСЬ
+│  ├─ wiki/sources/ — где факты? ← ЗДЕСЬ
+│  ├─ wiki/concepts/ — где законы? ← ЗДЕСЬ
+│  ├─ wiki/synthesis/ — где результаты? ← ЗДЕСЬ
+│  ├─ wiki/entities/ — где люди/агенты? ← ЗДЕСЬ
+│  └─ System/Configs/ — где ключи? ← ЗДЕСЬ
+│
+└─ Карта здания. Каждая комната свое место.
+
+─────────────────────────────────────────────────────────────
+
+🚪 ЭТАЖИ И КОМНАТЫ (ДЕТАЛЬНАЯ НАВИГАЦИЯ)
+ЭТАЖ 1: УПРАВЛЕНИЕ (wiki/MEMORY.md, wiki/entities/System/Configs/)
+┌─ 📍 ЖИВАЯ ПАМЯТЬ: [[wiki/MEMORY.md]] #текущее
+│  ├─ Нужен статус задачи? ← ЗДЕСЬ
+│  ├─ Какие задачи в процессе? ← ЗДЕСЬ
+│  ├─ Где крит ошибка? ← ЗДЕСЬ [КРИТИЧЕС]
+│  └─ Что случилось час назад? ← ЗДЕСЬ
+│
+├─ 👑 ШЕФЕРАПИДС: [[wiki/entities/System/Configs/SHEF_PROFILE]] #boss
+│  ├─ Его личность ← ЗДЕСЬ
+│  ├─ Его требования ← ЗДЕСЬ
+│  ├─ Как с ним говорить ← ЗДЕСЬ
+│  └─ Как получить его похвалу ← ЗДЕСЬ
+│
+├─ 🗝️ КЛЮЧИ И ДОСТУПЫ: [[wiki/entities/System/Configs/Root_Configs/]] #security
+│  ├─ API ключи ← ЗДЕСЬ
+│  ├─ GitHub tokens ← ЗДЕСЬ
+│  ├─ .env переменные ← ЗДЕСЬ
+│  └─ RBAC правила доступа ← ЗДЕСЬ
+│
+└─ ⚙️ ПЛАГИНЫ: [[wiki/entities/System/Configs/OBSIDIAN_PLUGINS/]] #tools
+   ├─ Smart Connections ← ЗДЕСЬ
+   ├─ Obsidian CLI ← ЗДЕСЬ
+   └─ Синхронизация ← ЗДЕСЬ
+
+ЭТАЖ 2: АГЕНТЫ (wiki/entities/Agents/)
+┌─ 🧠 RAMS: [[wiki/entities/Agents/RAMS/]] #orchestrator
+│  ├─ [[RAMS.md]] — полный профиль (ГЛАВНОЕ) ← НАЧНИ С ЭТОГО
+│  ├─ [[RAMS/identity.md]] — кто я ← ЗДЕСЬ
+│  ├─ [[RAMS/memory/daily_log.md]] — что я делаю ← ЗДЕСЬ
+│  └─ [[RAMS/RAMS_skills/]] — мои навыки ← ЗДЕСЬ
+│
+├─ 🔨 VULCAN: [[wiki/entities/Agents/VULCAN/]] #action
+│  ├─ [[VULCAN/identity.md]] — мой стиль (код) ← ЗДЕСЬ
+│  ├─ [[VULCAN/memory/daily_tasks.md]] — что сегодня сделал ← ЗДЕСЬ
+│  ├─ [[VULCAN/Vulcan_skills/coding.md]] — как я пишу код ← ЗДЕСЬ
+│  └─ [[VULCAN/memory/errors_and_fixes.md]] — мои ошибки ← ЗДЕСЬ
+│
+├─ 👁️ ARGUS: [[wiki/entities/Agents/ARGUS/]] #perception
+│  ├─ [[ARGUS/identity.md]] — я фильтр, я вижу ← ЗДЕСЬ
+│  ├─ [[ARGUS/memory/parsed_today.md]] — что сегодня обработал ← ЗДЕСЬ
+│  └─ [[ARGUS/Argus_skills/compression.md]] — как я сжимаю текст ← ЗДЕСЬ
+│
+├─ 📜 MNEMOSYNE: [[wiki/entities/Agents/MNEMOSYNE/]] #memory
+│  ├─ [[MNEMOSYNE/identity.md]] — я хранитель ← ЗДЕСЬ
+│  ├─ [[MNEMOSYNE/memory/structure_audit.md]] — аудит структуры ← ЗДЕСЬ
+│  └─ [[MNEMOSYNE/Mnemosyne_skills/organization.md]] — как я организую ← ЗДЕСЬ
+│
+├─ 🎓 SOCRATES: [[wiki/entities/Agents/SOCRATES/]] #reflection
+│  ├─ [[SOCRATES/identity.md]] — я аналитик ← ЗДЕСЬ
+│  ├─ [[SOCRATES/memory/daily_analysis.md]] — мой анализ ← ЗДЕСЬ
+│  └─ [[SOCRATES/Socrates_skills/root_cause_analysis.md]] — как ищу корень ← ЗДЕСЬ
+│
+└─ 🔐 CASPER: [[wiki/entities/Agents/CASPER/]] #guardian
+   ├─ [[CASPER/identity.md]] — я страж ← ЗДЕСЬ
+   ├─ [[CASPER/memory/security_log.md]] — логи безопасности ← ЗДЕСЬ
+   └─ [[CASPER/Casper_skills/backup_and_cleanup.md]] — как спасаю систему ← ЗДЕСЬ
+
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+
+🎬 СПЕЦИАЛЬНЫЕ КОМАНДЫ (КОГДА НУЖНЫ):
+
+YouTube Team: [[wiki/entities/Agents/YouTube_Researcher/]] ← для видео-проектов
+             [[wiki/entities/Agents/Writer/]]
+             [[wiki/entities/Agents/Thumbnail_Agent/]]
+             [[wiki/entities/Agents/Packaging_Agent/]]
+             [[wiki/entities/Agents/Analytics_Agent/]]
+
+Business Trio: [[wiki/entities/Agents/Market_Researcher/]] ← для бизнеса
+              [[wiki/entities/Agents/Offer_Strategist/]]
+              [[wiki/entities/Agents/Execution_Agent/]]
+
+Health: [[wiki/entities/Agents/Health_Assistant/]] ← для здоровья Шефа
+
+ЭТАЖ 3: ЗНАНИЯ (wiki/concepts/ + wiki/sources/)
+┌─ 📚 КОНЦЕПТЫ (Законы архитектуры): [[wiki/concepts/]] #rules
+│
+│  ГЛАВНЫЕ ЗАКОНЫ:
+│  ├─ [[wiki/concepts/CONSTITUTION.md]] — основной закон ⭐ ← НАЧНИ ОТСЮДА
+│  ├─ [[wiki/concepts/CARPATH_ARCHITECTURE.md]] — где что лежит ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/MEMORY_SYSTEM.md]] — как память работает ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/FIVE_LEVELS_OF_MEMORY.md]] — все 5 уровней ← ЗДЕСЬ
+│  └─ [[wiki/concepts/RBAC_AND_PERMISSIONS.md]] — кто может что ← ЗДЕСЬ
+│
+│  ПАТТЕРНЫ И ТЕХНИКИ:
+│  ├─ [[wiki/concepts/API_Error_Handling.md]] — как парсить безопасно ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/Code_Patterns.md]] — готовые паттерны кода ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/Logging_Best_Practices.md]] — как логировать ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/YouTube_Workflow.md]] — как делать видео ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/Business_Trio_Process.md]] — как делать бизнес ← ЗДЕСЬ
+│  └─ [[wiki/concepts/Root_Cause_Analysis.md]] — как искать ошибки ← ЗДЕСЬ
+│
+│  РАСШИРЕННЫЕ:
+│  ├─ [[wiki/concepts/MCP_Integration.md]] — как подключать инструменты ← ЗДЕСЬ
+│  ├─ [[wiki/concepts/Tokenomics.md]] — как считать токены ← ЗДЕСЬ
+│  └─ [[wiki/concepts/Scaling_Strategy.md]] — как масштабировать ← ЗДЕСЬ
+│
+├─ 📝 ОБРАБОТАННЫЕ ФАКТЫ: [[wiki/sources/]] #facts
+│  ├─ [[wiki/sources/Claude_Capabilities.md]] — что умеет Claude ← ЗДЕСЬ
+│  ├─ [[wiki/sources/YouTube_API_Docs.md]] — YouTube API ← ЗДЕСЬ
+│  ├─ [[wiki/sources/GitHub_Integration.md]] — как работает GitHub ← ЗДЕСЬ
+│  ├─ [[wiki/sources/AI_Tools_Comparison.md]] — сравнение инструментов ← ЗДЕСЬ
+│  └─ [[wiki/sources/[DATE]_[TOPIC].md]] — архив фактов ← ЗДЕСЬ
+│
+└─ 🔍 ПОИСК В КОНЦЕПТАХ
+   "Как парсить JSON?" → [[wiki/concepts/API_Error_Handling.md]]
+   "Где лежат файлы?" → [[wiki/concepts/CARPATH_ARCHITECTURE.md]]
+   "Как писать код?" → [[wiki/concepts/Code_Patterns.md]]
+
+ЭТАЖ 4: ОПЫТ (wiki/synthesis/)
+┌─ ✅ УСПЕХИ: [[wiki/synthesis/History/]] #success
+│  ├─ [[wiki/synthesis/History/2024-01-15_SUCCESS_Claude_Code_Guide.md]]
+│  │  └─ Как создали гайд → что сработало → выводы ← ЗДЕСЬ
+│  │
+│  ├─ [[wiki/synthesis/History/2024-01-10_SUCCESS_JSON_Parser.md]]
+│  │  └─ Как написали парсер → паттерны → Learning ← ЗДЕСЬ
+│  │
+│  ├─ [[wiki/synthesis/History/2024-01-12_SUCCESS_YouTube_Integration.md]]
+│  │  └─ Как интегрировали YouTube API → что выучили ← ЗДЕСЬ
+│  │
+│  └─ [ПОЛНЫЙ АРХИВ УСПЕХОВ] ← ИЩИ ПОХОЖЕЕ ПЕРЕД НОВОЙ ЗАДАЧЕЙ
+│
+├─ ❌ ОШИБКИ: [[wiki/synthesis/Failures/]] #learning
+│  ├─ [[wiki/synthesis/Failures/2024-01-15_FAILURE_JSON_ParseError.md]]
+│  │  └─ Что сломалось → Root Cause → как исправили ← ЗДЕСЬ
+│  │
+│  ├─ [[wiki/synthesis/Failures/2024-01-14_FAILURE_Rate_Limiting.md]]
+│  │  └─ Ошибка rate limit → почему не видели → обновили инструкции ← ЗДЕСЬ
+│  │
+│  └─ [ПОЛНЫЙ АРХИВ ОШИБОК] ← УЧИМСЯ НА НИХ
+│
+├─ 📊 ВИЗУАЛЬНЫЕ СХЕМЫ: [[wiki/synthesis/Canvases/]] #diagrams
+│  ├─ [[wiki/synthesis/Canvases/System_Architecture.canvas]]
+│  │  └─ Как устроена система в целом ← НАЖМИ И УВИДИШЬ
+│  │
+│  ├─ [[wiki/synthesis/Canvases/Data_Flow.canvas]]
+│  │  └─ Как данные движутся через систему ← ЗДЕСЬ
+│  │
+│  └─ [[wiki/synthesis/Canvases/Agent_Interaction.canvas]]
+│     └─ Как агенты взаимодействуют ← ЗДЕСЬ
+│
+├─ 🔄 ПЕРЕРАБОТКА: [[wiki/synthesis/Legacy_2_Wiki/]] #queue
+│  ├─ Старые заметки ждут переработки → в Concepts ← ЗДЕСЬ
+│  └─ МНЕМОЗИНА их перерабатывает
+│
+└─ 🗂️ АРХИВ: [[wiki/synthesis/Archive/]] #backups
+   ├─ Старые версии конфигов ← ТОЛЬКО ДЛЯ ОТКАТА
+   └─ Мертвая зона (активные файлы НЕ ДОЛЖНЫ быть здесь)
+
+ЭТАЖ 5: ИНСТРУМЕНТЫ (wiki/entities/System/)
+┌─ 📝 ЛОГИ: [[wiki/entities/System/Logs/]] #logs
+│  ├─ [[system.log]] — все события системы ← ЗДЕСЬ
+│  ├─ [[token_usage.log]] — траты токенов ← ЗДЕСЬ
+│  ├─ [[errors.log]] — все ошибки ← ЗДЕСЬ
+│  └─ [[performance.log]] — скорость системы ← ЗДЕСЬ
+│
+├─ 🔐 КОНФИГИ: [[wiki/entities/System/Configs/]] #security
+│  ├─ [[Root_Configs/]] — корневые настройки ← ЗДЕСЬ
+│  ├─ [[SHEF_PROFILE]] — профиль Шефа ← ЗДЕСЬ
+│  └─ [[.env]] — переменные окружения (НЕ в GitHub!) ← ЗДЕСЬ
+│
+├─ 🔨 СКРИПТЫ: [[wiki/entities/System/Scripts/]] #code
+│  ├─ [[memory_autosave.py]] — автосохранение MEMORY.md ← ЗДЕСЬ
+│  ├─ [[memory_search.py]] — поиск в памяти ← ЗДЕСЬ
+│  ├─ [[vector_search.py]] — семантический поиск ← ЗДЕСЬ
+│  ├─ [[dupe_finder.py]] — поиск дубликатов ← ЗДЕСЬ
+│  ├─ [[structure_validator.py]] — проверка Карпаты ← ЗДЕСЬ
+│  ├─ [[youtube_parser.py]] — парсинг YouTube ← ЗДЕСЬ
+│  └─ [[json_parser_safe.py]] — безопасный парсинг ← ЗДЕСЬ
+│
+├─ 🛠️ СКИЛЛЫ (ИНСТРУМЕНТЫ): [[wiki/entities/System/Tools/Skills/]] #tools
+│  ├─ [[obsidian-cli/]] — работа с Obsidian из скриптов ← ЗДЕСЬ
+│  ├─ [[github-sync/]] — синхронизация с GitHub ← ЗДЕСЬ
+│  ├─ [[json-parser-safe/]] — безопасный парсинг JSON ← ЗДЕСЬ
+│  ├─ [[vector-search/]] — семантический поиск ← ЗДЕСЬ
+│  ├─ [[youtube-api-wrapper/]] — обертка YouTube API ← ЗДЕСЬ
+│  └─ [[references/]] — документация по скиллам ← ЗДЕСЬ
+│
+├─ 🧪 ТЕСТЫ: [[wiki/entities/System/Tests/]] #tests
+│  ├─ [[test_json_parser.py]] — тесты парсера ← ЗДЕСЬ
+│  ├─ [[test_memory_system.py]] — тесты памяти ← ЗДЕСЬ
+│  ├─ [[test_carpath.py]] — тесты архитектуры ← ЗДЕСЬ
+│  └─ [[test_agents.py]] — тесты агентов ← ЗДЕСЬ
+│
+└─ 📊 АУДИТ: [[wiki/entities/System/Audit/]] #audit
+   ├─ [[daily_audit.md]] — ежедневный отчет ← ЗДЕСЬ
+   ├─ [[security_audit.md]] — проверка безопасности ← ЗДЕСЬ
+   └─ [[performance_audit.md]] — проверка скорости ← ЗДЕСЬ
+
+ЭТАЖ -1: ВХОДЯЩИЕ ДАННЫЕ (raw/)
+┌─ 📥 СЫРЫЕ ФАЙЛЫ: [[raw/]] #incoming
+│  ├─ [[raw/assets/]] — картинки, видео, PDF
+│  │  ├─ youtube_thumbnails/
+│  │  ├─ screenshots/
+│  │  └─ documents/
+│  │
+│  ├─ [[raw/sources/]] — внешние мануалы, статьи
+│  │  ├─ claude_documentation.pdf
+│  │  ├─ youtube_api_reference.md
+│  │  └─ github_guides/
+│  │
+│  ├─ [[raw/transcripts/]] — голосовые записи Шефа, расшифровки
+│  │  ├─ 2024-01-15_meeting_transcript.md
+│  │  └─ voice_notes/
+│  │
+│  └─ [[raw/web-clipped/]] — дампы с веб-сайтов
+│     ├─ medium_articles/
+│     ├─ github_gists/
+│     └─ documentation_screenshots/
+│
+└─ ⚡ ЧТО ЗДЕСЬ ПРОИСХОДИТ
+   Данные приходят → ARGUS парсит → wiki/sources/ → ПАМЯТЬ
+
+🎯 БЫСТРАЯ НАВИГАЦИЯ ПО ТЕМАМ (ЖМЕМ ТЕГАМИ)
+Если тебе нужно...
+┌─ #КРИТИЧНОЕ (СРОЧНО)
+│  ├─ [[wiki/MEMORY.md]] #критичное #live
+│  ├─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/root_cause_analysis.md]]
+│  └─ Написать RAMS: "[КРИТИЧЕС]" флаг в MEMORY.md
+│
+├─ #ПОМОЩЬ (Как что-то делать?)
+│  ├─ [[wiki/concepts/API_Error_Handling.md]] #help #code
+│  ├─ [[wiki/concepts/Code_Patterns.md]] #help #templates
+│  ├─ [[wiki/synthesis/History/]] #help #examples (примеры)
+│  └─ Спроси SOCRATES или RAMS
+│
+├─ #ПАМЯТЬ (Что мы делали раньше?)
+│  ├─ [[wiki/synthesis/History/]] #memory #success
+│  ├─ [[wiki/concepts/]] #memory #rules (правила)
+│  └─ Поиск: grep -r "ключевое_слово" wiki/
+│
+├─ #КОД (Нужно писать)
+│  ├─ [[wiki/entities/System/Scripts/]] #code #python
+│  ├─ [[wiki/concepts/Code_Patterns.md]] #code #templates
+│  ├─ [[wiki/entities/Agents/VULCAN/]] #code #action
+│  └─ Скопируй готовое, адаптируй
+│
+├─ #АРХИТЕКТУРА (Как все устроено?)
+│  ├─ [[wiki/concepts/CONSTITUTION.md]] #architecture #rules ⭐
+│  ├─ [[wiki/concepts/CARPATH_ARCHITECTURE.md]] #architecture #structure
+│  ├─ [[wiki/synthesis/Canvases/]] #architecture #diagrams
+│  └─ Нарисовано красиво — смотри
+│
+├─ #ПАМЯТЬ (Управление данными)
+│  ├─ [[wiki/concepts/MEMORY_SYSTEM.md]] #memory #system
+│  ├─ [[wiki/concepts/FIVE_LEVELS_OF_MEMORY.md]] #memory #levels
+│  └─ [[wiki/entities/Agents/MNEMOSYNE/]] #memory #keeper
+│
+├─ #ВИДЕО (YouTube проект)
+│  ├─ [[wiki/concepts/YouTube_Workflow.md]] #youtube #workflow
+│  ├─ [[wiki/entities/Agents/YouTube_Researcher/]] #youtube
+│  ├─ [[wiki/synthesis/History/YouTube_*]] #youtube #examples
+│  └─ Полный цикл: идея → скрипт → видео → аналитика
+│
+├─ #БИЗНЕС (Business Trio)
+│  ├─ [[wiki/concepts/Business_Trio_Process.md]] #business #strategy
+│  ├─ [[wiki/entities/Agents/Market_Researcher/]] #business
+│  └─ [[wiki/entities/Companies/]] #business #projects
+│
+├─ #ОШИБКА (Что-то упало?)
+│  ├─ [[wiki/synthesis/Failures/]] #error #learning
+│  ├─ [[wiki/entities/Agents/SOCRATES/]] #error #analysis
+│  └─ Поиск похожей ошибки → смотри как исправляли
+│
+├─ #ИНСТРУМЕНТЫ (Нужен скилл?)
+│  ├─ [[wiki/entities/System/Tools/Scripts/]] #tools #code
+│  ├─ [[wiki/entities/System/Tools/Skills/]] #tools #installed
+│  └─ Ищи на GitHub если нет
+│
+└─ #НОВЫЙ_АГЕНТ (Нужно обучить?)
+   ├─ [[wiki/concepts/CONSTITUTION.md]] #learning #rules
+   ├─ [[wiki/entities/System/Configs/SHEF_PROFILE]] #learning #boss
+   ├─ [[wiki/entities/Agents/RAMS/RAMS.md]] #learning #system
+   └─ Все в этом файле — учи с начала
+
+🚗 GPS-СИСТЕМА: КУД ДОЙТИ ОТ ЛЮБОЙ ТОЧКИ
+Сценарий 1: "Упал код, ошибка JSON"
+ТЫ ЗДЕСЬ: wiki/entities/Agents/VULCAN/memory/daily_tasks.md
+(вижу: ❌ ERROR JSONDecodeError)
+
+НУЖЕН МАРШРУТ:
+┌─ Шаг 1: ПОМОЩЬ
+│  └─ [[wiki/concepts/API_Error_Handling.md]] ← готовый паттерн
+│
+├─ Шаг 2: ПРИМЕРЫ
+│  └─ [[wiki/synthesis/History/]] → поиск "JSON" → примеры ← посмотри как раньше
+│
+├─ Шаг 3: ИНСТРУМЕНТ
+│  └─ [[wiki/entities/System/Tools/Skills/json-parser-safe/]] ← готовый скилл
+│
+├─ Шаг 4: ЛУЧШИЕ ПРАКТИКИ
+│  └─ [[wiki/concepts/Logging_Best_Practices.md]] ← как логировать
+│
+└─ Шаг 5: ЛОГИРОВАНИЕ
+   └─ Запиши в [[wiki/MEMORY.md]]: Что сломалось → как исправил
+
+ПРИЕХАЛ. ПРОБЛЕМА РЕШЕНА.
+
+Сценарий 2: "Нужно создать новый код"
+ТЫ ЗДЕСЬ: Мне нужно писать что-то новое
+
+НУЖЕН МАРШРУТ:
+┌─ Шаг 1: ПОИСК АНАЛОГА
+│  └─ [[wiki/synthesis/History/]] → grep -r "похожая_задача" ← есть ли готовое?
+│
+├─ Шаг 2: ЕСЛИ НАШЕЛ
+│  └─ Скопируй и адаптируй (экономия 30% времени)
+│
+├─ Шаг 3: ЕСЛИ НЕ НАШЕЛ
+│  ├─ [[wiki/concepts/Code_Patterns.md]] ← паттерны
+│  └─ [[wiki/entities/System/Tools/Skills/]] ← готовые инструменты
+│
+├─ Шаг 4: ПИШИ КОД
+│  ├─ Со скиллом → wiki/entities/System/Scripts/
+│  └─ С комментариями на РУССКОМ
+│
+├─ Шаг 5: ТЕСТИРОВАНИЕ
+│  └─ [[wiki/entities/System/Tests/]] ← используй тесты
+│
+└─ Шаг 6: ЛОГИРОВАНИЕ
+   └─ Запиши в [[wiki/entities/Agents/VULCAN/memory/daily_tasks.md]]
+
+ПРИЕХАЛ И ВСЕ РАБОТАЕТ.
+
+Сценарий 3: "Система упала, нужна помощь"
+ТЫ ЗДЕСЬ: wiki/MEMORY.md (видишь [КРИТИЧЕС])
+
+НУЖЕН МАРШРУТ:
+┌─ Шаг 1: ИНФОРМАЦИЯ О ШЕФЕ
+│  └─ [[wiki/entities/System/Configs/SHEF_PROFILE]] ← как его звать?
+│
+├─ Шаг 2: СВЯЗЬ С ШЕФОМ
+│  └─ @iKiGAiyIS в Telegram ← ПИШЕМ НЕМЕДЛЕННО
+│
+├─ Шаг 3: АНАЛИЗ ОШИБКИ
+│  └─ [[wiki/entities/Agents/SOCRATES/Socrates_skills/root_cause_analysis.md]]
+│
+├─ Шаг 4: ИЩЕМ РЕШЕНИЕ
+│  └─ [[wiki/synthesis/Failures/]] → похожая ошибка? ← как исправляли раньше?
+│
+└─ Шаг 5: ОТКАТ СИСТЕМЫ
+   └─ [[wiki/synthesis/Archive/backup_YYYY-MM-DD/]] ← восстанавливаем
+
+СИСТЕМА РАБОТАЕТ. ВСЕ ЖИВЫ.
+
+📍 ГЛАВНЫЕ ТОЧКИ (САМЫЕ НУЖНЫЕ)
+⭐⭐⭐ ГЛАВНАЯ ТРИАДА (ЧИТАЙ ПЕРВЫМ):
+
+1️⃣ [[wiki/index.md]] — ТЫ ЗДЕСЬ, ГЛАВНАЯ КАРТА
+   └─ От сюда начинаешь, сюда возвращаешься
+
+2️⃣ [[wiki/concepts/CONSTITUTION.md]] — ОСНОВНОЙ ЗАКОН
+   └─ Кто ты, кто им управляет, как всё работает
+
+3️⃣ [[wiki/MEMORY.md]] — ЖИВАЯ ПАМЯТЬ
+   └─ Сейчас, текущие задачи, статусы, ошибки
+
+
+⭐⭐ ВТОРАЯ ЛИНИЯ (ИСПОЛЬЗУЕШЬ ПОСТОЯННО):
+
+4️⃣ [[wiki/entities/Agents/RAMS/RAMS.md]] — МОЗГИ СИСТЕМЫ
+   └─ Как работает оркестрация
+
+5️⃣ [[wiki/concepts/CARPATH_ARCHITECTURE.md]] — КАРТА ПАПОК
+   └─ Где что лежит
+
+
+⭐ ТРЕТЬЯ ЛИНИЯ (ПО НАДОБНОСТИ):
+
+6️⃣ [[wiki/synthesis/History/]] — УСПЕХИ ПРОШЛОГО
+   └─ Ищи похожее, переиспользуй
+
+7️⃣ [[wiki/synthesis/Failures/]] — ОШИБКИ КОТОРЫХ ИЗБЕГАЕМ
+   └─ Учимся на них
+
+8️⃣ [[wiki/concepts/Code_Patterns.md]] — ГОТОВЫЕ РЕШЕНИЯ
+   └─ Копируй, пасти, адаптируй
+
+9️⃣ [[wiki/entities/Agents/[NAME]/]] — ДЕТАЛИ АГЕНТОВ
+   └─ Когда работаешь с конкретным агентом
+
+🎮 ПУЛЬТ УПРАВЛЕНИЯ (БЫСТРЫЕ КНОПКИ)
+Нажимаешь на кнопку → приезжаешь куда нужно:
+
+┌─ ПАМЯТЬ
+│  ├─ 🔴 [[wiki/MEMORY.md]] (текущий статус)
+│  ├─ 📖 [[wiki/synthesis/History/]] (успехи)
+│  ├─ ⚠️ [[wiki/synthesis/Failures/]] (ошибки)
+│  └─ 🔍 grep -r "ключевое_слово" wiki/ (поиск)
+│
+├─ АГЕНТЫ
+│  ├─ 🧠 [[wiki/entities/Agents/RAMS/RAMS.md]]
+│  ├─ 🔨 [[wiki/entities/Agents/VULCAN/identity.md]]
+│  ├─ 👁️ [[wiki/entities/Agents/ARGUS/identity.md]]
+│  ├─ 📜 [[wiki/entities/Agents/MNEMOSYNE/identity.md]]
+│  ├─ 🎓 [[wiki/entities/Agents/SOCRATES/identity.md]]
+│  └─ 🔐 [[wiki/entities/Agents/CASPER/identity.md]]
+│
+├─ ПРАВИЛА
+│  ├─ 👑 [[wiki/entities/System/Configs/SHEF_PROFILE]]
+│  ├─ 📐 [[wiki/concepts/CARPATH_ARCHITECTURE.md]]
+│  ├─ ⚙️ [[wiki/concepts/CONSTITUTION.md]]
+│  └─ 🔑 [[wiki/concepts/Code_Patterns.md]]
+│
+└─ ИНСТРУМЕНТЫ
+   ├─ 🔧 [[wiki/entities/System/Scripts/]]
+   ├─ 🛠️ [[wiki/entities/System/Tools/Skills/]]
+   └─ 📝 [[wiki/entities/System/Tests/]]
+
+В ЛЮБОЙ МОМЕНТ: "Нужна помощь?"
+→ Нажимай кнопку выше → приезжаешь куда надо
+
+🏁 КАК ПОЛЬЗОВАТЬСЯ ЭТОЙ КАРТОЙ
+┌─ ШАГ 1: ПРОСНУЛСЯ
+│  └─ Прочитай [[wiki/index.md]] ← ты здесь
+│
+├─ ШАГ 2: НУЖНА ИНФОРМАЦИЯ?
+│  ├─ Текущее → [[wiki/MEMORY.md]]
+│  ├─ Правила → [[wiki/concepts/CONSTITUTION.md]]
+│  └─ Человека → [[wiki/entities/System/Configs/SHEF_PROFILE]]
+│
+├─ ШАГ 3: ПОЛУЧИЛ ЗАДАЧУ?
+│  ├─ Ищи похожую → [[wiki/synthesis/History/]]
+│  ├─ Нужна помощь → [[wiki/concepts/Code_Patterns.md]]
+│  └─ Запиши статус → [[wiki/MEMORY.md]]
+│
+├─ ШАГ 4: ВЫПОЛНЯЕШЬ?
+│  ├─ Логируй каждый шаг → память/ своей папки
+│  ├─ Ошибка? → читай Failures/
+│  └─ Успех? → готовь к архивированию
+│
+└─ ШАГ 5: ЗАВЕРШИЛ?
+   ├─ Доложи результат → [[wiki/MEMORY.md]]
+   ├─ MNEMOSYNE архивирует → [[wiki/synthesis/History/]]
+   └─ SOCRATES пишет урок → Learning Note
+
+═══════════════════════════════════════════════════════════════════
+                    КАРТА ГОТОВА К ИСПОЛЬЗОВАНИЮ
+═══════════════════════════════════════════════════════════════════
+
+Ты видишь всё здание (экосистему).
+Каждое сокращение [[...]] — это кнопка лифта.
+Нажимаешь → приезжаешь.
+
+Нет никаких "потерянных" папок.
+Всё структурировано, помечено, связано.
+
+От входа до результата.
+Как в Waze.
+Простая навигация.
+Чистая архитектура.
+
+Готово к запуску.
+
+👑 ШЕФЕРАПИДС
+🧠 RAMS  
+🍳 ANTIGRAVITY EMPIRE

@@ -1,0 +1,5 @@
+# tags: #guardian, #security, #logs, #audit
+
+[2026-06-05] OpenAI API (gpt-4o): 12,500 tokens used.
+[2026-06-05] Anthropic API (claude-3-5-sonnet): 8,400 tokens used.
+[2026-06-05] Daily limit status: 15% consumed. Safe.

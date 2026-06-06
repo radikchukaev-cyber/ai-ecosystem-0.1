@@ -1,0 +1,284 @@
+{
+  "main": {
+    "id": "ceed2507ff4cffe2",
+    "type": "split",
+    "children": [
+      {
+        "id": "90f366ba386f9781",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "62d140decd86885a",
+            "type": "leaf",
+            "state": {
+              "type": "localgraph",
+              "state": {
+                "file": "wiki/entities/System/Logs/LOGS_INDEX.md",
+                "options": {
+                  "collapse-filter": true,
+                  "search": "",
+                  "localJumps": 1,
+                  "localBacklinks": true,
+                  "localForelinks": true,
+                  "localInterlinks": false,
+                  "showTags": false,
+                  "showAttachments": false,
+                  "hideUnresolved": false,
+                  "collapse-color-groups": true,
+                  "colorGroups": [],
+                  "collapse-display": true,
+                  "showArrow": false,
+                  "textFadeMultiplier": 0,
+                  "nodeSizeMultiplier": 1,
+                  "lineSizeMultiplier": 1,
+                  "collapse-forces": true,
+                  "centerStrength": 0.518713248970312,
+                  "repelStrength": 10,
+                  "linkStrength": 1,
+                  "linkDistance": 250,
+                  "scale": 1,
+                  "close": false
+                }
+              },
+              "icon": "lucide-git-fork",
+              "title": "גרף של LOGS_INDEX"
+            }
+          },
+          {
+            "id": "1440fd9ea77a44ac",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/entities/System/Logs/LOGS_INDEX.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "LOGS_INDEX"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "e10b01d6888d4853",
+    "type": "split",
+    "children": [
+      {
+        "id": "e7d9332a9c117f4e",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "ebe2e35835724f62",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical",
+                "autoReveal": false
+              },
+              "icon": "lucide-folder-closed",
+              "title": "סייר קבצים"
+            }
+          },
+          {
+            "id": "f5ef0a6448f1b05e",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "Memory_System_Diagram",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              },
+              "icon": "lucide-search",
+              "title": "לחפש"
+            }
+          },
+          {
+            "id": "7fd5f165c2e7a8cd",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {},
+              "icon": "lucide-bookmark",
+              "title": "סימניות"
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 200
+  },
+  "right": {
+    "id": "a3b770aac90f59a9",
+    "type": "split",
+    "children": [
+      {
+        "id": "026b4f82b91b21cb",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "000fe58d80af921b",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "wiki/entities/System/Logs/LOGS_INDEX.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-coming-in",
+              "title": "קישורים נכנסים עבור LOGS_INDEX"
+            }
+          },
+          {
+            "id": "573b023ba3b7aedf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "wiki/entities/System/Logs/LOGS_INDEX.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              },
+              "icon": "links-going-out",
+              "title": "קישורים יוצאים מ-LOGS_INDEX"
+            }
+          },
+          {
+            "id": "23408ea2e719cbce",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-tags",
+              "title": "תגים"
+            }
+          },
+          {
+            "id": "bd079ecc314ddb99",
+            "type": "leaf",
+            "state": {
+              "type": "all-properties",
+              "state": {
+                "sortOrder": "frequency",
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-archive",
+              "title": "כל המאפיינים"
+            }
+          },
+          {
+            "id": "b0aa903a9d56a6e8",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "wiki/entities/System/Logs/LOGS_INDEX.md",
+                "followCursor": false,
+                "showSearch": false,
+                "searchQuery": ""
+              },
+              "icon": "lucide-list",
+              "title": "מתאר של LOGS_INDEX"
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:פתח את המחליף המהיר": false,
+      "graph:פתח תצוגת גרף": false,
+      "canvas:צור קנבס חדש": false,
+      "daily-notes:פתח את ההערה של היום": false,
+      "templates:הכנס תבנית": false,
+      "command-palette:פתח את לוח הפקודות": false,
+      "bases:צור בסיס חדש": false
+    }
+  },
+  "active": "1440fd9ea77a44ac",
+  "lastOpenFiles": [
+    "START_MEMORY_DAEMON.bat",
+    "wiki/templates/COMPANY_BRIEF_TEMPLATE.md",
+    "wiki/entities/Companies/COMPANIES_INDEX.md",
+    "wiki/synthesis/Failures/2026-06-06_FAILURE_Canvas_Hallucination.md",
+    "scratch/canvas_extracted_lore.md",
+    "wiki/entities/Agents/VULCAN/memory/task_telegram_gateway.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/15.Casper.Awakening/Cabinet.Casper/Casper.TOOLS.md/LAWSA.TOOLS.md",
+    "wiki/entities/System/Logs/LOGS_INDEX.md",
+    "wiki/templates/README.md",
+    "wiki/entities/Agents/CASPER/CASPER.md",
+    "wiki/entities/Agents/Market_Researcher/identity.md",
+    "wiki/index.md",
+    "wiki/entities/Agents/AGENTS_INDEX.md",
+    "wiki/entities/System/SYSTEM_INDEX.md",
+    "wiki/sources/GitHub_Integration.md",
+    "scratch/fix_canvases.py",
+    "scratch",
+    "wiki/synthesis/Canvases/CANVAS_INDEX.md",
+    "wiki/synthesis/Canvases/CANVASES_INDEX.md",
+    "wiki/synthesis/Canvases/Error_Handling_Flowchart.canvas",
+    "wiki/synthesis/Canvases/Growth_Trajectory.canvas",
+    "Learning_Patterns.md",
+    "wiki/synthesis/Canvases/Future_Vision.canvas",
+    "wiki/synthesis/Canvases/Recovery_Process.canvas",
+    "wiki/synthesis/Canvases/Risk_Matrix.canvas",
+    "wiki/synthesis/Canvases/Resource_Allocation.canvas",
+    "wiki/synthesis/Canvases/Workflow_Pipeline.canvas",
+    "wiki/synthesis/Canvases/Memory_System_Diagram.canvas",
+    "wiki/synthesis/Canvases/Decision_Tree.canvas",
+    "wiki/synthesis/History/HISTORY_INDEX.md",
+    "wiki/entities/System/Scripts/SCRIPTS_INDEX.md",
+    "wiki/sources/SOURCES_INDEX.md",
+    "wiki/concepts/CONCEPTS_INDEX.md",
+    "MCP_Integration.md",
+    "wiki/synthesis/Canvases/Canvases.md",
+    "wiki/synthesis/Canvases/Team_Structure.canvas",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/fly.toml",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/Dockerfile",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/requirements.txt",
+    "wiki/entities/Agents/Analytics_Agent/identity.md",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/test_send.py",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/gateway.py",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/README.md",
+    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway",
+    "wiki/entities/System/Tools/Skills/notebooklm-workflows/WORKFLOW_2_NAME.json",
+    "wiki/entities/System/Tools/Skills/notebooklm-workflows/WORKFLOW_1_NAME.json",
+    "wiki/raw/assets/vulcan_coder_banner_1780677705301.png",
+    "wiki/raw/assets/socrates_analyst_banner_1780677823509.png",
+    "wiki/raw/assets/rams_orchestrator_banner_1780677657743.png",
+    "wiki/raw/assets/casper_guardian_banner_1780677846881.png",
+    "wiki/raw/assets/argus_parser_banner_1780677805620.png",
+    "raw/assets/casper_banner.png",
+    "raw/assets/socrates_banner.png",
+    "raw/assets/argus_banner.png",
+    "raw/assets/vulcan_banner.png",
+    "raw/assets/rams_banner.png"
+  ]
+}

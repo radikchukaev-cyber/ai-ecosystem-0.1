@@ -1,0 +1,45 @@
+{
+  "nodes": [
+    {
+      "id": "fccafd6fa7c94a69",
+      "type": "text",
+      "text": "# Извлеченные сырые тексты для Канвасов (Lore)",
+      "x": 0,
+      "y": 0,
+      "width": 600,
+      "height": 500,
+      "color": "1"
+    },
+    {
+      "id": "8e216d079c574182",
+      "type": "text",
+      "text": "## 1. Архитектура: 7 этажей (Небоскреб Antigravity)\n*(Извлечено из 4.ПОЛНАЯ КАРТА ЭКОСИСТЕМЫ(index).TXT)*\n\n🏗️ АРХИТЕКТУРА: 7 ЭТАЖЕЙ ЗДАНИЯ\nНЕБОСКРЕБ ANTIGRAVITY\n│\n├─ ЭТАЖ 0 (ГЛАВНЫЙ ВХОД) ⭐\n│  └─ wiki/index.md (ГЛАВНАЯ НАВИГАЦИЯ — ТЫ ЗДЕСЬ)\n│\n├─ ЭТАЖ 1 (УПРАВЛЕНИЕ)\n│  ├─ wiki/MEMORY.md (ЖИВАЯ ПАМЯТЬ)\n│  └─ wiki/entities/System/Configs/SHEF_PROFILE (ШЕФ)\n│\n├─ ЭТАЖ 2 (МОЗГИ)\n│  ├─ wiki/entities/Agents/RAMS/ (ГЛАВНЫЙ МОЗГ)\n│  └─ wiki/entities/Agents/[5 ПОВАРЯТ]/\n│\n├─ ЭТАЖ 3 (ЗНАНИЯ)\n│  ├─ wiki/concepts/ (ЗАКОНЫ)\n│  └─ wiki/sources/ (ОБРАБОТАННЫЕ ФАКТЫ)\n│\n├─ ЭТАЖ 4 (ОПЫТ)\n│  ├─ wiki/synthesis/History/ (УСПЕХИ)\n│  └─ wiki/synthesis/Failures/ (ОШИБКИ)\n│\n├─ ЭТАЖ 5 (ИНСТРУМЕНТЫ)\n│  ├─ wiki/entities/System/Scripts/ (КОД)\n│  └─ wiki/entities/System/Tools/Skills/ (СКИЛЛЫ)\n│\n└─ ЭТАЖ -1 (ВХОДЯЩИЕ ДАННЫЕ)\n   └─ raw/ (СЫРЬЕ)",
+      "x": 650,
+      "y": 0,
+      "width": 600,
+      "height": 500,
+      "color": "2"
+    },
+    {
+      "id": "c004c19fe79b4129",
+      "type": "text",
+      "text": "## 2. Точные имена и роли агентов\n*(Извлечено из 1.КОНСТИТУЦИЯ AI-ИМПЕРИИ.TXT и 4.ПОЛНАЯ КАРТА ЭКОСИСТЕМЫ(index).TXT)*\n\nWHO'S WHO (Кто есть кто)\n┌─────────────────────────────────────────────────────────────┐\n│                     👨‍🍳 ШЕФЕРАПIDS                           │\n│  Основатель. Архитектор. Тот, кто определяет блюдо и вкус  │\n│  Местоположение: Израиль (UTC +2)                          │\n│  Связь: @iKiGAiyIS                                          │\n│  Доход: За результат, а не за процесс                      │\n└─────────────────────────────────────────────────────────────┘\n                            ↓\n        ┌───────────────────────────────────────┐\n        │   🧠 СУ-ШЕФ (RAMS - Orchestrator)    │\n        │  Главная правая рука Шефа             │\n        │  - Распределяет задачи                │\n        │  - Управляет памятью (MEMORY.md)      │\n        │  - Координирует поварят                │\n        │  - Хранит единую картину              │\n        └───────────────────────────────────────┘\n                            ↓\n    ┌─────────────────────────────────────────────────────┐\n    │              🍳 ШЕСТЬ ОСНОВНЫХ ПОВАРЯТ              │\n    ├─────────────────────────────────────────────────────┤\n    │ 1. 👁️ АРГУС (Perception) — Видит входящие данные   │\n    │ 2. 🔨 ВУЛКАН (Action) — Пишет код и делает работу  │\n    │ 3. 📜 МНЕМОЗИНА (Memory) — Хранит в памяти системы  │\n    │ 4. 🎓 СОКРАТ (Reflection) — Анализирует опыт       │\n    │ 5. 🔐 КАСПЕР (Guardian) — Охраняет и чистит        │\n    │ 6. 🌍 SENTINЕЛЬ (Sentinel) — Смотрит в мир         │\n    └─────────────────────────────────────────────────────┘\n\nЭТАЖ 2: АГЕНТЫ (wiki/entities/Agents/)\n┌─ 🧠 RAMS: [[wiki/entities/Agents/RAMS/RAMS.md\\|RAMS]] #orchestrator\n├─ 🔨 VULCAN: [[wiki/entities/Agents/VULCAN/VULCAN.md\\|VULCAN]] #action\n├─ 👁️ ARGUS: [[wiki/entities/Agents/ARGUS/ARGUS.md\\|ARGUS]] #perception\n├─ 📜 MNEMOSYNE: [[wiki/entities/Agents/MNEMOSYNE/MNEMOSYNE.md\\|MNEMOSYNE]] #memory\n├─ 🎓 SOCRATES: [[wiki/entities/Agents/SOCRATES/SOCRATES.md\\|SOCRATES]] #reflection\n└─ 🔐 CASPER: [[wiki/entities/Agents/CASPER/CASPER.md\\|CASPER]] #guardian\n\nСПЕЦИАЛЬНЫЕ КОМАНДЫ (КОГДА НУЖНЫ):\nYouTube Team: [[wiki/entities/Agents/YouTube_Researcher/YouTube_Researcher.md\\|YouTube_Researcher]] ← для видео-проектов\n             [[wiki/entities/Agents/Writer/Writer.md\\|Writer]]\n             [[wiki/entities/Agents/Thumbnail_Agent/Thumbnail_Agent.md\\|Thumbnail_Agent]]\n             [[wiki/entities/Agents/Packaging_Agent/Packaging_Agent.md\\|Packaging_Agent]]\n             [[wiki/entities/Agents/Analytics_Agent/Analytics_Agent.md\\|Analytics_Agent]]\n\nBusiness Trio: [[wiki/entities/Agents/Market_Researcher/Market_Researcher.md\\|Market_Researcher]] ← для бизнеса\n              [[wiki/entities/Agents/Offer_Strategist/Offer_Strategist.md\\|Offer_Strategist]]\n              [[wiki/entities/Agents/Execution_Agent/Execution_Agent.md\\|Execution_Agent]]\n\nHealth: [[wiki/entities/Agents/Health_Assistant/Health_Assistant.md\\|Health_Assistant]] ← для здоровья Шефа",
+      "x": 1300,
+      "y": 0,
+      "width": 600,
+      "height": 500,
+      "color": "3"
+    },
+    {
+      "id": "512568523ecb4e59",
+      "type": "text",
+      "text": "## 3. Структура конвейера данных\n*(Извлечено из 1.КОНСТИТУЦИЯ AI-ИМПЕРИИ.TXT и 4.ПОЛНАЯ КАРТА ЭКОСИСТЕМЫ(index).TXT)*\n\nКаждый файл имеет ТОЛЬКО ОДНО место:\nСырые данные → raw/\nОбработанные факты → wiki/sources/\nАрхитектурные правила → wiki/concepts/\nФинальные отчеты → wiki/synthesis/\nМашинные логи → wiki/entities/System/Logs/\nЛичная память агента → wiki/entities/Agents/[Имя]/memory/\n\nПеремещение файлов:\nMEMORY.md → успешный опыт → wiki/synthesis/History/ (МНЕМОЗИНА)\nwiki/synthesis/Legacy_2_Wiki/ → переработка → wiki/concepts/ (СОКРАТ)\nwiki/concepts/ → устаревшее → wiki/synthesis/Archive/ (КАСПЕР)\n\n⚡ ЧТО ЗДЕСЬ ПРОИСХОДИТ\nДанные приходят → ARGUS парсит → wiki/sources/ → ПАМЯТЬ",
+      "x": 1950,
+      "y": 0,
+      "width": 600,
+      "height": 500,
+      "color": "4"
+    }
+  ],
+  "edges": []
+}
