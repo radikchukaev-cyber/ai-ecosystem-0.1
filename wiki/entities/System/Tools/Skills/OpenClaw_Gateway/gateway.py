@@ -24,7 +24,7 @@ app = FastAPI()
 # Configure Gemini
 if GEMINI_API_KEY:
     genai.configure(api_key=GEMINI_API_KEY)
-    model = genai.GenerativeModel('gemini-1.5-pro')
+    model = genai.GenerativeModel('gemini-3.1-flash-lite')
 
 def run_cmd(cmd, cwd=None):
     try:

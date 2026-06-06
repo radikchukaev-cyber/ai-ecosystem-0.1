@@ -13,7 +13,7 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "wiki/index.md",
+                "file": "wiki/MEMORY.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -41,7 +41,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "גרף של index"
+              "title": "גרף של MEMORY"
             }
           },
           {
@@ -64,12 +64,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "wiki/index.md",
+                "file": "wiki/MEMORY.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "index"
+              "title": "MEMORY"
             }
           }
         ],
@@ -147,7 +147,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "wiki/index.md",
+                "file": "wiki/MEMORY.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -157,7 +157,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "קישורים נכנסים עבור index"
+              "title": "קישורים נכנסים עבור MEMORY"
             }
           },
           {
@@ -166,12 +166,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "wiki/index.md",
+                "file": "wiki/MEMORY.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "קישורים יוצאים מ-index"
+              "title": "קישורים יוצאים מ-MEMORY"
             }
           },
           {
@@ -209,13 +209,13 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "wiki/index.md",
+                "file": "wiki/MEMORY.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "מתאר של index"
+              "title": "מתאר של MEMORY"
             }
           }
         ]
@@ -238,10 +238,10 @@
   },
   "active": "3d8b0c259c6ffda8",
   "lastOpenFiles": [
-    "wiki/concepts/API_Error_Handling.md",
     "wiki/index.md",
-    "wiki/concepts/Code_Patterns.md",
     "wiki/entities/System/Configs/SHEF_PROFILE.md",
+    "wiki/concepts/API_Error_Handling.md",
+    "wiki/concepts/Code_Patterns.md",
     "wiki/entities/System/SYSTEM_INDEX.md",
     "wiki/entities/System/Tools/Skills/SKILLS_INDEX.md",
     "wiki/entities/Agents/VULCAN/Vulcan_skills/12_github_skills_manager.md",
