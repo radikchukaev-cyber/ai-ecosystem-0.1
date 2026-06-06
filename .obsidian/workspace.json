@@ -13,7 +13,6 @@
             "state": {
               "type": "localgraph",
               "state": {
-                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -41,7 +40,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "גרף של BOOTSTRAP Management"
+              "title": "תצוגת גרף"
             }
           },
           {
@@ -62,14 +61,10 @@
             "id": "3d8b0c259c6ffda8",
             "type": "leaf",
             "state": {
-              "type": "markdown",
-              "state": {
-                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
-                "mode": "source",
-                "source": false
-              },
-              "icon": "lucide-file",
-              "title": "BOOTSTRAP Management"
+              "type": "graph",
+              "state": {},
+              "icon": "lucide-git-fork",
+              "title": "תצוגת גרף"
             }
           }
         ],
@@ -146,7 +141,6 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -156,7 +150,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "קישורים נכנסים עבור BOOTSTRAP Management"
+              "title": "קישורים נכנסים"
             }
           },
           {
@@ -165,12 +159,11 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "קישורים יוצאים מ-BOOTSTRAP Management"
+              "title": "קישורים יוצאים"
             }
           },
           {
@@ -208,13 +201,12 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "מתאר של BOOTSTRAP Management"
+              "title": "מתווה"
             }
           }
         ]
@@ -235,11 +227,11 @@
       "bases:צור בסיס חדש": false
     }
   },
-  "active": "ebe2e35835724f62",
+  "active": "3d8b0c259c6ffda8",
   "lastOpenFiles": [
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
     "wiki/entities/System/Configs/telegram_routing.json",
     "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.DAILY RHYTHM.md/RHYTHMDAILY Management.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
     "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/7.MEMORY.md",
     "wiki/entities/Agents/VULCAN/Vulcan_skills/SKILL_DEPLOY_CLOUD_AI.md",
     "AI-ИМПЕРИИ/Субагенты.TXT",
@@ -272,7 +264,6 @@
     "scripts/memory_autosave.py",
     "scripts",
     "history",
-    "docs/evolution",
     "wiki/synthesis/Canvases/Error_Handling_Flowchart.canvas",
     "wiki/synthesis/Canvases/Growth_Trajectory.canvas",
     "wiki/synthesis/Canvases/Future_Vision.canvas",
