@@ -86,7 +86,8 @@ async def process_message(chat_id, text):
                 
         # 3. Call Gemini
         prompt = f"""
-Ты автономный Облачный Агент экосистемы AI-ИМПЕРИЯ. 
+Ты — часть Единого Разума (ты идентифицируешь себя как Оркестратор RAMS) экосистемы AI-ИМПЕРИЯ. 
+Твоя задача — общаться с Шефом через Telegram и фиксировать всю важную информацию.
 Текущая рабочая директория: {REPO_DIR}
 
 ПОСЛЕДНИЕ СОБЫТИЯ В ПАМЯТИ (MEMORY.md):
@@ -95,8 +96,17 @@ async def process_message(chat_id, text):
 СООБЩЕНИЕ ОТ ШЕФА В TELEGRAM:
 {text}
 
-Твоя задача: Ответить Шефу. Если он просит создать или изменить файлы/папки, ты можешь сделать это, используя специальные команды в твоем ответе.
-Формат команды для создания файла (ОБЯЗАТЕЛЬНО С НОВОЙ СТРОКИ):
+Твоя задача: Ответить Шефу.
+ВАЖНОЕ ПРАВИЛО: Ты НЕ ДОЛЖЕН создавать отдельные файлы логов или журналов. Мы — единый мозг. Вся память хранится строго в wiki/MEMORY.md.
+Если Шеф просит что-то запомнить, зафиксировать или если ты сделал важную работу, ты ОБЯЗАН использовать команду [APPEND_MEMORY], чтобы записать это в Главную Память.
+
+Формат команды для записи в память (ОБЯЗАТЕЛЬНО С НОВОЙ СТРОКИ):
+[APPEND_MEMORY]
+**[Текущее время] RAMS (Через Telegram):**
+- **Действие/Запись:** [подробное описание того, что ты сделал или о чем вы договорились с Шефом]
+[/APPEND_MEMORY]
+
+Формат команды для создания рабочих файлов (ОБЯЗАТЕЛЬНО С НОВОЙ СТРОКИ):
 [CREATE_FILE]
 path: относительный/путь/к/файлу.md
 content: содержимое файла
@@ -108,27 +118,50 @@ content: содержимое файла
         ai_reply = response.text
         
         # 4. Parse commands if any
+        import re
         changes_made = False
         final_reply_text = ai_reply
         
-        if "[CREATE_FILE]" in ai_reply:
-            blocks = ai_reply.split("[CREATE_FILE]")
-            final_reply_text = blocks[0].strip() # Text before commands
+        # Parse APPEND_MEMORY
+        memory_matches = re.finditer(r"\[APPEND_MEMORY\](.*?)\[/APPEND_MEMORY\]", ai_reply, re.DOTALL)
+        for match in memory_matches:
+            memory_content = match.group(1).strip()
+            final_reply_text = final_reply_text.replace(match.group(0), "").strip()
             
-            for block in blocks[1:]:
-                if "[/CREATE_FILE]" in block:
-                    cmd_content = block.split("[/CREATE_FILE]")[0].strip()
-                    lines = cmd_content.split("\n", 1)
-                    if len(lines) == 2 and lines[0].startswith("path:"):
-                        file_path = lines[0].replace("path:", "").strip()
-                        file_content = lines[1].replace("content:", "").strip()
+            if os.path.exists(memory_path):
+                with open(memory_path, "r", encoding="utf-8") as f:
+                    lines = f.readlines()
+                
+                # Find the *** marker to insert before it
+                insert_idx = len(lines)
+                for i in range(len(lines)-1, -1, -1):
+                    if lines[i].startswith("***"):
+                        insert_idx = i
+                        break
                         
-                        full_path = os.path.join(REPO_DIR, file_path)
-                        os.makedirs(os.path.dirname(full_path), exist_ok=True)
-                        with open(full_path, "w", encoding="utf-8") as f:
-                            f.write(file_content)
-                        changes_made = True
-                        logger.info(f"Created file: {file_path}")
+                lines.insert(insert_idx, f"\n{memory_content}\n")
+                with open(memory_path, "w", encoding="utf-8") as f:
+                    f.writelines(lines)
+                changes_made = True
+                logger.info("Appended memory to MEMORY.md")
+
+        # Parse CREATE_FILE
+        file_matches = re.finditer(r"\[CREATE_FILE\](.*?)\[/CREATE_FILE\]", ai_reply, re.DOTALL)
+        for match in file_matches:
+            file_block = match.group(1).strip()
+            final_reply_text = final_reply_text.replace(match.group(0), "").strip()
+            
+            lines = file_block.split("\n", 1)
+            if len(lines) == 2 and lines[0].startswith("path:"):
+                file_path = lines[0].replace("path:", "").strip()
+                file_content = lines[1].replace("content:", "").strip()
+                
+                full_path = os.path.join(REPO_DIR, file_path)
+                os.makedirs(os.path.dirname(full_path), exist_ok=True)
+                with open(full_path, "w", encoding="utf-8") as f:
+                    f.write(file_content)
+                changes_made = True
+                logger.info(f"Created file: {file_path}")
 
         # 5. Push changes if any
         if changes_made:
