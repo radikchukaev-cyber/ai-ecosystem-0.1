@@ -1,0 +1,51 @@
+# Аудит Скиллов
+
+## Найдено в лоре:
+- [RAMS] 🎼 СКИЛЛ: Оркестрация (Распределение задач)
+- [RAMS] ⚖️ СКИЛЛ: Принятие решений (Decision Making)
+- [RAMS] 💰 СКИЛЛ: Управление ресурсами (Resource Management)
+- [VULCAN] 💻 СКИЛЛ: Кодирование (Coding Standards)
+- [VULCAN] 🧪 СКИЛЛ: Тестирование (Testing & QA)
+- [VULCAN] 🐛 СКИЛЛ: Отладка (Debugging & Problem Solving)
+- [VULCAN] 🚀 СКИЛЛ: Развёртывание (Deployment & Production)
+- [VULCAN] ⚡ СКИЛЛ: Оптимизация (Performance & Efficiency)
+- [ARGUS] 🗜️ СКИЛЛ: Сжатие данных (Data Compaction ×5)
+- [UNKNOWN] ⚡ СУПЕРСКИЛЛ: Генератор кода (Fast Code Generator)
+- [UNKNOWN] 🐛 СУПЕРСКИЛЛ: Охотник на баги (Bug Hunter)
+- [UNKNOWN] ⚡ СУПЕРСКИЛЛ: Оптимизатор производительности
+- [UNKNOWN] 🧪 СУПЕРСКИЛЛ: Генератор тестов (Auto Test Generator)
+- [UNKNOWN] 🎨 СУПЕРСКИЛЛ: Форматер кода (Code Formatter)
+- [UNKNOWN] 📦 СУПЕРСКИЛЛ: Менеджер зависимостей
+- [UNKNOWN] 📚 СУПЕРСКИЛЛ: Генератор документации
+- [UNKNOWN] 👀 СУПЕРСКИЛЛ: Автоматический код ревью
+- [UNKNOWN] 🔐 СУПЕРСКИЛЛ: Проверка безопасности
+- [UNKNOWN] 🔄 СУПЕРСКИЛЛ: Помощник рефакторинга
+- [UNKNOWN] 🔗 СУПЕРСКИЛЛ: Синхронизация Obsidian (Obsidian Sync Manager)
+- [UNKNOWN] 🏛️ СУПЕРСКИЛЛ: Менеджер хранилища (Vault Manager)
+- [UNKNOWN] 📖 Новый концепт
+- [UNKNOWN] 🎵 СУПЕРСКИЛЛ: Парсер мультимедиа (Multimedia Parser)
+- [UNKNOWN] 📦 СУПЕРСКИЛЛ: Менеджер скиллов GitHub (GitHub Skills Manager)
+- [UNKNOWN] 🌐 СУПЕРСКИЛЛ: Загрузчик Open Source скиллов (Open Source Skills Loader)
+- [UNKNOWN] 💬 СУПЕРСКИЛЛ: Интеграция Telegram (Telegram Bot Integration)
+- [UNKNOWN] 🗜️ СУПЕРСКИЛЛ: Компрессор данных (Data Compressor)
+- [UNKNOWN] ⚠️ СУПЕРСКИЛЛ: Детектор противоречий (Contradiction Detector)
+- [UNKNOWN] ✅ СУПЕРСКИЛЛ: Валидатор качества (Quality Validator)
+- [UNKNOWN] 🔄 СУПЕРСКИЛЛ: Конвертер форматов (Format Converter)
+- [UNKNOWN] 🔍 СУПЕРСКИЛЛ: Дедупликатор (Deduplicator)
+- [UNKNOWN] 📊 СУПЕРСКИЛЛ: Анализатор паттернов (Pattern Analyzer)
+- [UNKNOWN] 🚨 СУПЕРСКИЛЛ: Детектор аномалий (Anomaly Detector)
+- [UNKNOWN] ✔️ СУПЕРСКИЛЛ: Верификатор источников (Source Verifier)
+- [UNKNOWN] 📂 СУПЕРСКИЛЛ: Классификатор контента (Content Classifier)
+
+## Существующие файлы в директории:
+- Skills.md
+- telegram-gateway.md
+- github-sync.md
+- json-parser-safe.md
+- README.md
+- obsidian-cli.md
+- README.md
+- references.md
+- tools_cheat_sheet.md
+- vector-search.md
+- youtube-api-wrapper.md

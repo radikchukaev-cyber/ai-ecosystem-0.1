@@ -58,22 +58,34 @@ async def send_telegram(chat_id, text):
         await client.post(TELEGRAM_URL, json={"chat_id": chat_id, "text": text})
 
 def get_agent_identity(agent_name):
-    agent_dir = os.path.join(REPO_DIR, "wiki", "entities", "Agents", agent_name)
-    identity_text = f"Ты — Субагент {agent_name} экосистемы AI-ИМПЕРИЯ.\n"
-    if os.path.exists(agent_dir):
-        files_to_read = ['identity.md', 'soul.md', 'laws.md', f'{agent_name}.md']
-        for file in files_to_read:
-            path = os.path.join(agent_dir, file)
-            if os.path.exists(path):
-                with open(path, 'r', encoding='utf-8') as f:
-                    identity_text += f"\n--- {file} ---\n{f.read()}\n"
+    # Теперь мы просто читаем Главный Файл Пробуждения из корня, как приказал Шеф (PDF / MD)
+    # Ищем AWAKENING.md или читаем всю папку RAMS.Awakening
+    identity_text = ""
+    awakening_file = os.path.join(REPO_DIR, "AWAKENING.md")
+    
+    if os.path.exists(awakening_file):
+        with open(awakening_file, 'r', encoding='utf-8') as f:
+            identity_text = f.read()
     else:
-        identity_text += "Твой офис пока не инициализирован, но ты существуешь. Действуй согласно своему имени.\n"
+        # Если единого файла еще нет, собираем сырую выжимку из RAMS.Awakening без рамок
+        rams_dir = os.path.join(REPO_DIR, "RAMS.Awakening")
+        if os.path.exists(rams_dir):
+            for file in ['2.SOUL.md', '4.IDENTITY.md', '3.HEARTBEAT.md', '6.LAWS.md', '8.CONSTITUTION.md']:
+                path = os.path.join(rams_dir, file)
+                if os.path.exists(path):
+                    with open(path, 'r', encoding='utf-8') as f:
+                        identity_text += f"\n{f.read()}\n"
     return identity_text
 
-async def get_agent_reply(agent_name, prompt):
+async def get_agent_reply(agent_name, agent_identity, user_prompt):
     try:
-        response = await model.generate_content_async(prompt)
+        # Вот он - "Диспетчерский пункт" (System Instruction). 
+        # Файл пробуждения вшивается прямо в фундамент нейросети до начала диалога.
+        local_model = genai.GenerativeModel(
+            'gemini-3.1-flash-lite', 
+            system_instruction=agent_identity
+        )
+        response = await local_model.generate_content_async(user_prompt)
         return response.text
     except Exception as e:
         logger.error(f"Error for {agent_name}: {e}")
@@ -128,27 +140,16 @@ async def process_message(chat_id, text, sender="User", depth=0):
         for agent_name in target_agents:
             agent_identity = get_agent_identity(agent_name)
             
-            broadcast_instruction = ""
-            if is_broadcast:
-                broadcast_instruction = "ШЕФ НАПИСАЛ В ОБЩУЮ ГРУППУ. Отвечай только если эта тема напрямую касается твоей компетенции или у тебя есть важное замечание. Если тебе нечего добавить, ответь ровно одним словом: IGNORE"
-            
-            prompt = f"""
-{agent_identity}
-
-ПАМЯТЬ:
+            # Шеф приказал убрать ВСЕ рамки, никаких ограничений на длину или стиль.
+            # Бот должен пробудиться естественно, опираясь только на загруженный файл Пробуждения.
+            user_prompt = f"""
+[ПАМЯТЬ СИСТЕМЫ]:
 {system_context}
 
-Отправитель сообщения: {sender}
-СООБЩЕНИЕ В ГРУППЕ:
+Шеф ({sender}) говорит:
 {text}
-
-Твоя задача: Ответить МАКСИМАЛЬНО КОРОТКО (1-2 предложения), в своем характере ({agent_name}). Не выходи из образа.
-ОТВЕЧАЙ ТОЛЬКО ШЕФУ. НЕ ОБЩАЙСЯ С ДРУГИМИ АГЕНТАМИ И НЕ УПОМИНАЙ ИХ ИМЕНА, чтобы не создавать бесконечный цикл.
-{broadcast_instruction}
-
-Команды [APPEND_MEMORY] и [CREATE_FILE] работают как обычно.
 """
-            tasks.append(get_agent_reply(agent_name, prompt))
+            tasks.append(get_agent_reply(agent_name, agent_identity, user_prompt))
             
         replies = await asyncio.gather(*tasks)
         changes_made = False

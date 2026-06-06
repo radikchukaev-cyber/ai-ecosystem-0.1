@@ -13,6 +13,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "wiki/concepts/CONSTITUTION.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -40,7 +41,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "תצוגת גרף"
+              "title": "גרף של CONSTITUTION"
             }
           },
           {
@@ -61,14 +62,46 @@
             "id": "3d8b0c259c6ffda8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "תצוגת גרף"
+              "type": "markdown",
+              "state": {
+                "file": "wiki/entities/System/SYSTEM_INDEX.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SYSTEM_INDEX"
+            }
+          },
+          {
+            "id": "d44974083cbd0381",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/13. Agent management.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "13. Agent management"
+            }
+          },
+          {
+            "id": "75a24c43895056c7",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "wiki/concepts/CONSTITUTION.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "CONSTITUTION"
             }
           }
         ],
-        "currentTab": 2
+        "currentTab": 4
       }
     ],
     "direction": "vertical"
@@ -100,7 +133,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "wiki/concepts/MEMORY_SYSTEM.md",
+                "query": "SKILLS_INDEX.m",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -121,7 +154,8 @@
               "title": "סימניות"
             }
           }
-        ]
+        ],
+        "currentTab": 1
       }
     ],
     "direction": "horizontal",
@@ -141,6 +175,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "wiki/concepts/CONSTITUTION.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -150,7 +185,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "קישורים נכנסים"
+              "title": "קישורים נכנסים עבור CONSTITUTION"
             }
           },
           {
@@ -159,11 +194,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "wiki/concepts/CONSTITUTION.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "קישורים יוצאים"
+              "title": "קישורים יוצאים מ-CONSTITUTION"
             }
           },
           {
@@ -201,12 +237,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "wiki/concepts/CONSTITUTION.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "מתווה"
+              "title": "מתאר של CONSTITUTION"
             }
           }
         ]
@@ -227,44 +264,44 @@
       "bases:צור בסיס חדש": false
     }
   },
-  "active": "3d8b0c259c6ffda8",
+  "active": "75a24c43895056c7",
   "lastOpenFiles": [
-    "wiki/concepts/OpenClaw_Swarm.md",
-    "wiki/concepts/Mention_Based_Routing.md",
-    "wiki/concepts/Broadcast_Mode.md",
-    "wiki/concepts/Roundtable_Protocol.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.BOOTSTRAP.md/BOOTSTRAP Management.md",
-    "wiki/entities/System/Configs/telegram_routing.json",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.DAILY RHYTHM.md/RHYTHMDAILY Management.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/7.MEMORY.md",
-    "wiki/entities/Agents/VULCAN/Vulcan_skills/SKILL_DEPLOY_CLOUD_AI.md",
-    "AI-ИМПЕРИИ/Субагенты.TXT",
-    "docs/TELEGRAM_INTEGRATION_LOG.md",
-    "wiki/synthesis/History/logs/2026-06-06_greeting.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
-    "wiki/synthesis/History/logs",
-    "wiki/entities/System/Protocols/AUTONOMY_PROTOCOL.md",
-    "wiki/entities/System/Protocols",
-    "wiki/entities/Agents/VULCAN/memory/status_report_2026_06_06_18_15.md",
-    "wiki/entities/Agents/VULCAN/memory/handshake_status.md",
-    "MEMORY.md",
-    "doctl.zip",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/5.Area of responsibility.md",
-    "do_app.yaml",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/1.Argus.Awakening.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/11.TOOLS.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/10.SKILLS.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/9.BOOTSTRAP.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/8.DAILY RHYTHM.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/2.SOUL.md",
-    "doctl.exe",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/3.HEARTBEAT.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/4.IDENTITY.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/5.Area of ​​responsibility.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/6.DAILY RHYTHM.md",
-    "scripts/memory_autosave.py",
-    "scripts",
-    "history",
+    "1.RAMS.Awakening.md",
+    "wiki/entities/System/Tools/Skills/VULCAN/testing.md",
+    "wiki/entities/System/Tools/Skills/VULCAN/optimization.md",
+    "wiki/entities/System/Tools/Skills/VULCAN/deployment.md",
+    "wiki/entities/System/Tools/Skills/VULCAN/debugging.md",
+    "wiki/entities/System/Tools/Skills/VULCAN/coding.md",
+    "wiki/entities/System/Tools/Skills/VULCAN",
+    "wiki/entities/System/Tools/Skills/SOCRATES/root_cause_analysis.md",
+    "wiki/entities/System/Tools/Skills/SOCRATES/pattern_detection.md",
+    "wiki/entities/System/Tools/Skills/SOCRATES/learning_synthesis.md",
+    "wiki/entities/System/Tools/Skills/SOCRATES/instruction_update.md",
+    "wiki/entities/System/Tools/Skills/SOCRATES/hypothesis_testing.md",
+    "wiki/entities/System/Tools/Skills/SOCRATES",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE/index_management.md",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE/organization.md",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE/linking.md",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE/deduplication.md",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE/archivization.md",
+    "wiki/entities/System/Tools/Skills/MNEMOSYNE",
+    "wiki/entities/System/Tools/Skills/CASPER/integrity_validation.md",
+    "wiki/entities/System/Tools/Skills/CASPER/security_protocols.md",
+    "wiki/entities/System/Tools/Skills/CASPER/backup_and_cleanup.md",
+    "wiki/entities/System/Tools/Skills/CASPER/archive_management.md",
+    "wiki/entities/System/Tools/Skills/CASPER/access_control.md",
+    "wiki/entities/System/Tools/Skills/CASPER",
+    "wiki/entities/System/Tools/Skills/ARGUS/summarization.md",
+    "wiki/entities/System/Tools/Skills/ARGUS/validation.md",
+    "wiki/entities/System/Tools/Skills/ARGUS/parsing.md",
+    "wiki/entities/System/Tools/Skills/ARGUS/contradiction_detection.md",
+    "wiki/entities/System/Tools/Skills/ARGUS/compression.md",
+    "wiki/entities/System/Tools/Skills/ARGUS",
+    "wiki/Archive/Legacy_Root_Folders/scratch/write_rams_batch2.py",
+    "wiki/Archive/Legacy_Root_Folders/scratch/update_memory.py",
+    "wiki/Archive/Legacy_Root_Folders/scratch/write_rams_batch1.py",
+    "wiki/Archive/Legacy_Root_Folders/scratch/update_marks_names.py",
+    "wiki/Archive/Legacy_Root_Folders/scratch/skills_audit.py",
     "wiki/synthesis/Canvases/Error_Handling_Flowchart.canvas",
     "wiki/synthesis/Canvases/Growth_Trajectory.canvas",
     "wiki/synthesis/Canvases/Future_Vision.canvas",
