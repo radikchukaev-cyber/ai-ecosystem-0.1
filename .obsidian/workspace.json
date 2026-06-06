@@ -13,6 +13,7 @@
             "state": {
               "type": "localgraph",
               "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
                 "options": {
                   "collapse-filter": true,
                   "search": "",
@@ -40,7 +41,7 @@
                 }
               },
               "icon": "lucide-git-fork",
-              "title": "תצוגת גרף"
+              "title": "גרף של SKILLS Management"
             }
           },
           {
@@ -61,10 +62,14 @@
             "id": "3d8b0c259c6ffda8",
             "type": "leaf",
             "state": {
-              "type": "graph",
-              "state": {},
-              "icon": "lucide-git-fork",
-              "title": "תצוגת גרף"
+              "type": "markdown",
+              "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
+                "mode": "source",
+                "source": false
+              },
+              "icon": "lucide-file",
+              "title": "SKILLS Management"
             }
           }
         ],
@@ -121,8 +126,7 @@
               "title": "סימניות"
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -142,6 +146,7 @@
             "state": {
               "type": "backlink",
               "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -151,7 +156,7 @@
                 "unlinkedCollapsed": true
               },
               "icon": "links-coming-in",
-              "title": "קישורים נכנסים"
+              "title": "קישורים נכנסים עבור SKILLS Management"
             }
           },
           {
@@ -160,11 +165,12 @@
             "state": {
               "type": "outgoing-link",
               "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               },
               "icon": "links-going-out",
-              "title": "קישורים יוצאים"
+              "title": "קישורים יוצאים מ-SKILLS Management"
             }
           },
           {
@@ -202,12 +208,13 @@
             "state": {
               "type": "outline",
               "state": {
+                "file": "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
                 "followCursor": false,
                 "showSearch": false,
                 "searchQuery": ""
               },
               "icon": "lucide-list",
-              "title": "מתווה"
+              "title": "מתאר של SKILLS Management"
             }
           }
         ]
@@ -230,40 +237,42 @@
   },
   "active": "3d8b0c259c6ffda8",
   "lastOpenFiles": [
+    "do_app.yaml",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/1.Argus.Awakening.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/11.TOOLS.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/10.SKILLS.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/9.BOOTSTRAP.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/8.DAILY RHYTHM.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/7.MEMORY.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/2.SOUL.md",
+    "doctl.exe",
+    "doctl.zip",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/3.HEARTBEAT.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/4.IDENTITY.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/5.Area of ​​responsibility.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/6.DAILY RHYTHM.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/6.LAWS.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/5.Area of responsibility.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/13. Agent management.md",
+    "wiki/entities/Agents/ARGUS/Argus_skills/07_pattern_analyzer.md",
+    "wiki/entities/Agents/ARGUS/Argus_skills/06_deduplicator.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/18.Vulcan.Awakening/Cabinet.Vulcan/Vulcan.SKILLS.md/SKILLS Management.md",
+    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/14.Argus.Awakening/Cabinet.Argus/Argus.SKILLS.md/SKILLS Management.md",
+    "RAMS.Awakening/1.RAMS.Awakening.md",
+    "docs/TELEGRAM_INTEGRATION_LOG.md",
+    "scripts/memory_autosave.py",
+    "scripts",
+    "history/telegram_buffer.md",
+    "history",
+    "docs/evolution/THE_ETERNAL_MIND_MANIFESTO.md",
+    "docs/SYNC_PROTOCOL.md",
+    "docs/MANIFESTO_ETERNAL_MIND.md",
+    "docs/evolution",
+    "docs",
     "wiki/entities/Agents/VULCAN/Vulcan_skills/SKILL_DEPLOY_CLOUD_AI.md",
-    "wiki/MEMORY.md",
-    "wiki/entities/Agents/VULCAN/memory/cloud_test.md",
-    "wiki/index.md",
-    "wiki/entities/System/Configs/SHEF_PROFILE.md",
-    "wiki/concepts/API_Error_Handling.md",
-    "wiki/concepts/Code_Patterns.md",
-    "wiki/entities/System/SYSTEM_INDEX.md",
-    "wiki/entities/System/Tools/Skills/SKILLS_INDEX.md",
-    "wiki/entities/Agents/VULCAN/Vulcan_skills/12_github_skills_manager.md",
-    "wiki/entities/Agents/VULCAN/VULCAN.md",
-    "wiki/entities/Agents/VULCAN.md",
-    "wiki/entities/System/Logs/LOGS_INDEX.md",
     "wiki/entities/System/Logs/performance.log",
     "wiki/entities/System/Logs/api_calls.log",
     "raw/sources/obsidian_docs.pdf",
-    "raw/sources/n8n_workflows.pdf",
-    "raw/sources/claude_documentation.pdf",
-    "START_MEMORY_DAEMON.bat",
-    "wiki/templates/COMPANY_BRIEF_TEMPLATE.md",
-    "wiki/entities/Companies/COMPANIES_INDEX.md",
-    "wiki/synthesis/Failures/2026-06-06_FAILURE_Canvas_Hallucination.md",
-    "scratch/canvas_extracted_lore.md",
-    "wiki/entities/Agents/VULCAN/memory/task_telegram_gateway.md",
-    "RAMS.Awakening/General Cabinet.RAMS/RAMS.AGENTS.md/15.Casper.Awakening/Cabinet.Casper/Casper.TOOLS.md/LAWSA.TOOLS.md",
-    "wiki/templates/README.md",
-    "wiki/entities/Agents/CASPER/CASPER.md",
-    "wiki/entities/Agents/Market_Researcher/identity.md",
-    "wiki/entities/Agents/AGENTS_INDEX.md",
-    "wiki/sources/GitHub_Integration.md",
-    "scratch/fix_canvases.py",
-    "scratch",
-    "wiki/synthesis/Canvases/CANVAS_INDEX.md",
-    "wiki/synthesis/Canvases/CANVASES_INDEX.md",
     "wiki/synthesis/Canvases/Error_Handling_Flowchart.canvas",
     "wiki/synthesis/Canvases/Growth_Trajectory.canvas",
     "wiki/synthesis/Canvases/Future_Vision.canvas",
@@ -274,8 +283,6 @@
     "wiki/synthesis/Canvases/Memory_System_Diagram.canvas",
     "wiki/synthesis/Canvases/Decision_Tree.canvas",
     "wiki/synthesis/Canvases/Team_Structure.canvas",
-    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/fly.toml",
-    "wiki/entities/System/Tools/Skills/OpenClaw_Gateway/Dockerfile",
     "wiki/raw/assets/vulcan_coder_banner_1780677705301.png",
     "wiki/raw/assets/socrates_analyst_banner_1780677823509.png",
     "wiki/raw/assets/rams_orchestrator_banner_1780677657743.png",
