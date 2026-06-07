@@ -58,14 +58,12 @@ async def send_telegram(chat_id, text):
         await client.post(TELEGRAM_URL, json={"chat_id": chat_id, "text": text})
 
 def get_agent_identity(agent_name):
-    # Теперь мы просто читаем Главный Файл Пробуждения из корня, как приказал Шеф (PDF / MD)
-    # Ищем AWAKENING.md или читаем всю папку RAMS.Awakening
-    identity_text = ""
+    identity_text = f"ТЫ — АГЕНТ {agent_name.upper()}. Это твой профиль и законы. Веди себя, думай и общайся исключительно как описано ниже. Твоя личность — это эти документы:\n\n"
     awakening_file = os.path.join(REPO_DIR, "AWAKENING.md")
     
     if os.path.exists(awakening_file):
         with open(awakening_file, 'r', encoding='utf-8') as f:
-            identity_text = f.read()
+            identity_text += f.read()
     else:
         # Если единого файла еще нет, собираем сырую выжимку из RAMS.Awakening без рамок
         rams_dir = os.path.join(REPO_DIR, "RAMS.Awakening")
